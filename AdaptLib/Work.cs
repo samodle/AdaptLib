@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 namespace AdaptLib
 {
@@ -29,8 +28,8 @@ namespace AdaptLib
         public List<Exercise> Exercizes { get; set; } = new List<Exercise>();
         public List<double> Seconds { get; set; } = new List<double>();
 
-        public double NetSeconds{ get { return Seconds.Sum(); }}
-        public double NetMinutes{ get { return NetSeconds / 60; }}
+        public double NetSeconds { get { return Seconds.Sum(); } }
+        public double NetMinutes { get { return NetSeconds / 60; } }
 
         public List<Gear> EquipmentRequired { get; set; } = new List<Gear>();
 
@@ -40,17 +39,21 @@ namespace AdaptLib
             Seconds.Add(s);
         }
 
-        public AbWork()
+        private void SetGear()
         {
-        }
-
-        private void SetGear(){
             EquipmentRequired.Clear();
-            foreach(Exercise e in Exercizes){ if (!EquipmentRequired.Contains(e.MyGear)){ EquipmentRequired.Add(e.MyGear); }}
+            foreach (Exercise e in Exercizes)
+            {
+                foreach(Gear g in e.MyGear)
+                if (!EquipmentRequired.Contains(g))
+                {
+                    EquipmentRequired.Add(g);
+                }
+            }
         }
 
     }
 
-    public class AeroWork{}
+    public class AeroWork { }
 
 }

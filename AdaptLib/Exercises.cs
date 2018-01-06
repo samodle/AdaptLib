@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace AdaptLib
 {
-    public class Exercise
+    public class Exercise 
     {
         public Guid ID = new Guid();
         public List<Gear> MyGear { get; set; } = new List<Gear>();
@@ -11,7 +11,7 @@ namespace AdaptLib
         public AdaptText Description { get; set; }
         public AdaptText Instructions { get; set; }
 
-
+    
         public Tier1Muscle PrimaryMuscleGroup { get; set; }
 
         /* To Do: Add image, adapttext dictionary */
@@ -23,7 +23,6 @@ namespace AdaptLib
             this.PrimaryMuscleGroup = m1;
         }
 
-
         //Equals
         public override bool Equals(object obj)
         {
@@ -34,10 +33,8 @@ namespace AdaptLib
                 // Order these by the most different first.
                 // That is, whatever value is most selective, and the fewest
                 // instances have the same value, put that first.
-                return this.Id == myClass.Id
-                   && this.Name == myClass.Name
-                   && this.Quantity == myClass.Quantity
-                   && this.Color == myClass.Color;
+                return this.Name == myClass.Name;
+ 
             }
             else
             {
@@ -50,10 +47,8 @@ namespace AdaptLib
             int hash = 19;
             unchecked
             { // allow "wrap around" in the int
-                hash = hash * 31 + this.Id; // assuming integer
                 hash = hash * 31 + this.Name.GetHashCode();
-                hash = hash * 31 + this.Quantity; // again assuming integer
-                hash = hash * 31 + this.Color.GetHashCode();
+
             }
             return hash;
         }
