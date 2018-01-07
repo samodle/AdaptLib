@@ -62,5 +62,5 @@ namespace AdaptLib
         }
     }
 
-    public class AeroWork { }
+   // public class AeroWork { }
 }
