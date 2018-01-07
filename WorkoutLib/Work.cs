@@ -8,30 +8,32 @@ namespace AdaptLib
         #region Variables/Properties
 
         public List<Exercise> Exercizes { get; set; } = new List<Exercise>();
-        public List<Gear> Equipment { get; set; } = new List<Gear>();
-
         #endregion
 
     }
 
-    #region Derivative Work
+
 
     public class GymWork
     {
 
         #region Variables/Properties
         public AdaptText Name { get; set; }
-        public int NumRounds { get; set; } 
+        public int NumRounds { get; set; } = 0; //works w/ constructor
         public List<List<int>> NumReps { get; set; } = new List<List<int>>();
         public List<Exercise> Exercizes { get; set; } = new List<Exercise>();
         #endregion
 
-        #region Constructor
+        public void AddWork(Exercise e, int rounds, List<int> reps)
+        {
+            NumRounds++;
+            Exercizes.Add(e);
+            NumReps.Add(reps);
+        }
+
         public GymWork()
         {
         }
-        #endregion
-
     }
 
     public class AbWork
@@ -61,6 +63,4 @@ namespace AdaptLib
     }
 
     public class AeroWork { }
-
-    #endregion
 }

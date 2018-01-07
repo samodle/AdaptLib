@@ -11,8 +11,6 @@ namespace AdaptLib
         public AdaptText Description { get; set; }
         public AdaptText Instructions { get; set; }
 
-        public bool DoIHaveReps { get; set; } //is this a type of exercise that has a prescribed # of reps?
-
     
         public Tier1Muscle PrimaryMuscleGroup { get; set; }
         public Tier2Muscle SecondaryMuscleGroup { get; set; }
