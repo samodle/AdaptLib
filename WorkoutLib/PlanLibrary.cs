@@ -18,6 +18,7 @@ namespace AdaptLib
             return x;
         }
 
+        /*
         public static AbPlan GetPlan_30DayAbs()
         {
             AbPlan p = new AbPlan();
@@ -47,7 +48,7 @@ namespace AdaptLib
             return p;
         }
 
-
+    */
 
 
 

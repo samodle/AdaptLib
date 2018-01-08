@@ -12,17 +12,4 @@ namespace AdaptLib
           
         }
     }
-
-    public class GymPlan
-    {
-        public List<GymWork> Gym = new List<GymWork>();
-    }
-    public class AbPlan
-    {
-        public List<AbWork> Abs = new List<AbWork>();
-    }
-    public class AeroPlan
-    {
-        public List<AeroWork> Cardio = new List<AeroWork>();
-    }
 }

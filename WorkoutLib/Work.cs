@@ -12,7 +12,7 @@ namespace AdaptLib
          * 1. the order of this list is CRITICAL for the operation of the SetList set/superset functionality
          * 2. Exercizes and Equip/Gear lists need to be populated at the same time
          */
-        public List<Exercise> Exercizes { get; private set; } = new List<Exercise>();
+        public List<Exercise> Exercises { get; private set; } = new List<Exercise>();
 
         //defines the set and/or superset structure of the workout. ints are indexes of the workout in the exercise list
         public List<List<int>> SetList { get; set; } = new List<List<int>>();
@@ -25,7 +25,7 @@ namespace AdaptLib
 
         private void populateEquipmentList()
         {
-            foreach (Exercize e in Exercizes)
+            foreach (Exercise e in Exercises)
             {
                 foreach(Gear g in e.MyGear)
                 {

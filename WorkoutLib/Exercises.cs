@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace AdaptLib
 {
-    public class Exercise 
+    public class Exercise
     {
         #region Variables/Properties
         public Guid ID = new Guid();
@@ -14,14 +14,14 @@ namespace AdaptLib
         public AdaptText Description { get; set; } //...laying flat on back simultaneuosly kick legs laterally in opposite directions working the lower abdominal muscles
         public AdaptText Instructions { get; set; }  //...more detailed step by step version of 'Description'
 
-        public List<int> Reps { get; set; } = new List<int>();  
+        public List<int> Reps { get; set; } = new List<int>();
         public List<TimeSpan> Times { get; set; } = new List<TimeSpan>();
         public List<double> Distances { get; set; } = new List<double>();
 
-        public bool DoIHaveReps { get { return (Reps.Count > 0 && !DoIHaveDistance && !DoIHaveTimes); } } 
+        public bool DoIHaveReps { get { return (Reps.Count > 0 && !DoIHaveDistance && !DoIHaveTimes); } }
         public bool DoIHaveTimes { get { return (Times.Count > 0); } }
-        public bool DoIHaveDistance { get { return (Distances.Count > 0);  }} }
-    
+        public bool DoIHaveDistance { get { return (Distances.Count > 0); } }
+
         public Tier1Muscle PrimaryMuscleGroup { get; set; }
         public Tier2Muscle SecondaryMuscleGroup { get; set; }
 
@@ -50,7 +50,7 @@ namespace AdaptLib
                 // That is, whatever value is most selective, and the fewest
                 // instances have the same value, put that first.
                 return this.Name == myClass.Name;
- 
+
             }
             else
             {
@@ -68,5 +68,6 @@ namespace AdaptLib
             }
             return hash;
         }
-        #endregion  
+        #endregion
+    }
 }

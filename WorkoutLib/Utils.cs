@@ -5,6 +5,7 @@ namespace AdaptLib
     public static class Utils
     {
         public const double LBsPerKG = 2.20462; //2.20462
+        public const double NA = -1;
     }
 
     public class PriceCheck
@@ -13,14 +14,13 @@ namespace AdaptLib
         public AdaptText URL { get; set; } = new AdaptText();
         public double PriceUSD { get; set; } = -1;
 
-        public PriceCheck(DateTime t, string url, double price)
+        public PriceCheck(DateTime t,  double price, string url, MisIdiomas i)
         {
             LastUpdate = t;
-            URL = url;
+           // URL.Add( = url;
             PriceUSD = price;
         }
     }
-
 
     public class AdaptText
     {
@@ -52,5 +52,4 @@ namespace AdaptLib
         }
         #endregion
     }
-
 }
