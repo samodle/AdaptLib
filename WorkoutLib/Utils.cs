@@ -4,7 +4,7 @@ namespace AdaptLib
 {
     public static class Utils
     {
-        public const double LBsPerKG = 2.20462;
+        public const double LBsPerKG = 2.20462; //2.20462
     }
 
     public class PriceCheck

@@ -6,61 +6,36 @@ namespace AdaptLib
     public class Work
     {
         #region Variables/Properties
-
-        public List<Exercise> Exercizes { get; set; } = new List<Exercise>();
-        #endregion
-
-    }
-
-
-
-    public class GymWork
-    {
-
-        #region Variables/Properties
-        public AdaptText Name { get; set; }
-        public int NumRounds { get; set; } = 0; //works w/ constructor
-        public List<List<int>> NumReps { get; set; } = new List<List<int>>();
-        public List<Exercise> Exercizes { get; set; } = new List<Exercise>();
-        #endregion
-
-        public void AddWork(Exercise e, int rounds, List<int> reps)
-        {
-            NumRounds++;
-            Exercizes.Add(e);
-            NumReps.Add(reps);
-        }
-
-        public GymWork()
-        {
-        }
-    }
-
-    public class AbWork
-    {
-        #region Variables/Properties
         public AdaptText Name { get; set; }
 
+        /*
+         * 1. the order of this list is CRITICAL for the operation of the SetList set/superset functionality
+         * 2. Exercizes and Equip/Gear lists need to be populated at the same time
+         */
         public List<Exercise> Exercizes { get; private set; } = new List<Exercise>();
 
-        public TimeSpan Duration { get; set; } //cumulative timespan of exercize duration 
+        //defines the set and/or superset structure of the workout. ints are indexes of the workout in the exercise list
+        public List<List<int>> SetList { get; set; } = new List<List<int>>();
 
-        public List<Gear> EquipmentRequired { get; set; } = new List<Gear>();
+        /*
+         *should be populated when the exercize list is populated as this is set from that list
+         */
+        public List<Gear> Equip { get; private set; }
         #endregion
 
-        private void SetGear()
+        private void populateEquipmentList()
         {
-            EquipmentRequired.Clear();
-            foreach (Exercise e in Exercizes)
+            foreach (Exercize e in Exercizes)
             {
-                foreach (Gear g in e.MyGear)
-                    if (!EquipmentRequired.Contains(g))
-                    {
-                        EquipmentRequired.Add(g);
-                    }
+                foreach(Gear g in e.MyGear)
+                {
+                    if (!Equip.Contains(g)) { Equip.Add(g); }
+                }
             }
         }
-    }
 
-   // public class AeroWork { }
+        #region Constructor
+
+        #endregion
+    }
 }

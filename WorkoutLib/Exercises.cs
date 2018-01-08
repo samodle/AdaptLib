@@ -4,26 +4,41 @@ namespace AdaptLib
 {
     public class Exercise 
     {
+        #region Variables/Properties
         public Guid ID = new Guid();
         public List<Gear> MyGear { get; set; } = new List<Gear>();
 
-        public AdaptText Name { get; set; }
-        public AdaptText Description { get; set; }
-        public AdaptText Instructions { get; set; }
+        //for example...
+        public AdaptText Name { get; set; }  //...scissor kicks 
+        public List<AdaptText> Aliases { get; set; } //...leg crossovers, side to side kicks
+        public AdaptText Description { get; set; } //...laying flat on back simultaneuosly kick legs laterally in opposite directions working the lower abdominal muscles
+        public AdaptText Instructions { get; set; }  //...more detailed step by step version of 'Description'
 
+        public List<int> Reps { get; set; } = new List<int>();  
+        public List<TimeSpan> Times { get; set; } = new List<TimeSpan>();
+        public List<double> Distances { get; set; } = new List<double>();
+
+        public bool DoIHaveReps { get { return (Reps.Count > 0 && !DoIHaveDistance && !DoIHaveTimes); } } 
+        public bool DoIHaveTimes { get { return (Times.Count > 0); } }
+        public bool DoIHaveDistance { get { return (Distances.Count > 0);  }} }
     
         public Tier1Muscle PrimaryMuscleGroup { get; set; }
         public Tier2Muscle SecondaryMuscleGroup { get; set; }
 
         /* To Do: Add image, adapttext dictionary */
+        #endregion
 
+        #region Constructor
         public Exercise(MisIdiomas l, string name, string description, Tier1Muscle m1)
         {
             this.Name.Add(name, l);
             this.Description.Add(description, l);
             this.PrimaryMuscleGroup = m1;
         }
+        #endregion
 
+
+        #region Equals/Hashcode Overrides
         //Equals
         public override bool Equals(object obj)
         {
@@ -53,5 +68,5 @@ namespace AdaptLib
             }
             return hash;
         }
-    }
+        #endregion  
 }
