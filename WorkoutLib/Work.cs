@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace AdaptLib
 {
-    public class Work
+    public class Workout
     {
         #region Variables/Properties
         public AdaptText Name { get; set; }
