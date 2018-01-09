@@ -6,7 +6,9 @@ namespace AdaptLib
     public class Workout
     {
         #region Variables/Properties
-        public AdaptText Name { get; set; }
+        public static int NumberOfWorkouts = 1;
+        public int ID { get; set; } = -1;
+        public AdaptText Name { get; set; } = new AdaptText();
 
         /*
          * 1. the order of this list is CRITICAL for the operation of the SetList set/superset functionality
@@ -35,7 +37,14 @@ namespace AdaptLib
         }
 
         #region Constructor
+        public Workout(MisIdiomas lang, string name)
+        {
+            ID = NumberOfWorkouts;
 
+            Name.Add(name, lang);
+
+            NumberOfWorkouts++;
+        }
         #endregion
     }
 }

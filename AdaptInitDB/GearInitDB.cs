@@ -191,6 +191,10 @@ namespace AdaptLib
             MasterExerciseList = eList;
 
             // Exercise a = new Exercise(MisIdiomas.english, "", MuscleT1.core);
+
+            //Workouts 
+            Workout Abs_3_HASFit = new Workout(MisIdiomas.english, "6 Pack Abs In 3 Minutes");
+
         }
     }
 }
