@@ -5,6 +5,9 @@ namespace AdaptLib
 {
     public class Gear
     {
+
+        //TD: for some things like box jumps height is the important metric
+
         #region Variables/Properties
         public static int NumberOfGear = 1;
         // public Guid ID { get; set; } = new Guid();
@@ -17,6 +20,8 @@ namespace AdaptLib
 
         public double WeightKGs { get; private set; }
         public double WeightLBs { get { return WeightKGs * Utils.LBsPerKG; } }
+
+        public double Height { get; set; } = Utils.NA;
 
         public bool DoIHaveWeight { get { return (WeightKGs != Utils.NA); } }
         #endregion

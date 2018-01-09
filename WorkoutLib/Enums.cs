@@ -5,7 +5,7 @@ namespace AdaptLib
 
     public enum Tier2Muscle {biceps, triceps, forearms }
 
-    public enum WorkoutEquipment { barbell, dumbell, speedladder, mat, box, chair, footprop, soupcans }
+    public enum WorkoutEquipment { barbell, dumbell, speedladder, mat, plyobox, propbox, chair, footprop, soupcans }
 
     public enum UnitType { metric, imperial}
 
