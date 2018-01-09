@@ -4,9 +4,6 @@ using System.Text;
 
 namespace AdaptLib
 {
-
-    // public enum WorkoutEquipment { barbell, dumbell, speedladder, mat, box, chair, footprop, soupcans }
-
     public static class GearInitDB
     {
         public static List<Gear> MasterGearList = new List<Gear>();
@@ -32,6 +29,12 @@ namespace AdaptLib
             g_pb.PC = pc;
             gList.Add(g_pb);
 
+            Gear g_prb = new Gear(WorkoutEquipment.plyobox, Utils.NA);
+            g_prb.AddText_NameDescription(MisIdiomas.english, "Prop Box", "Used for resting feet on or bearing relatively light loads (<150 lbs) during exercise.");
+            pc = new PriceCheck(new DateTime(2018, 1, 9, 8, 0, 0), 49.97, "https://www.walmart.com/ip/Gold-s-Gym-Extreme-Adjustable-Plyometric-Jump-Box/21811895", MisIdiomas.english);
+            g_prb.PC = pc;
+            gList.Add(g_prb);
+
 
             Gear g_db = new Gear(WorkoutEquipment.dumbell, Utils.NA);
             g_db.AddText_NameDescription(MisIdiomas.english, "Dumbell", "");
@@ -53,7 +56,6 @@ namespace AdaptLib
 
             //Next, add dependencies
 
-
             /*
             g = new Gear(WorkoutEquipment.plyobox, Utils.NA);
             g.AddText_NameDescription(MisIdiomas.english, "", "");
@@ -66,10 +68,81 @@ namespace AdaptLib
             //EXERCISE
             List<Exercise> eList = new List<Exercise>();
 
+            Exercise a0 = new Exercise(MisIdiomas.english, "Star Crunch", MuscleT1.core);
+
+            Exercise a1 = new Exercise(MisIdiomas.english, "Elbow Plank", MuscleT1.core);
+
+            Exercise a2 = new Exercise(MisIdiomas.english, "Raised Feet Elbow Plank", MuscleT1.core);
+
+            Exercise a3 = new Exercise(MisIdiomas.english, "Weighted Windshield Wiper", MuscleT1.core);
+
+            Exercise a4 = new Exercise(MisIdiomas.english, "Legs Up Alternate Hip-Up + Reach Crunch", MuscleT1.core); //up with legs then arms
+
+            Exercise a5 = new Exercise(MisIdiomas.english, "Hip-Ups", MuscleT1.core);
+
+            Exercise a6 = new Exercise(MisIdiomas.english, "Double Crunch w/ Leg Spread (Hands on head, bending knees)", MuscleT1.core);
+
+            Exercise a7 = new Exercise(MisIdiomas.english, "Alternating Leg Standing Crunch, Arms Extended", MuscleT1.core);
+
+            Exercise a8 = new Exercise(MisIdiomas.english, "Alternating Elbow To Opposite Knee, Hands On Head", MuscleT1.core);
+
+            Exercise a9 = new Exercise(MisIdiomas.english, "Side/Oblique Crunches, Standing hands on head, as leg kicks out to side torso bends in that direction", MuscleT1.core);
+
+            Exercise a10 = new Exercise(MisIdiomas.english, "Standing Twists, Knees Bent + Weight In Butt", MuscleT1.core);
+
+            Exercise a11 = new Exercise(MisIdiomas.english, "Standing Chop, One Leg At A Time Knee Thrusts Up While Arm Thrusts Down", MuscleT1.core);
+
+            Exercise a12 = new Exercise(MisIdiomas.english, "High Plank Knee to Elbows", MuscleT1.core);
+
+            Exercise a13 = new Exercise(MisIdiomas.english, "Lying Leg Raise + Crunch", MuscleT1.core);
+
+            Exercise a14 = new Exercise(MisIdiomas.english, "High Plank + Shoulder Touches", MuscleT1.core);
+
+            Exercise a15 = new Exercise(MisIdiomas.english, "Lying Leg Twist", MuscleT1.core);
+
+            Exercise a16 = new Exercise(MisIdiomas.english, "Lying Knee Twist", MuscleT1.core);
+
+            Exercise a17 = new Exercise(MisIdiomas.english, "Russian Twists", MuscleT1.core);
 
 
-
+            eList.Add(a0);
+            eList.Add(a1);
+            eList.Add(a2);
+            eList.Add(a3);
+            eList.Add(a4);
+            eList.Add(a5);
+            eList.Add(a6);
+            eList.Add(a7);
+            eList.Add(a8);
+            eList.Add(a9);
+            eList.Add(a10);
+            eList.Add(a11);
+            eList.Add(a12);
+            eList.Add(a13);
+            eList.Add(a14);
+            eList.Add(a15);
+            eList.Add(a16);
+            eList.Add(a17);
+            eList.Add(a18);
+            eList.Add(a19);
+            eList.Add(a20);
             MasterExerciseList = eList;
+
+            // Exercise a = new Exercise(MisIdiomas.english, "", MuscleT1.core);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

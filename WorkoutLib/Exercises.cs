@@ -16,10 +16,14 @@ namespace AdaptLib
 
         //for example...
         public AdaptText Name { get; set; } = new AdaptText();  //...scissor kicks 
-        public List<AdaptText> Aliases { get; set; } //...leg crossovers, side to side kicks
+        public List<AdaptText> Aliases { get; set; } = new List<AdaptText>(); //...leg crossovers, side to side kicks
         public AdaptText Description { get; set; } = new AdaptText(); //...laying flat on back simultaneuosly kick legs laterally in opposite directions working the lower abdominal muscles
-        public AdaptText Instructions { get; set; } = new AdaptText();  //...more detailed step by step version of 'Description'
+        public List<AdaptText> Instructions { get; set; } = new List<AdaptText>();  //...more detailed step by step version of 'Description'. each item in the list is a single instruction/step
 
+        public List<MuscleT1> PrimaryMuscleGroup { get; set; } = new List<MuscleT1>();
+        public List<MuscleT2> SecondaryMuscleGroup { get; set; } = new List<MuscleT2>();
+
+        /*
         public List<int> Reps { get; set; } = new List<int>();
         public List<TimeSpan> Times { get; set; } = new List<TimeSpan>();
         public List<double> Distances { get; set; } = new List<double>();
@@ -27,22 +31,20 @@ namespace AdaptLib
         public bool DoIHaveReps { get { return (Reps.Count > 0 && !DoIHaveDistance && !DoIHaveTimes); } }
         public bool DoIHaveTimes { get { return (Times.Count > 0); } }
         public bool DoIHaveDistance { get { return (Distances.Count > 0); } }
+        */
 
-        public Tier1Muscle PrimaryMuscleGroup { get; set; }
-        public Tier2Muscle SecondaryMuscleGroup { get; set; }
 
         /* To Do: Add image, adapttext dictionary */
         #endregion
 
         #region Constructor
-        public Exercise(MisIdiomas l, string name, string description, Tier1Muscle m1)
+        public Exercise(MisIdiomas l, string name, MuscleT1 m1)
         {
             ID = NumberOfExercises;
             NumberOfExercises++;
 
             this.Name.Add(name, l);
-            this.Description.Add(description, l);
-            this.PrimaryMuscleGroup = m1;
+            this.PrimaryMuscleGroup.Add(m1);
         }
         #endregion
 
