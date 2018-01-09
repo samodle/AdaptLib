@@ -104,6 +104,49 @@ namespace AdaptLib
 
             Exercise a17 = new Exercise(MisIdiomas.english, "Russian Twists", MuscleT1.core);
 
+            Exercise a18 = new Exercise(MisIdiomas.english, "Standing Side Crunches", MuscleT1.core);
+
+            Exercise a19 = new Exercise(MisIdiomas.english, "Standing Same Arm + Leg Reach Up", MuscleT1.core);
+
+            Exercise a20 = new Exercise(MisIdiomas.english, "Elbow Side Plank w/ Dips", MuscleT1.core);
+
+            Exercise a21 = new Exercise(MisIdiomas.english, "sitting cruch w twist knee to elbow, alterating sides. optional legs up on chair", MuscleT1.core);
+
+            Exercise a22 = new Exercise(MisIdiomas.english, "sitting cruch position hip thrusters, optional legs on chair", MuscleT1.core);
+
+            Exercise a23 = new Exercise(MisIdiomas.english, "leg raise and split at bottom", MuscleT1.core);
+
+            Exercise a24 = new Exercise(MisIdiomas.english, "legs up toe touches", MuscleT1.core);
+
+            Exercise a25 = new Exercise(MisIdiomas.english, "full body isometric hold, legs head and arms up and still", MuscleT1.core);
+
+            Exercise a26 = new Exercise(MisIdiomas.english, "Low Plank Position Hip Thrusters", MuscleT1.core);
+
+            Exercise a27 = new Exercise(MisIdiomas.english, "Weighted Crunch", MuscleT1.core);
+
+            Exercise a28 = new Exercise(MisIdiomas.english, "Sprinter (sitting, opposite elbow to knee)", MuscleT1.core);
+
+            Exercise a29 = new Exercise(MisIdiomas.english, "high plank alternating knee to chest and then rotate in", MuscleT1.core);
+
+            Exercise a30 = new Exercise(MisIdiomas.english, "laying on back legs six inches off the ground", MuscleT1.core);
+
+            Exercise a31 = new Exercise(MisIdiomas.english, "0-45 Leg Raise", MuscleT1.core);
+
+            Exercise a32 = new Exercise(MisIdiomas.english, "45-90 Leg Raise", MuscleT1.core);
+
+            Exercise a33 = new Exercise(MisIdiomas.english, "0-90 Leg Raise", MuscleT1.core);
+
+            Exercise a34 = new Exercise(MisIdiomas.english, "0-90 Knee Raise", MuscleT1.core);
+
+            Exercise a35 = new Exercise(MisIdiomas.english, "The Clam", MuscleT1.core);
+
+            Exercise a36 = new Exercise(MisIdiomas.english, "Scissor Kicks", MuscleT1.core);
+
+            Exercise a37 = new Exercise(MisIdiomas.english, "Elbow Side Plank On Knee w/ Dips", MuscleT1.core);
+
+            Exercise a38 = new Exercise(MisIdiomas.english, "Elbow Side Plank", MuscleT1.core);
+
+            Exercise a39 = new Exercise(MisIdiomas.english, "Elbow Side Plank On Knee", MuscleT1.core);
 
             eList.Add(a0);
             eList.Add(a1);
@@ -126,6 +169,25 @@ namespace AdaptLib
             eList.Add(a18);
             eList.Add(a19);
             eList.Add(a20);
+            eList.Add(a21);
+            eList.Add(a22);
+            eList.Add(a23);
+            eList.Add(a24);
+            eList.Add(a25);
+            eList.Add(a26);
+            eList.Add(a27);
+            eList.Add(a28);
+            eList.Add(a29);
+            eList.Add(a30);
+            eList.Add(a31);
+            eList.Add(a32);
+            eList.Add(a33);
+            eList.Add(a34);
+            eList.Add(a35);
+            eList.Add(a36);
+            eList.Add(a37);
+            eList.Add(a38);
+            eList.Add(a39);
             MasterExerciseList = eList;
 
             // Exercise a = new Exercise(MisIdiomas.english, "", MuscleT1.core);
