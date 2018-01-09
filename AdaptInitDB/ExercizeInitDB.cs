@@ -4,7 +4,10 @@ using System.Text;
 
 namespace AdaptLib
 {
-    public static class ExercizeInitDB
+    public static class ExerciseInitDB
     {
+ 
+
+
     }
 }
