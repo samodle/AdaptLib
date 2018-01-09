@@ -17,13 +17,15 @@ namespace AdaptLib
         public PriceCheck(DateTime t,  double price, string url, MisIdiomas i)
         {
             LastUpdate = t;
-           // URL.Add( = url;
+            URL.Add(url,i);
             PriceUSD = price;
         }
     }
 
     public class AdaptText
     {
+        public Dictionary<MisIdiomas, string> AString = new Dictionary<MisIdiomas, string>();
+
         /* TO DO: WRITE GETTER AND SETTER FUNCTIONS HERE */
         public void Add(string s, MisIdiomas i)
         {
@@ -39,8 +41,7 @@ namespace AdaptLib
             return r;
         }
 
-        public Dictionary<MisIdiomas, string> AString = new Dictionary<MisIdiomas, string>();
-
+   
         #region Constructors
         public AdaptText(string s, MisIdiomas lang)
         {

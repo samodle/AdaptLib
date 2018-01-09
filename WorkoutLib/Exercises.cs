@@ -5,14 +5,20 @@ namespace AdaptLib
     public class Exercise
     {
         #region Variables/Properties
-        public Guid ID = new Guid();
+        //public Guid ID = new Guid();
+        public static int NumberOfExercises = 1;
+        public int ID = -1;
         public List<Gear> MyGear { get; set; } = new List<Gear>();
 
+        public List<int> HarderIDs { get; set; } = new List<int>();
+        public List<int> EasierIDs { get; set; } = new List<int>();
+        public List<int> AltIDs { get; set; } = new List<int>();
+
         //for example...
-        public AdaptText Name { get; set; }  //...scissor kicks 
+        public AdaptText Name { get; set; } = new AdaptText();  //...scissor kicks 
         public List<AdaptText> Aliases { get; set; } //...leg crossovers, side to side kicks
-        public AdaptText Description { get; set; } //...laying flat on back simultaneuosly kick legs laterally in opposite directions working the lower abdominal muscles
-        public AdaptText Instructions { get; set; }  //...more detailed step by step version of 'Description'
+        public AdaptText Description { get; set; } = new AdaptText(); //...laying flat on back simultaneuosly kick legs laterally in opposite directions working the lower abdominal muscles
+        public AdaptText Instructions { get; set; } = new AdaptText();  //...more detailed step by step version of 'Description'
 
         public List<int> Reps { get; set; } = new List<int>();
         public List<TimeSpan> Times { get; set; } = new List<TimeSpan>();
@@ -31,6 +37,9 @@ namespace AdaptLib
         #region Constructor
         public Exercise(MisIdiomas l, string name, string description, Tier1Muscle m1)
         {
+            ID = NumberOfExercises;
+            NumberOfExercises++;
+
             this.Name.Add(name, l);
             this.Description.Add(description, l);
             this.PrimaryMuscleGroup = m1;

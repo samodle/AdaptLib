@@ -14,6 +14,8 @@ namespace AdaptConsole2
 
             Console.WriteLine("Wassup World! err ref#80085");
             Console.WriteLine("MasterGearList.Count = " + GearInitDB.MasterGearList.Count);
+            GearInitDB.MasterGearList = GearInitDB.getMasterGearList();
+            Console.WriteLine("MasterGearList.Count = " + GearInitDB.MasterGearList.Count);
             Console.Write("Press any key to continue...");
             Console.ReadKey(true);
 

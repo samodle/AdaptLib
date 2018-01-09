@@ -9,5 +9,5 @@ namespace AdaptLib
 
     public enum UnitType { metric, imperial}
 
-    public enum MisIdiomas {english, espanol, francais, korean }
+    public enum MisIdiomas {english, espanol, francais, korean }  //english technical (isometric etc), englishAlt
 }
