@@ -2,8 +2,8 @@
 namespace AdaptLib
 {
     //workout specific
-    public enum TorsoPositionT1 { standing_upright, sitting, kneeling, laying}
-    public enum LegPositionT1 { }
+   // public enum TorsoPositionT1 { standing_upright, sitting, kneeling, laying}
+   // public enum LegPositionT1 { }
 
     public enum MuscleT1{arms, legs, chest, neck, back, core }
 
@@ -11,6 +11,7 @@ namespace AdaptLib
 
     public enum WorkoutEquipment { barbell, dumbell, speedladder, mat, plyobox, propbox, chair, footprop, soupcans }
 
+    public enum WeightStatus { none, optional, required}
 
     //other
     public enum UnitType { metric, imperial}

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 namespace AdaptLib
 {
+    public class ExerciseParams
+    {
+        public MuscleT1 PrimaryMuscle { get; set; }
+        public WeightStatus WeightStat { get; set; }
+
+    }
+
     public class Exercise
     {
         #region Variables/Properties
@@ -14,6 +21,8 @@ namespace AdaptLib
         public List<int> EasierIDs { get; set; } = new List<int>();
         public List<int> AltIDs { get; set; } = new List<int>();
 
+        public WeightStatus WeightsNeeded { get; set; }
+
         //for example...
         public AdaptText Name { get; set; } = new AdaptText();  //...scissor kicks 
         public List<AdaptText> Aliases { get; set; } = new List<AdaptText>(); //...leg crossovers, side to side kicks
@@ -23,37 +32,21 @@ namespace AdaptLib
         public List<MuscleT1> PrimaryMuscleGroup { get; set; } = new List<MuscleT1>();
         public List<MuscleT2> SecondaryMuscleGroup { get; set; } = new List<MuscleT2>();
 
-        /*
-        public List<int> Reps { get; set; } = new List<int>();
-        public List<TimeSpan> Times { get; set; } = new List<TimeSpan>();
-        public List<double> Distances { get; set; } = new List<double>();
-
-        public bool DoIHaveReps { get { return (Reps.Count > 0 && !DoIHaveDistance && !DoIHaveTimes); } }
-        public bool DoIHaveTimes { get { return (Times.Count > 0); } }
-        public bool DoIHaveDistance { get { return (Distances.Count > 0); } }
-        */
-
-
         /* To Do: Add image, adapttext dictionary */
         #endregion
 
         #region Constructor
-        public Exercise(MisIdiomas l, string name,  MuscleT1 m1)
+        public Exercise(MisIdiomas l, string name, ExerciseParams p)
         {
             ID = NumberOfExercises;
             NumberOfExercises++;
 
             this.Name.Add(name, l);
-            this.PrimaryMuscleGroup.Add(m1);
+            this.PrimaryMuscleGroup.Add(p.PrimaryMuscle);
         }
-        public Exercise(MisIdiomas l, string name, string description, MuscleT1 m1)
+        public Exercise(MisIdiomas l, string name, ExerciseParams p, string description) : this(l, name, p)
         {
-            ID = NumberOfExercises;
-            NumberOfExercises++;
-
-            this.Name.Add(name, l);
             this.Description.Add(description, l);
-            this.PrimaryMuscleGroup.Add(m1);
         }
         #endregion
 

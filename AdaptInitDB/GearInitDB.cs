@@ -75,7 +75,7 @@ namespace AdaptLib
 
             Exercise a2 = new Exercise(MisIdiomas.EN, "Raised Feet Elbow Plank", "Hold your body straight, parallel to the ground resting on your feet on a chair or raised surface and your elbows on the ground.", MuscleT1.core);
 
-            Exercise a3 = new Exercise(MisIdiomas.EN, "Weighted Windshield Wiper", "Start on your back with your legs at a 90 degree angle", MuscleT1.core);
+            Exercise a3 = new Exercise(MisIdiomas.EN, "Windshield Wiper", "Start on your back with your legs at a 90 degree angle", MuscleT1.core);
 
             Exercise a4 = new Exercise(MisIdiomas.EN, "Hip-Up + Reach Crunch","Start lying on your back with legs straight up. Alternate between hip up and reach crunch.", MuscleT1.core); //up with legs then arms
 
@@ -121,7 +121,7 @@ namespace AdaptLib
 
             Exercise a26 = new Exercise(MisIdiomas.EN, "Downward Hip Thrusters","From the low plank position, thrust your hips up and down essentially in a humping motion. It looks funny but you won't be laughing for long.", MuscleT1.core);
 
-            Exercise a27 = new Exercise(MisIdiomas.EN, "Weighted Crunch", "Laying on back with knees up, hold weight on chest and lift both shoulder blades off the ground.", MuscleT1.core);
+        //    Exercise a27 = new Exercise(MisIdiomas.EN, "Weighted Crunch", "Laying on back with knees up, hold weight on chest and lift both shoulder blades off the ground.", MuscleT1.core);
 
             Exercise a28 = new Exercise(MisIdiomas.EN, "Sprinter","sitting, opposite elbow to knee. Lean torso back to achieve 90 degree angle w knees w feet resting on ground.", MuscleT1.core);
 
@@ -197,7 +197,15 @@ namespace AdaptLib
 
             //Workouts 
             Workout Abs_3_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 3 Minutes");
+            Abs_3_HASFit.Exercises.Add(a13); //legs up double reach
+            Abs_3_HASFit.Exercises.Add(a3);
+            Abs_3_HASFit.Exercises.Add(a2);
 
+            Workout Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
+            Abs_3_HASFit.Exercises.Add(a0);
+            Abs_3_HASFit.Exercises.Add(a1);
+            Abs_3_HASFit.Exercises.Add(a5);
+            Abs_3_HASFit.Exercises.Add(a1);
         }
     }
 }

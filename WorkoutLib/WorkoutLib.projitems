@@ -16,5 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)PlanLibrary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Work.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorkoutStructure.cs" />
   </ItemGroup>
 </Project>
