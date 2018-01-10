@@ -38,12 +38,21 @@ namespace AdaptLib
         #endregion
 
         #region Constructor
-        public Exercise(MisIdiomas l, string name, MuscleT1 m1)
+        public Exercise(MisIdiomas l, string name,  MuscleT1 m1)
         {
             ID = NumberOfExercises;
             NumberOfExercises++;
 
             this.Name.Add(name, l);
+            this.PrimaryMuscleGroup.Add(m1);
+        }
+        public Exercise(MisIdiomas l, string name, string description, MuscleT1 m1)
+        {
+            ID = NumberOfExercises;
+            NumberOfExercises++;
+
+            this.Name.Add(name, l);
+            this.Description.Add(description, l);
             this.PrimaryMuscleGroup.Add(m1);
         }
         #endregion

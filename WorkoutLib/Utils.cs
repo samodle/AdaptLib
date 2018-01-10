@@ -32,7 +32,7 @@ namespace AdaptLib
             AString.Add(i, s);
         }
 
-        public string EN{ get {return Get(MisIdiomas.english); }}
+        public string EN{ get {return Get(MisIdiomas.EN); }}
 
         public string Get(MisIdiomas lang)
         {
@@ -41,7 +41,6 @@ namespace AdaptLib
             return r;
         }
 
-   
         #region Constructors
         public AdaptText(string s, MisIdiomas lang)
         {
