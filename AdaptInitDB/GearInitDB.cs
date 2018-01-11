@@ -78,7 +78,7 @@ namespace AdaptLib
 
             Exercise a2 = new Exercise(ps, MisIdiomas.EN, "Raised Feet Elbow Plank", "Hold your body straight, parallel to the ground resting on your feet on a chair or raised surface and your elbows on the ground.");
 
-            Exercise a3 = new Exercise(ps, MisIdiomas.EN, "Windshield Wiper", "Start on your back with your legs at a 90 degree angle");
+            Exercise a3 = new Exercise(ps, MisIdiomas.EN, "Windshield Wiper", "Start on your back with your legs at a 90 degree angle to your torso.  Feet make a V motion coming up on alternating sides of your hands.");
             a2.WeightsNeeded = WeightStatus.preferred;
 
             Exercise a4 = new Exercise(ps2, MisIdiomas.EN, "Hip-Up + Reach Crunch", "Start lying on your back with legs straight up. Alternate between hip up and reach crunch."); //up with legs then arms
@@ -126,7 +126,11 @@ namespace AdaptLib
 
             Exercise a26 = new Exercise(ps, MisIdiomas.EN, "Downward Hip Thrusters", "From the low plank position, thrust your hips up and down essentially in a humping motion. It looks funny but you won't be laughing for long.");
 
-                Exercise a27 = new Exercise(ps, MisIdiomas.EN, "Crunch", "Laying on back with knees up, hold weight on chest and lift both shoulder blades off the ground.");
+            Exercise a27 = new Exercise(ps, MisIdiomas.EN, "Crunch", "Laying on back with knees up, hold weight on chest and lift both shoulder blades off the ground.");
+            a27.WeightsNeeded = WeightStatus.preferred;
+
+            Exercise a40 = new Exercise(ps, MisIdiomas.EN, "Reach Crunch", "Laying on back with knees up and feed on ground,  lift both shoulder blades off the ground reaching as straight up as possible.");
+            a40.WeightsNeeded = WeightStatus.optional;
 
             Exercise a28 = new Exercise(ps2, MisIdiomas.EN, "Sprinter", "sitting, opposite elbow to knee. Lean torso back to achieve 90 degree angle w knees w feet resting on ground.");
 
@@ -156,7 +160,7 @@ namespace AdaptLib
 
             Exercise a39 = new Exercise(ps, MisIdiomas.EN, "Elbow Side Knee Plank", "Resting on your side on one elbow and your knees");
 
-
+            //nordic track, plank reach twists, situp twist down
 
             eList.Add(a0);
             eList.Add(a1);
@@ -272,7 +276,7 @@ namespace AdaptLib
 
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            setL = new List<int> { 0, 1, 2};
+            setL = new List<int> { 0, 1, 2 };
             timeL = new List<double> { 0.5, 0.5, 0.5 };
             x.SetList.Add(setL); //4x
             x.TimeList.Add(timeL);
@@ -306,8 +310,49 @@ namespace AdaptLib
             Abs_8A_HASFit.Exercises.Add(a24); //legs up toe touches
             Abs_8A_HASFit.Exercises.Add(a25); //full body iso
             Abs_8A_HASFit.Exercises.Add(a26); //low plank hip thrusters
-            Abs_8A_HASFit.Exercises.Add(a27); //
+            Abs_8A_HASFit.Exercises.Add(a27); //weighted crunch
             Abs_8A_HASFit.Sets = x;
+
+
+
+            x = new WorkoutStructure(anyTimes: true, anyDistances: false);
+            setL = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7 };
+            timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 };
+            x.SetList.Add(setL); //2x
+            x.TimeList.Add(timeL);
+            x.SetList.Add(setL);
+            x.TimeList.Add(timeL);
+
+            Workout Abs_8Lower_HASFit = new Workout(MisIdiomas.EN, "Lower Ab Workout");
+            Abs_8Lower_HASFit.Exercises.Add(a28); //sprinter
+            Abs_8Lower_HASFit.Exercises.Add(a29); //high plank knee 2 chest
+            Abs_8Lower_HASFit.Exercises.Add(a30); //6 inches
+            Abs_8Lower_HASFit.Exercises.Add(a31); //0-45
+            Abs_8Lower_HASFit.Exercises.Add(a32); //45-90
+            Abs_8Lower_HASFit.Exercises.Add(a5); //hip-ups
+            Abs_8Lower_HASFit.Exercises.Add(a36); //scissor kicks
+            Abs_8Lower_HASFit.Exercises.Add(a35); //the clam
+            Abs_8Lower_HASFit.Sets = x;
+
+
+
+            x = new WorkoutStructure(anyTimes: true, anyDistances: false);
+            setL = new List<int> { 0, 1, 2, 3, 4, 5, 6, 6 };
+            timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 };
+            x.SetList.Add(setL); //2x
+            x.TimeList.Add(timeL);
+            x.SetList.Add(setL);
+            x.TimeList.Add(timeL);
+
+            Workout Abs_8B_HASFit = new Workout(MisIdiomas.EN, "Shredding 8 Min Abs");
+            Abs_8B_HASFit.Exercises.Add(a35); //clam
+            Abs_8B_HASFit.Exercises.Add(a15); //leg raise
+            Abs_8B_HASFit.Exercises.Add(a40); //reach 4 the sky, legs down
+            Abs_8B_HASFit.Exercises.Add(a31); //0-45
+            Abs_8B_HASFit.Exercises.Add(a32); //45-90
+            Abs_8B_HASFit.Exercises.Add(a33); //0-90
+            Abs_8B_HASFit.Exercises.Add(a38); //low side plank
+            Abs_8B_HASFit.Sets = x;
         }
     }
 }
