@@ -7,6 +7,12 @@ namespace AdaptLib
         public MuscleT1 PrimaryMuscle { get; set; }
         public WeightStatus WeightStat { get; set; }
 
+
+        public ExerciseParams(MuscleT1 m1, WeightStatus w)
+        {
+            WeightStat = w;
+            PrimaryMuscle = m1;
+        }
     }
 
     public class Exercise
@@ -36,7 +42,7 @@ namespace AdaptLib
         #endregion
 
         #region Constructor
-        public Exercise(MisIdiomas l, string name, ExerciseParams p)
+        public Exercise(ExerciseParams p, MisIdiomas l, string name)
         {
             ID = NumberOfExercises;
             NumberOfExercises++;
@@ -44,7 +50,7 @@ namespace AdaptLib
             this.Name.Add(name, l);
             this.PrimaryMuscleGroup.Add(p.PrimaryMuscle);
         }
-        public Exercise(MisIdiomas l, string name, ExerciseParams p, string description) : this(l, name, p)
+        public Exercise(ExerciseParams p, MisIdiomas l, string name, string description) : this(p, l, name)
         {
             this.Description.Add(description, l);
         }

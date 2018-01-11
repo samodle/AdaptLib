@@ -9,7 +9,6 @@
     <Import_RootNamespace>AdaptInitDB</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)ExercizeInitDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GearInitDB.cs" />
   </ItemGroup>
 </Project>

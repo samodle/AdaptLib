@@ -11,7 +11,7 @@ namespace AdaptLib
 
     public enum WorkoutEquipment { barbell, dumbell, speedladder, mat, plyobox, propbox, chair, footprop, soupcans }
 
-    public enum WeightStatus { none, optional, required}
+    public enum WeightStatus { none, optional, preferred, required}
 
     //other
     public enum UnitType { metric, imperial}
