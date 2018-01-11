@@ -21,14 +21,14 @@ namespace AdaptLib
         /*
          *should be populated when the exercize list is populated as this is set from that list
          */
-        public List<Gear> Equip { get; private set; }
+        public List<int> Equip { get; private set; }
         #endregion
 
         private void populateEquipmentList()
         {
             foreach (Exercise e in Exercises)
             {
-                foreach (Gear g in e.MyGear)
+                foreach (int g in e.MyGear)
                 {
                     if (!Equip.Contains(g)) { Equip.Add(g); }
                 }
@@ -43,6 +43,11 @@ namespace AdaptLib
             Name.Add(name, lang);
 
             NumberOfWorkouts++;
+        }
+
+        public Workout(MisIdiomas lang, string name, WorkoutStructure s) : this(lang, name)
+        {
+            Sets = s;
         }
         #endregion
     }

@@ -21,7 +21,7 @@ namespace AdaptLib
         //public Guid ID = new Guid();
         public static int NumberOfExercises = 1;
         public int ID = -1;
-        public List<Gear> MyGear { get; set; } = new List<Gear>();
+        public List<int> MyGear { get; set; } = new List<int>();
 
         public List<int> HarderIDs { get; set; } = new List<int>();
         public List<int> EasierIDs { get; set; } = new List<int>();

@@ -9,7 +9,7 @@ namespace AdaptLib
         //defines the set and/or superset structure of the workout. ints are indexes of the workout in the exercise list
         public List<List<int>> SetList { get; set; } = new List<List<int>>();
         public List<List<int>> RepList { get; set; } = new List<List<int>>();
-        public List<List<double>> TimeList { get; set; }// = new List<List<double>>(); //seconds
+        public List<List<double>> TimeList { get; set; }// = new List<List<double>>(); //MINUTES
         public List<List<double>> DistList { get; set; }// = new List<List<double>>();
 
         public bool DoIHaveTimes { get; private set; } = false;
