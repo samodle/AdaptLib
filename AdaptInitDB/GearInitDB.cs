@@ -353,6 +353,48 @@ namespace AdaptLib
             Abs_8B_HASFit.Exercises.Add(a33); //0-90
             Abs_8B_HASFit.Exercises.Add(a38); //low side plank
             Abs_8B_HASFit.Sets = x;
+
+
+
+
+
+            //WORKOUT PLAN
+            WorkoutPlan HASFit_30DayAbs_OG = new WorkoutPlan(MisIdiomas.EN, "Six Pack Abs In 30 Days");
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5Standing_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit })); //'Shredding 8 Minute Abs'
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_3_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit, Abs_6Oblique_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5Standing_HASFit, Abs_5_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit, Abs_8A_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_5_HASFit}));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> {Abs_8Lower_HASFit, Abs_8A_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit, Abs_8B_HASFit }));
+
         }
     }
 }

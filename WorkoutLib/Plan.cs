@@ -27,12 +27,21 @@ namespace AdaptLib
 
         private void setGearFromWork()
         {
-
+            foreach(Workout w in Workouts)
+            {
+                //?
+            }
         }
     }
 
     public class WorkoutPlan
     {
-        public List<DailyPlan> Days = new List<DailyPlan>();
+        public AdaptText Name { get; set; }
+        public List<DailyPlan> Days { get; set; } = new List<DailyPlan>();
+
+        public WorkoutPlan(MisIdiomas lang, string nombre)
+        {
+            Name.Add(nombre, lang);
+        }
     }
 }
