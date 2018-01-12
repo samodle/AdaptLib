@@ -11,6 +11,14 @@ namespace AdaptLib
 
         public static void setMasterLists()
         {
+            WorkoutStructure x;
+            Workout Abs_3_HASFit;
+
+            Workout Abs_5_HASFit;
+            Workout Abs_5Standing_HASFit;
+            Workout Abs_6_HASFit;
+
+            #region Gear
             List<Gear> gList = new List<Gear>();
             PriceCheck pc;
             //Gear g;
@@ -64,7 +72,9 @@ namespace AdaptLib
             */
 
             MasterGearList = gList;
+            #endregion
 
+            #region Core Exercises
             ExerciseParams ps = new ExerciseParams(MuscleT1.core, WeightStatus.none);
             ExerciseParams ps2 = new ExerciseParams(MuscleT1.core, WeightStatus.optional);
 
@@ -79,7 +89,7 @@ namespace AdaptLib
             Exercise a2 = new Exercise(ps, MisIdiomas.EN, "Raised Feet Elbow Plank", "Hold your body straight, parallel to the ground resting on your feet on a chair or raised surface and your elbows on the ground.");
 
             Exercise a3 = new Exercise(ps, MisIdiomas.EN, "Windshield Wiper", "Start on your back with your legs at a 90 degree angle to your torso.  Feet make a V motion coming up on alternating sides of your hands.");
-            a2.WeightsNeeded = WeightStatus.preferred;
+            a3.WeightsNeeded = WeightStatus.preferred;
 
             Exercise a4 = new Exercise(ps2, MisIdiomas.EN, "Hip-Up + Reach Crunch", "Start lying on your back with legs straight up. Alternate between hip up and reach crunch."); //up with legs then arms
 
@@ -202,18 +212,43 @@ namespace AdaptLib
             eList.Add(a37);
             eList.Add(a38);
             eList.Add(a39);
-            MasterExerciseList = eList;
+            #endregion
 
-            // Exercise a = new Exercise(MisIdiomas.english, "", MuscleT1.core);
+            #region Gym Exercises
+            ps = new ExerciseParams(MuscleT1.arms, WeightStatus.none);
+            ps2 = new ExerciseParams(MuscleT1.chest, WeightStatus.optional);
+            ExerciseParams ps3 = new ExerciseParams(MuscleT1.back, WeightStatus.required);
 
+            Exercise a41 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Chest Press", "");
+            Exercise a42 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Supported Row", "");
+            Exercise a43 = new Exercise(ps, MisIdiomas.EN, "Dumbbell Arnold Press", "");
+            Exercise a44 = new Exercise(ps, MisIdiomas.EN, "Dumbbell Upright Row", "");
+            Exercise a45 = new Exercise(ps, MisIdiomas.EN, "Cable Crossovers", "");
+            Exercise a46 = new Exercise(ps, MisIdiomas.EN, "Low Rope Face Pulls", "");
+
+            Exercise a47 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a48 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a49 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a50 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise a51 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a52 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a53 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+
+
+            //Exercise a = new Exercise(ps, MisIdiomas.EN, "", "");
+            #endregion
+
+            #region Core Workouts
             //Workouts 
-            WorkoutStructure x = new WorkoutStructure(anyTimes: true, anyDistances: false);
+            x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             var setL = new List<int> { 0, 1, 2 };
             var timeL = new List<double> { 1, 1, 1 };
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_3_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 3 Minutes");
+            Abs_3_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 3 Minutes");
             Abs_3_HASFit.Exercises.Add(a13); //legs up double reach
             Abs_3_HASFit.Exercises.Add(a3);  //windshield wiper
             Abs_3_HASFit.Exercises.Add(a2);  //low plank, raised feet
@@ -229,7 +264,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
+             Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
             Abs_5_HASFit.Exercises.Add(a0);  //star crunch
             Abs_5_HASFit.Exercises.Add(a1);  //low plank
             Abs_5_HASFit.Exercises.Add(a5);  //hip-ups
@@ -247,7 +282,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_5Standing_HASFit = new Workout(MisIdiomas.EN, "5 Minute Standing Abs Workout");
+            Abs_5Standing_HASFit = new Workout(MisIdiomas.EN, "5 Minute Standing Abs Workout");
             Abs_5Standing_HASFit.Exercises.Add(a7); //alt leg standing crunch, arms extended
             Abs_5Standing_HASFit.Exercises.Add(a8); //alt elbow 2 knee hands on head
             Abs_5Standing_HASFit.Exercises.Add(a9); //oblique crunches
@@ -264,7 +299,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
+             Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
             Abs_6_HASFit.Exercises.Add(a12); //high plank knee to elbow
             Abs_6_HASFit.Exercises.Add(a13); //lying leg raise + crunch
             Abs_6_HASFit.Exercises.Add(a14); //high plank + shoulder touches
@@ -354,10 +389,10 @@ namespace AdaptLib
             Abs_8B_HASFit.Exercises.Add(a38); //low side plank
             Abs_8B_HASFit.Sets = x;
 
+            #endregion
 
 
-
-
+            #region Finite Plans
             //WORKOUT PLAN
             WorkoutPlan HASFit_30DayAbs_OG = new WorkoutPlan(MisIdiomas.EN, "Six Pack Abs In 30 Days");
             HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit }));
@@ -389,12 +424,14 @@ namespace AdaptLib
             HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
             HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
             HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_5_HASFit}));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_5_HASFit }));
             HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
 
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> {Abs_8Lower_HASFit, Abs_8A_HASFit }));
+            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit, Abs_8A_HASFit }));
             HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit, Abs_8B_HASFit }));
+            #endregion
 
+            MasterExerciseList = eList;
         }
     }
 }
