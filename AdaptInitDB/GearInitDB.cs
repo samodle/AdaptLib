@@ -11,12 +11,29 @@ namespace AdaptLib
 
         public static void setMasterLists()
         {
+            #region Variables
             WorkoutStructure x;
-            Workout Abs_3_HASFit;
 
+            //Core
+            Workout Abs_3_HASFit;
             Workout Abs_5_HASFit;
             Workout Abs_5Standing_HASFit;
             Workout Abs_6_HASFit;
+            Workout Abs_6Oblique_HASFit;
+            Workout Abs_8A_HASFit;
+            Workout Abs_8Lower_HASFit;
+            Workout Abs_8B_HASFit;
+
+            //Gym
+            Workout Gym_Upper_HASFit_00;
+            Workout Gym_Upper_HASFit_01;
+            Workout Gym_Lower_HASFit_00;
+            Workout Gym_Lower_HASFit_01;
+
+            List<int> setL;
+            List<double> timeL;
+            List<int> repL;
+            #endregion
 
             #region Gear
             List<Gear> gList = new List<Gear>();
@@ -215,8 +232,8 @@ namespace AdaptLib
             #endregion
 
             #region Gym Exercises
-            ps = new ExerciseParams(MuscleT1.arms, WeightStatus.none);
-            ps2 = new ExerciseParams(MuscleT1.chest, WeightStatus.optional);
+            ps = new ExerciseParams(MuscleT1.arms, WeightStatus.required);
+            ps2 = new ExerciseParams(MuscleT1.arms, WeightStatus.optional);
             ExerciseParams ps3 = new ExerciseParams(MuscleT1.back, WeightStatus.required);
 
             Exercise a41 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Chest Press", "");
@@ -226,25 +243,100 @@ namespace AdaptLib
             Exercise a45 = new Exercise(ps, MisIdiomas.EN, "Cable Crossovers", "");
             Exercise a46 = new Exercise(ps, MisIdiomas.EN, "Low Rope Face Pulls", "");
 
-            Exercise a47 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a48 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a49 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a50 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a47 = new Exercise(ps, MisIdiomas.EN, "Squat w/ Elevated Heels", "");
+            Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "");
+            Exercise a49 = new Exercise(ps, MisIdiomas.EN, "One Leg Squat", "");
+            Exercise a50 = new Exercise(ps, MisIdiomas.EN, "Donkey Calf Raise", "");
+            Exercise a51 = new Exercise(ps, MisIdiomas.EN, "Leg Extension", "");
+            Exercise a52 = new Exercise(ps, MisIdiomas.EN, "Hamstring Curls", "");
 
-            Exercise a51 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a52 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a53 = new Exercise(ps, MisIdiomas.EN, "", "");
 
-
-
             //Exercise a = new Exercise(ps, MisIdiomas.EN, "", "");
+            #endregion
+
+            #region Gym Workouts
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 4, 4, 6, 6, 8, 8, 10, 10 }; //{ 8, 8, 10, 10, 12, 12, 15, 15 };
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(repL);
+
+            Gym_Upper_HASFit_00 = new Workout(MisIdiomas.EN, "Strength Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.We’ve provide both a Mass Building Emphasis version and a Strength Emphasis version of this technique.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
+            Gym_Upper_HASFit_00.Exercises.Add(a41); //
+            Gym_Upper_HASFit_00.Exercises.Add(a42); //
+            Gym_Upper_HASFit_00.Exercises.Add(a43); //
+            Gym_Upper_HASFit_00.Exercises.Add(a44); //
+            Gym_Upper_HASFit_00.Exercises.Add(a45); //
+            Gym_Upper_HASFit_00.Exercises.Add(a46); //
+            Gym_Upper_HASFit_00.Sets = x;
+
+
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 8, 8, 10, 10, 12, 12, 15, 15 };
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(repL);
+
+            Gym_Upper_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.We’ve provide both a Mass Building Emphasis version and a Strength Emphasis version of this technique.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
+            Gym_Upper_HASFit_01.Exercises.Add(a41); //
+            Gym_Upper_HASFit_01.Exercises.Add(a42); //
+            Gym_Upper_HASFit_01.Exercises.Add(a43); //
+            Gym_Upper_HASFit_01.Exercises.Add(a44); //
+            Gym_Upper_HASFit_01.Exercises.Add(a45); //
+            Gym_Upper_HASFit_01.Exercises.Add(a46); //
+            Gym_Upper_HASFit_01.Sets = x;
+
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(new List<int> { 4, 4, 6, 6, 8, 8, 10, 10 });
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(new List<int> { 6, 50, 8, 40, 10, 30, 12, 20 });
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(new List<int> { 6, 6, 8, 8, 10, 10, 12, 12 });
+
+            Gym_Lower_HASFit_00 = new Workout(MisIdiomas.EN, "Strength Emphasis: Muscle Building Lower Body Workout", "Spark new leg growth with HASfit’s muscle building lower body workout. The drop sets superset leg exercises will add variety to your routine. This legs workout is great for intermediate to advanced trainees. Drop Set Supersets – This is a great plateau killing workout.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
+            Gym_Lower_HASFit_00.Exercises.Add(a47); //
+            Gym_Lower_HASFit_00.Exercises.Add(a48); //
+            Gym_Lower_HASFit_00.Exercises.Add(a49); //
+            Gym_Lower_HASFit_00.Exercises.Add(a50); //
+            Gym_Lower_HASFit_00.Exercises.Add(a51); //
+            Gym_Lower_HASFit_00.Exercises.Add(a52); //
+            Gym_Lower_HASFit_00.Sets = x;
+
+
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(new List<int> { 8, 6, 10, 8, 12, 10, 15, 12 });
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(new List<int> { 8, 50, 10, 40, 12, 30, 15, 20 });
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(new List<int> { 10, 8, 12, 10, 15, 12, 25, 15 });
+
+            Gym_Lower_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Lower Body Workout", "Spark new leg growth with HASfit’s muscle building lower body workout. The drop sets superset leg exercises will add variety to your routine. This legs workout is great for intermediate to advanced trainees. Drop Set Supersets – This is a great plateau killing workout.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
+            Gym_Lower_HASFit_01.Exercises.Add(a47); //
+            Gym_Lower_HASFit_01.Exercises.Add(a48); //
+            Gym_Lower_HASFit_01.Exercises.Add(a49); //
+            Gym_Lower_HASFit_01.Exercises.Add(a50); //
+            Gym_Lower_HASFit_01.Exercises.Add(a51); //
+            Gym_Lower_HASFit_01.Exercises.Add(a52); //
+            Gym_Lower_HASFit_01.Sets = x;
             #endregion
 
             #region Core Workouts
             //Workouts 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            var setL = new List<int> { 0, 1, 2 };
-            var timeL = new List<double> { 1, 1, 1 };
+            setL = new List<int> { 0, 1, 2 };
+            timeL = new List<double> { 1, 1, 1 };
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
@@ -264,7 +356,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-             Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
+            Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
             Abs_5_HASFit.Exercises.Add(a0);  //star crunch
             Abs_5_HASFit.Exercises.Add(a1);  //low plank
             Abs_5_HASFit.Exercises.Add(a5);  //hip-ups
@@ -299,7 +391,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-             Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
+            Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
             Abs_6_HASFit.Exercises.Add(a12); //high plank knee to elbow
             Abs_6_HASFit.Exercises.Add(a13); //lying leg raise + crunch
             Abs_6_HASFit.Exercises.Add(a14); //high plank + shoulder touches
@@ -322,7 +414,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_6Oblique_HASFit = new Workout(MisIdiomas.EN, "Oblique Exercises And Love Handles In 6 Minutes");
+            Abs_6Oblique_HASFit = new Workout(MisIdiomas.EN, "Oblique Exercises And Love Handles In 6 Minutes");
             Abs_6Oblique_HASFit.Exercises.Add(a10); //standing twist
             Abs_6Oblique_HASFit.Exercises.Add(a18); //standing side crunches
             Abs_6Oblique_HASFit.Exercises.Add(a19); //standing same arm leg reach up
@@ -337,7 +429,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_8A_HASFit = new Workout(MisIdiomas.EN, "8 Minutes To Ripped Abs");
+            Abs_8A_HASFit = new Workout(MisIdiomas.EN, "8 Minutes To Ripped Abs");
             Abs_8A_HASFit.Exercises.Add(a20); //side plank + dips
             Abs_8A_HASFit.Exercises.Add(a21); //crunch w twist (1 shoulder to knee)
             Abs_8A_HASFit.Exercises.Add(a22); //upward hip thrusters
@@ -358,7 +450,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_8Lower_HASFit = new Workout(MisIdiomas.EN, "Lower Ab Workout");
+            Abs_8Lower_HASFit = new Workout(MisIdiomas.EN, "Lower Ab Workout");
             Abs_8Lower_HASFit.Exercises.Add(a28); //sprinter
             Abs_8Lower_HASFit.Exercises.Add(a29); //high plank knee 2 chest
             Abs_8Lower_HASFit.Exercises.Add(a30); //6 inches
@@ -379,7 +471,7 @@ namespace AdaptLib
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
 
-            Workout Abs_8B_HASFit = new Workout(MisIdiomas.EN, "Shredding 8 Min Abs");
+            Abs_8B_HASFit = new Workout(MisIdiomas.EN, "Shredding 8 Min Abs");
             Abs_8B_HASFit.Exercises.Add(a35); //clam
             Abs_8B_HASFit.Exercises.Add(a15); //leg raise
             Abs_8B_HASFit.Exercises.Add(a40); //reach 4 the sky, legs down
@@ -390,7 +482,6 @@ namespace AdaptLib
             Abs_8B_HASFit.Sets = x;
 
             #endregion
-
 
             #region Finite Plans
             //WORKOUT PLAN

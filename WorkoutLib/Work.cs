@@ -9,6 +9,8 @@ namespace AdaptLib
         public static int NumberOfWorkouts = 1;
         public int ID { get; set; } = -1;
         public AdaptText Name { get; set; } = new AdaptText();
+        public AdaptText Description { get; set; } = new AdaptText();
+        public AdaptText Instructions { get; set; } = new AdaptText();
 
         /*
          * 1. the order of this list is CRITICAL for the operation of the SetList set/superset functionality
@@ -45,10 +47,17 @@ namespace AdaptLib
             NumberOfWorkouts++;
         }
 
-        public Workout(MisIdiomas lang, string name, WorkoutStructure s) : this(lang, name)
+        public Workout(MisIdiomas lang, string name, string description, string instruct): this(lang, name)
+        {
+            Description.Add(description, lang);
+            Instructions.Add(instruct, lang);
+        }
+
+
+      /*  public Workout(MisIdiomas lang, string name, WorkoutStructure s) : this(lang, name)
         {
             Sets = s;
-        }
+        } */
         #endregion
     }
 }
