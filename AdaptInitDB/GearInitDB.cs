@@ -30,6 +30,11 @@ namespace AdaptLib
             Workout Gym_Upper_HASFit_02;
             Workout Gym_Upper_HASFit_03;
 
+            Workout Gym_Total_HASFit_00;
+            Workout Gym_Total_HASFit_01;
+            Workout Gym_Total_HASFit_02;
+            Workout Gym_Total_HASFit_03;
+
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
 
@@ -260,13 +265,13 @@ namespace AdaptLib
             Exercise a57 = new Exercise(ps, MisIdiomas.EN, "Incline DB Skullcrusher", "");
             Exercise a58 = new Exercise(ps, MisIdiomas.EN, "Close Grip Bench Press", "");
 
-            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
+            Exercise a60 = new Exercise(ps, MisIdiomas.EN, "Conventional Deadlift", "");
+            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "Lunge Knee Ups with Overhead Plate", "4 x 8 (each leg)");
+            Exercise a62 = new Exercise(ps, MisIdiomas.EN, "Figure 8’s from bench", "4 x 10 revolutions (5 each way)");
+            Exercise a63 = new Exercise(ps, MisIdiomas.EN, "50-50 Curls", "4 x 20 (10 lower half + 10 upper half)");
+            Exercise a64 = new Exercise(ps, MisIdiomas.EN, "DB California Skullcrusher", "");
 
-            Exercise a60 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a62 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a63 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a64 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a65 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a66 = new Exercise(ps, MisIdiomas.EN, "", "");
 
@@ -415,6 +420,24 @@ namespace AdaptLib
             Gym_Lower_HASFit_01.Exercises.Add(a51); //
             Gym_Lower_HASFit_01.Exercises.Add(a52); //
             Gym_Lower_HASFit_01.Sets = x;
+
+
+            //Total Body Workouts
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(new List<int> { 5, 5, 5, 5, 5, 5, 5, 5 });
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(new List<int> { 8, 10, 8, 10, 8, 10, 8, 10 });
+            x.SetList.Add(new List<int> { 20, 8, 20, 8, 20, 8, 20, 8 });
+            x.RepList.Add(new List<int> { 6, 6, 8, 8, 10, 10, 12, 12 });
+            Gym_Total_HASFit_00 = new Workout(MisIdiomas.EN, "The Vin Diesel Workout – Vin Diesel Exercises for Strength and Size Training", "The Vin Diesel workout program is a total body workout for men that consists of 3 rounds: 1. explosive power, 2. get lean & ripped, 3. arm building. The Vin Diesel exercises for strength and size training are for intermediate through advanced trainees.", "Complete this workout with the three supersets A, B, and C. Perform each exercise in a superset without breaking before moving to the next.Break for 2 minutes between supersets.Example: A1, A2, A1, A2, A1, A2, A1, A2, and then break for 2 minutes before beginning superset B.");
+            Gym_Total_HASFit_00.Exercises.Add(a59); //
+            Gym_Total_HASFit_00.Exercises.Add(a60); //
+            Gym_Total_HASFit_00.Exercises.Add(a61); //
+            Gym_Total_HASFit_00.Exercises.Add(a62); //
+            Gym_Total_HASFit_00.Exercises.Add(a63); //
+            Gym_Total_HASFit_00.Exercises.Add(a64); //
+            Gym_Total_HASFit_00.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -578,9 +601,9 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
