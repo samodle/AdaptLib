@@ -27,6 +27,9 @@ namespace AdaptLib
             //Gym
             Workout Gym_Upper_HASFit_00;
             Workout Gym_Upper_HASFit_01;
+            Workout Gym_Upper_HASFit_02;
+            Workout Gym_Upper_HASFit_03;
+
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
 
@@ -250,8 +253,50 @@ namespace AdaptLib
             Exercise a51 = new Exercise(ps, MisIdiomas.EN, "Leg Extension", "");
             Exercise a52 = new Exercise(ps, MisIdiomas.EN, "Hamstring Curls", "");
 
-            Exercise a53 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a53 = new Exercise(ps, MisIdiomas.EN, "Curl", "");
+            Exercise a54 = new Exercise(ps, MisIdiomas.EN, "Reverse EZ Bar Curl", "");
+            Exercise a55 = new Exercise(ps, MisIdiomas.EN, "Low Rope Hammer Curl", "");
+            Exercise a56 = new Exercise(ps, MisIdiomas.EN, "Bench Dips", "");
+            Exercise a57 = new Exercise(ps, MisIdiomas.EN, "Incline DB Skullcrusher", "");
+            Exercise a58 = new Exercise(ps, MisIdiomas.EN, "Close Grip Bench Press", "");
 
+            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise a60 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a62 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a63 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a64 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a65 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a66 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise a67 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a68 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a69 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a70 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a71 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a72 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise a73 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a74 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a75 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a76 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a77 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a78 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise a79 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a80 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a81 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a82 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a83 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a84 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise a85 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a86 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a87 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a88 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a89 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a90 = new Exercise(ps, MisIdiomas.EN, "", "");
             //Exercise a = new Exercise(ps, MisIdiomas.EN, "", "");
             #endregion
 
@@ -274,8 +319,6 @@ namespace AdaptLib
             Gym_Upper_HASFit_00.Exercises.Add(a46); //
             Gym_Upper_HASFit_00.Sets = x;
 
-
-
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             repL = new List<int> { 8, 8, 10, 10, 12, 12, 15, 15 };
             x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
@@ -294,6 +337,52 @@ namespace AdaptLib
             Gym_Upper_HASFit_01.Exercises.Add(a46); //
             Gym_Upper_HASFit_01.Sets = x;
 
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 8, 8, 10, 10, 12, 12, 15, 15 };
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(repL);
+            Gym_Upper_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.We’ve provide both a Mass Building Emphasis version and a Strength Emphasis version of this technique.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
+            Gym_Upper_HASFit_01.Exercises.Add(a41); //
+            Gym_Upper_HASFit_01.Exercises.Add(a42); //
+            Gym_Upper_HASFit_01.Exercises.Add(a43); //
+            Gym_Upper_HASFit_01.Exercises.Add(a44); //
+            Gym_Upper_HASFit_01.Exercises.Add(a45); //
+            Gym_Upper_HASFit_01.Exercises.Add(a46); //
+            Gym_Upper_HASFit_01.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.RepList.Add(new List<int> { 6, 6, 8, 8, 10, 10, 12, 12 });
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(new List<int> { 6, 50, 8, 40, 10, 30, 12, 20 });
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(new List<int> { 6, 4, 8, 6, 10, 8, 12, 10 });
+            Gym_Upper_HASFit_02 = new Workout(MisIdiomas.EN, "Strength Emphasis: Muscle Building Arm Workout – Drop Set Superset Biceps and Triceps Exercises", "Experience explosive arm growth with HASfit’s muscle building biceps and triceps workout. The drop set superset technique arm workout and arm exercises is just what you need to mix up your routine. Drop Set Supersets – This is a great plateau killing workout. ", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1, A2, A3, A1, A2, A3… with no rest until all sets are completed. Rest for 2 minutes before moving on to B1, B2, B3.");
+            Gym_Upper_HASFit_02.Exercises.Add(a53); //
+            Gym_Upper_HASFit_02.Exercises.Add(a54); //
+            Gym_Upper_HASFit_02.Exercises.Add(a55); //
+            Gym_Upper_HASFit_02.Exercises.Add(a56); //
+            Gym_Upper_HASFit_02.Exercises.Add(a57); //
+            Gym_Upper_HASFit_02.Exercises.Add(a58); //
+            Gym_Upper_HASFit_02.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.RepList.Add(new List<int> { 8, 8, 10, 10, 12, 12, 15, 15 });
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(new List<int> { 8, 50, 10, 40, 12, 30, 15, 20 });
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(new List<int> { 8, 6, 10, 8, 12, 10, 15, 12 });
+            Gym_Upper_HASFit_03 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Arm Workout – Drop Set Superset Biceps and Triceps Exercises", "Experience explosive arm growth with HASfit’s muscle building biceps and triceps workout. The drop set superset technique arm workout and arm exercises is just what you need to mix up your routine. Drop Set Supersets – This is a great plateau killing workout. ", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1, A2, A3, A1, A2, A3… with no rest until all sets are completed. Rest for 2 minutes before moving on to B1, B2, B3.");
+            Gym_Upper_HASFit_03.Exercises.Add(a53); //
+            Gym_Upper_HASFit_03.Exercises.Add(a54); //
+            Gym_Upper_HASFit_03.Exercises.Add(a55); //
+            Gym_Upper_HASFit_03.Exercises.Add(a56); //
+            Gym_Upper_HASFit_03.Exercises.Add(a57); //
+            Gym_Upper_HASFit_03.Exercises.Add(a58); //
+            Gym_Upper_HASFit_03.Sets = x;
 
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
@@ -302,7 +391,6 @@ namespace AdaptLib
             x.RepList.Add(new List<int> { 6, 50, 8, 40, 10, 30, 12, 20 });
             x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
             x.RepList.Add(new List<int> { 6, 6, 8, 8, 10, 10, 12, 12 });
-
             Gym_Lower_HASFit_00 = new Workout(MisIdiomas.EN, "Strength Emphasis: Muscle Building Lower Body Workout", "Spark new leg growth with HASfit’s muscle building lower body workout. The drop sets superset leg exercises will add variety to your routine. This legs workout is great for intermediate to advanced trainees. Drop Set Supersets – This is a great plateau killing workout.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
             Gym_Lower_HASFit_00.Exercises.Add(a47); //
             Gym_Lower_HASFit_00.Exercises.Add(a48); //
@@ -312,8 +400,6 @@ namespace AdaptLib
             Gym_Lower_HASFit_00.Exercises.Add(a52); //
             Gym_Lower_HASFit_00.Sets = x;
 
-
-
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
             x.RepList.Add(new List<int> { 8, 6, 10, 8, 12, 10, 15, 12 });
@@ -321,7 +407,6 @@ namespace AdaptLib
             x.RepList.Add(new List<int> { 8, 50, 10, 40, 12, 30, 15, 20 });
             x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
             x.RepList.Add(new List<int> { 10, 8, 12, 10, 15, 12, 25, 15 });
-
             Gym_Lower_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Lower Body Workout", "Spark new leg growth with HASfit’s muscle building lower body workout. The drop sets superset leg exercises will add variety to your routine. This legs workout is great for intermediate to advanced trainees. Drop Set Supersets – This is a great plateau killing workout.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
             Gym_Lower_HASFit_01.Exercises.Add(a47); //
             Gym_Lower_HASFit_01.Exercises.Add(a48); //
@@ -484,42 +569,60 @@ namespace AdaptLib
             #endregion
 
             #region Finite Plans
-            //WORKOUT PLAN
-            WorkoutPlan HASFit_30DayAbs_OG = new WorkoutPlan(MisIdiomas.EN, "Six Pack Abs In 30 Days");
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5Standing_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+            WorkoutPlan Muscle_90_HASFit_00 = new WorkoutPlan(MisIdiomas.EN, "90 Days To Build Muscle");
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
 
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit })); //'Shredding 8 Minute Abs'
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_3_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
 
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit, Abs_6Oblique_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
 
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_5Standing_HASFit, Abs_5_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit, Abs_8A_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_5_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan());
 
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit, Abs_8A_HASFit }));
-            HASFit_30DayAbs_OG.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit, Abs_8B_HASFit }));
+            WorkoutPlan Abs_30_HASFit_00 = new WorkoutPlan(MisIdiomas.EN, "Six Pack Abs In 30 Days");
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_5Standing_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_6_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit })); //'Shredding 8 Minute Abs'
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_3_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_6_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_5_HASFit, Abs_6Oblique_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_5Standing_HASFit, Abs_5_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_3_HASFit, Abs_8A_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_6Oblique_HASFit, Abs_6_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8B_HASFit, Abs_5_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan());
+
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8Lower_HASFit, Abs_8A_HASFit }));
+            Abs_30_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Abs_8A_HASFit, Abs_8B_HASFit }));
             #endregion
 
             MasterExerciseList = eList;
