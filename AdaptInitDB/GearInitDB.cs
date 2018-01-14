@@ -244,39 +244,42 @@ namespace AdaptLib
             ps2 = new ExerciseParams(MuscleT1.arms, WeightStatus.optional);
             ExerciseParams ps3 = new ExerciseParams(MuscleT1.back, WeightStatus.required);
 
+            //upper body
             Exercise a41 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Chest Press", "");
             Exercise a42 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Supported Row", "");
             Exercise a43 = new Exercise(ps, MisIdiomas.EN, "Dumbbell Arnold Press", "");
             Exercise a44 = new Exercise(ps, MisIdiomas.EN, "Dumbbell Upright Row", "");
             Exercise a45 = new Exercise(ps, MisIdiomas.EN, "Cable Crossovers", "");
             Exercise a46 = new Exercise(ps, MisIdiomas.EN, "Low Rope Face Pulls", "");
-
-            Exercise a47 = new Exercise(ps, MisIdiomas.EN, "Squat w/ Elevated Heels", "");
-            Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "");
-            Exercise a49 = new Exercise(ps, MisIdiomas.EN, "One Leg Squat", "");
-            Exercise a50 = new Exercise(ps, MisIdiomas.EN, "Donkey Calf Raise", "");
-            Exercise a51 = new Exercise(ps, MisIdiomas.EN, "Leg Extension", "");
-            Exercise a52 = new Exercise(ps, MisIdiomas.EN, "Hamstring Curls", "");
-
             Exercise a53 = new Exercise(ps, MisIdiomas.EN, "Curl", "");
             Exercise a54 = new Exercise(ps, MisIdiomas.EN, "Reverse EZ Bar Curl", "");
             Exercise a55 = new Exercise(ps, MisIdiomas.EN, "Low Rope Hammer Curl", "");
             Exercise a56 = new Exercise(ps, MisIdiomas.EN, "Bench Dips", "");
             Exercise a57 = new Exercise(ps, MisIdiomas.EN, "Incline DB Skullcrusher", "");
             Exercise a58 = new Exercise(ps, MisIdiomas.EN, "Close Grip Bench Press", "");
-
-            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
-            Exercise a60 = new Exercise(ps, MisIdiomas.EN, "Conventional Deadlift", "");
-            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "Lunge Knee Ups with Overhead Plate", "4 x 8 (each leg)");
-            Exercise a62 = new Exercise(ps, MisIdiomas.EN, "Figure 8’s from bench", "4 x 10 revolutions (5 each way)");
             Exercise a63 = new Exercise(ps, MisIdiomas.EN, "50-50 Curls", "4 x 20 (10 lower half + 10 upper half)");
             Exercise a64 = new Exercise(ps, MisIdiomas.EN, "DB California Skullcrusher", "");
 
-            Exercise a65 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a66 = new Exercise(ps, MisIdiomas.EN, "", "");
+            //lower body
+            Exercise a47 = new Exercise(ps, MisIdiomas.EN, "Squat w/ Elevated Heels", "");
+            Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "");
+            Exercise a49 = new Exercise(ps, MisIdiomas.EN, "One Leg Squat", "");
+            Exercise a50 = new Exercise(ps, MisIdiomas.EN, "Donkey Calf Raise", "");
+            Exercise a51 = new Exercise(ps, MisIdiomas.EN, "Leg Extension", "");
+            Exercise a52 = new Exercise(ps, MisIdiomas.EN, "Hamstring Curls", "");
+            Exercise a60 = new Exercise(ps, MisIdiomas.EN, "Conventional Deadlift", "");
 
-            Exercise a67 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a68 = new Exercise(ps, MisIdiomas.EN, "", "");
+            //core + total body movements
+            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
+            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "Lunge Knee Ups with Overhead Plate", "4 x 8 (each leg)");
+            Exercise a62 = new Exercise(ps, MisIdiomas.EN, "Figure 8’s from bench", "4 x 10 revolutions (5 each way)");
+
+
+            Exercise a65 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Pull-ups", "");
+            Exercise a66 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Squat", "");
+            Exercise a67 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Dips", "");
+            Exercise a68 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Med Ball Sit-ups", "");
+
             Exercise a69 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a70 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a71 = new Exercise(ps, MisIdiomas.EN, "", "");
@@ -360,6 +363,7 @@ namespace AdaptLib
             Gym_Upper_HASFit_01.Sets = x;
 
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
             x.RepList.Add(new List<int> { 6, 6, 8, 8, 10, 10, 12, 12 });
             x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
             x.RepList.Add(new List<int> { 6, 50, 8, 40, 10, 30, 12, 20 });
@@ -375,6 +379,7 @@ namespace AdaptLib
             Gym_Upper_HASFit_02.Sets = x;
 
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
             x.RepList.Add(new List<int> { 8, 8, 10, 10, 12, 12, 15, 15 });
             x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
             x.RepList.Add(new List<int> { 8, 50, 10, 40, 12, 30, 15, 20 });
@@ -428,8 +433,8 @@ namespace AdaptLib
             x.RepList.Add(new List<int> { 5, 5, 5, 5, 5, 5, 5, 5 });
             x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
             x.RepList.Add(new List<int> { 8, 10, 8, 10, 8, 10, 8, 10 });
-            x.SetList.Add(new List<int> { 20, 8, 20, 8, 20, 8, 20, 8 });
-            x.RepList.Add(new List<int> { 6, 6, 8, 8, 10, 10, 12, 12 });
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(new List<int> { 20, 8, 20, 8, 20, 8, 20, 8 });
             Gym_Total_HASFit_00 = new Workout(MisIdiomas.EN, "The Vin Diesel Workout – Vin Diesel Exercises for Strength and Size Training", "The Vin Diesel workout program is a total body workout for men that consists of 3 rounds: 1. explosive power, 2. get lean & ripped, 3. arm building. The Vin Diesel exercises for strength and size training are for intermediate through advanced trainees.", "Complete this workout with the three supersets A, B, and C. Perform each exercise in a superset without breaking before moving to the next.Break for 2 minutes between supersets.Example: A1, A2, A1, A2, A1, A2, A1, A2, and then break for 2 minutes before beginning superset B.");
             Gym_Total_HASFit_00.Exercises.Add(a59); //
             Gym_Total_HASFit_00.Exercises.Add(a60); //
@@ -438,6 +443,25 @@ namespace AdaptLib
             Gym_Total_HASFit_00.Exercises.Add(a63); //
             Gym_Total_HASFit_00.Exercises.Add(a64); //
             Gym_Total_HASFit_00.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 5,5,5,5 };
+            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
+            x.RepList.Add(repL);
+            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
+            x.RepList.Add(repL);
+            Gym_Total_HASFit_01 = new Workout(MisIdiomas.EN, "21 Workout To Build Muscle – Partial Reps Exercises For Muscle Growth", "Mix up your routine with the 21 workout to build muscle. The partial reps exercises are for muscle growth and great for gaining strength.", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
+            Gym_Total_HASFit_01.Exercises.Add(a65); //
+            Gym_Total_HASFit_01.Exercises.Add(a66); //
+            Gym_Total_HASFit_01.Exercises.Add(a67); //
+            Gym_Total_HASFit_01.Exercises.Add(a68); //
+            Gym_Total_HASFit_01.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -601,13 +625,13 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
 
 
@@ -652,17 +676,3 @@ namespace AdaptLib
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
