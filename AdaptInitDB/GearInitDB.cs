@@ -34,6 +34,7 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_01;
             Workout Gym_Total_HASFit_02;
             Workout Gym_Total_HASFit_03;
+            Workout Gym_Total_HASFit_04;
 
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
@@ -244,6 +245,9 @@ namespace AdaptLib
             ps2 = new ExerciseParams(MuscleT1.arms, WeightStatus.optional);
             ExerciseParams ps3 = new ExerciseParams(MuscleT1.back, WeightStatus.required);
 
+
+            //To Do - add property for does it 50-50 or 7-7-7 etc
+
             //upper body
             Exercise a41 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Chest Press", "");
             Exercise a42 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbbell Supported Row", "");
@@ -259,6 +263,8 @@ namespace AdaptLib
             Exercise a58 = new Exercise(ps, MisIdiomas.EN, "Close Grip Bench Press", "");
             Exercise a63 = new Exercise(ps, MisIdiomas.EN, "50-50 Curls", "4 x 20 (10 lower half + 10 upper half)");
             Exercise a64 = new Exercise(ps, MisIdiomas.EN, "DB California Skullcrusher", "");
+            Exercise a67 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Dips", "");
+            Exercise a65 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Pull-ups", "");
 
             //lower body
             Exercise a47 = new Exercise(ps, MisIdiomas.EN, "Squat w/ Elevated Heels", "");
@@ -268,39 +274,39 @@ namespace AdaptLib
             Exercise a51 = new Exercise(ps, MisIdiomas.EN, "Leg Extension", "");
             Exercise a52 = new Exercise(ps, MisIdiomas.EN, "Hamstring Curls", "");
             Exercise a60 = new Exercise(ps, MisIdiomas.EN, "Conventional Deadlift", "");
+            Exercise a66 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Squat", "");
 
             //core + total body movements
             Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
             Exercise a61 = new Exercise(ps, MisIdiomas.EN, "Lunge Knee Ups with Overhead Plate", "4 x 8 (each leg)");
             Exercise a62 = new Exercise(ps, MisIdiomas.EN, "Figure 8’s from bench", "4 x 10 revolutions (5 each way)");
-
-
-            Exercise a65 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Pull-ups", "");
-            Exercise a66 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Squat", "");
-            Exercise a67 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Dips", "");
             Exercise a68 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Med Ball Sit-ups", "");
 
-            Exercise a69 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a70 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a71 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a72 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a73 = new Exercise(ps, MisIdiomas.EN, "Alternating Arm Squat Press", "Weights resting on shoulder, perform squat. After coming up all the way, lift one arm all the way overhead. (This is a press, not a jerk)");
+            Exercise a74 = new Exercise(ps, MisIdiomas.EN, "Jump Squat", "Perform normal unweighted squat, however on the way up jump as high as you can.");
+            Exercise a75 = new Exercise(ps, MisIdiomas.EN, "Mountain Climber", "From high plank position, jump so that one knee is up in your chest while one is still behind you. Jump again and switch leg positions.");
+            Exercise a76 = new Exercise(ps, MisIdiomas.EN, "Jump Hang", "With");
+            Exercise a77 = new Exercise(ps, MisIdiomas.EN, "Standing Weight Swing", "");
 
-            Exercise a73 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a74 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a75 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a76 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a77 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a78 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a78 = new Exercise(ps, MisIdiomas.EN, "RDL + Bent-over Row + Snatch Power Pull", "");
+            Exercise a79 = new Exercise(ps, MisIdiomas.EN, "Barbell Step-Ups", "1 rep is 1 rep for each leg");
+            Exercise a80 = new Exercise(ps, MisIdiomas.EN, "Barbell Push", "");
+            Exercise a81 = new Exercise(ps, MisIdiomas.EN, "Hanging Knee Twist", "");
+            Exercise a82 = new Exercise(ps, MisIdiomas.EN, "Plank Knee to Elbows", "1 rep is 1 rep for each elbow");
 
-            Exercise a79 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a80 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a81 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a82 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a83 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a84 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a69 = new Exercise(ps, MisIdiomas.EN, "Wide Pronate Lat Pulldowns", "pronate - palms facing away");
+            Exercise a70 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Curl", "");
+            Exercise a71 = new Exercise(ps, MisIdiomas.EN, "Reverse Grip Straight Bar Pullbacks", "");
+            Exercise a72 = new Exercise(ps, MisIdiomas.EN, "Hammer Curl", "");
 
-            Exercise a85 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise a83 = new Exercise(ps, MisIdiomas.EN, "Pike Push-up", "");
+            Exercise a84 = new Exercise(ps, MisIdiomas.EN, "Elevated Wide Push-up", "");
+            Exercise a85 = new Exercise(ps, MisIdiomas.EN, "Split Squat To Knee Raise", "");
+
+
             Exercise a86 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+
             Exercise a87 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a88 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise a89 = new Exercise(ps, MisIdiomas.EN, "", "");
@@ -317,7 +323,6 @@ namespace AdaptLib
             x.RepList.Add(repL);
             x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
             x.RepList.Add(repL);
-
             Gym_Upper_HASFit_00 = new Workout(MisIdiomas.EN, "Strength Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.We’ve provide both a Mass Building Emphasis version and a Strength Emphasis version of this technique.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
             Gym_Upper_HASFit_00.Exercises.Add(a41); //
             Gym_Upper_HASFit_00.Exercises.Add(a42); //
@@ -335,25 +340,7 @@ namespace AdaptLib
             x.RepList.Add(repL);
             x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
             x.RepList.Add(repL);
-
-            Gym_Upper_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.We’ve provide both a Mass Building Emphasis version and a Strength Emphasis version of this technique.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
-            Gym_Upper_HASFit_01.Exercises.Add(a41); //
-            Gym_Upper_HASFit_01.Exercises.Add(a42); //
-            Gym_Upper_HASFit_01.Exercises.Add(a43); //
-            Gym_Upper_HASFit_01.Exercises.Add(a44); //
-            Gym_Upper_HASFit_01.Exercises.Add(a45); //
-            Gym_Upper_HASFit_01.Exercises.Add(a46); //
-            Gym_Upper_HASFit_01.Sets = x;
-
-            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
-            repL = new List<int> { 8, 8, 10, 10, 12, 12, 15, 15 };
-            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
-            x.RepList.Add(repL);
-            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
-            x.RepList.Add(repL);
-            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
-            x.RepList.Add(repL);
-            Gym_Upper_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.We’ve provide both a Mass Building Emphasis version and a Strength Emphasis version of this technique.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
+            Gym_Upper_HASFit_01 = new Workout(MisIdiomas.EN, "Mass Emphasis: Muscle Building Upper Body Workout", "Drop Set Superset Chest and Back Exercises. Mix up your routine with the muscle building upper body workout. The bodybuilding drop set superset will work chest and back. Drop Set Supersets – This is a great plateau killing workout.", "Start with appropriate weight for the first set and then drop 10% off the weight every set. Alternate between A1 and A2 with no rest until all sets are completed. Rest for 2 minutes before moving on to B1 and B2. Repeat for C.");
             Gym_Upper_HASFit_01.Exercises.Add(a41); //
             Gym_Upper_HASFit_01.Exercises.Add(a42); //
             Gym_Upper_HASFit_01.Exercises.Add(a43); //
@@ -462,6 +449,62 @@ namespace AdaptLib
             Gym_Total_HASFit_01.Exercises.Add(a67); //
             Gym_Total_HASFit_01.Exercises.Add(a68); //
             Gym_Total_HASFit_01.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: true, anyDistances: false);
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5 };
+            x.SetList.Add(setL);
+            x.TimeList.Add(timeL);
+            x.SetList.Add(setL);
+            x.TimeList.Add(timeL);
+            Gym_Total_HASFit_02 = new Workout(MisIdiomas.EN, "Blitzkrieg 5 Minute Home Workout", "The BLITZKRIEG cardio workout is a fast pace 5 minute workout at home. Get a good sweat, get your heart rate going, and work your muscles all in only five minute workout with our personal trainer.");
+            Gym_Total_HASFit_02.Exercises.Add(a73); //
+            Gym_Total_HASFit_02.Exercises.Add(a74);  //
+            Gym_Total_HASFit_02.Exercises.Add(a75);  //
+            Gym_Total_HASFit_02.Exercises.Add(a76);  //
+            Gym_Total_HASFit_02.Exercises.Add(a77);  //
+            Gym_Total_HASFit_02.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 5, 8, 8, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            Gym_Total_HASFit_03 = new Workout(MisIdiomas.EN, "Thor Workout – Chris Hemsworth Workout Routine – Muscle Building Exercises to Add Mass", "Build muscle with our Chris Hemsworth workout routine. This Thor workout includes compound strength movements to increase strength and exercises to add mass!", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
+            Gym_Total_HASFit_03.Exercises.Add(a78); //
+            Gym_Total_HASFit_03.Exercises.Add(a79); //
+            Gym_Total_HASFit_03.Exercises.Add(a80); //
+            Gym_Total_HASFit_03.Exercises.Add(a81); //
+            Gym_Total_HASFit_03.Exercises.Add(a82); //
+            Gym_Total_HASFit_03.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 6, 8, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3 };
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            x.SetList.Add(setL);
+            x.RepList.Add(repL);
+            Gym_Total_HASFit_04 = new Workout(MisIdiomas.EN, "Bodyweight Strength Training Without Weights – Body Weight Exercise Training Workouts", "", "");
+            Gym_Total_HASFit_04.Exercises.Add(a83); //
+            Gym_Total_HASFit_04.Exercises.Add(a49); //
+            Gym_Total_HASFit_04.Exercises.Add(a84); //
+            Gym_Total_HASFit_04.Exercises.Add(a85); //
+            Gym_Total_HASFit_04.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -617,7 +660,7 @@ namespace AdaptLib
 
             #region Finite Plans
             WorkoutPlan Muscle_90_HASFit_00 = new WorkoutPlan(MisIdiomas.EN, "90 Days To Build Muscle");
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 })); //week 1
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 })); //week 1 - hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -625,23 +668,15 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 })); //week 2
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 })); //week 2 - strength
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_02, Abs_5_HASFit }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_01 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_03 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_04 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { })); //week 3
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 4
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { })); //week 3 - hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -649,15 +684,7 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 5
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 6
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 4 - strength
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -665,15 +692,7 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 7
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 8
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 5 - hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -681,7 +700,31 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 })); //week 9
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 6 - high intensity interval training
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 7 - high intensity interval training
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 8 - hypertrohpy
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 })); //week 9 - strength/hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -689,7 +732,7 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 10
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 10 - hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -697,7 +740,7 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 }));//week 11
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 }));//week 11 - strength
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -705,7 +748,7 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 12
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 12 - high intensity interval training
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day

@@ -47,17 +47,15 @@ namespace AdaptLib
             NumberOfWorkouts++;
         }
 
-        public Workout(MisIdiomas lang, string name, string description, string instruct): this(lang, name)
+        public Workout(MisIdiomas lang, string name, string description): this(lang, name)
         {
-            Description.Add(description, lang);
-            Instructions.Add(instruct, lang);
+            this.Description.Add(description, lang);
         }
 
-
-      /*  public Workout(MisIdiomas lang, string name, WorkoutStructure s) : this(lang, name)
+        public Workout(MisIdiomas lang, string name, string description, string instruct): this(lang, name, description)
         {
-            Sets = s;
-        } */
+            Instructions.Add(instruct, lang);
+        }
         #endregion
     }
 }
