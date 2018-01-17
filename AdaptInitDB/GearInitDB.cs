@@ -48,6 +48,10 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_02;
             Workout Gym_Total_HASFit_03;
             Workout Gym_Total_HASFit_04;
+            Workout Gym_Total_HASFit_05;
+            Workout Gym_Total_HASFit_06;
+            Workout Gym_Total_HASFit_07;
+            Workout Gym_Total_HASFit_08;
 
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
@@ -276,12 +280,13 @@ namespace AdaptLib
             Exercise a53 = new Exercise(ps, MisIdiomas.EN, "Curl", "");
             Exercise a54 = new Exercise(ps, MisIdiomas.EN, "Reverse EZ Bar Curl", "");
             Exercise a55 = new Exercise(ps, MisIdiomas.EN, "Low Rope Hammer Curl", "");
-            Exercise a56 = new Exercise(ps, MisIdiomas.EN, "Bench Dips", "");
             Exercise a57 = new Exercise(ps, MisIdiomas.EN, "Incline DB Skullcrusher", "");
             Exercise a58 = new Exercise(ps, MisIdiomas.EN, "Close Grip Bench Press", "");
             Exercise a63 = new Exercise(ps, MisIdiomas.EN, "50-50 Curls", "4 x 20 (10 lower half + 10 upper half)");
             Exercise a64 = new Exercise(ps, MisIdiomas.EN, "DB California Skullcrusher", "");
             Exercise a67 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Dips", "");
+            Exercise a89 = new Exercise(ps, MisIdiomas.EN, "Dips", "");
+            Exercise a56 = new Exercise(ps, MisIdiomas.EN, "Bench Dips", "");
             Exercise a65 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Pull-ups", "");
             Exercise a83 = new Exercise(ps, MisIdiomas.EN, "Pike Push-up", "");
             Exercise a84 = new Exercise(ps, MisIdiomas.EN, "Elevated Wide Push-up", "");
@@ -291,6 +296,9 @@ namespace AdaptLib
             Exercise a72 = new Exercise(ps, MisIdiomas.EN, "Hammer Curl", "");
             Exercise a87 = new Exercise(ps, MisIdiomas.EN, "Low Cable Flys", "");
             Exercise a88 = new Exercise(ps, MisIdiomas.EN, "Reverse Cable Pulldowns", "");
+            Exercise a91 = new Exercise(ps, MisIdiomas.EN, "Manual Tricep Extensions", "");
+            Exercise a92 = new Exercise(ps, MisIdiomas.EN, "Supinated Grip Pull-Upss", "");
+            Exercise a96 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Negative Fly To Chest Press Concentric", "");
 
             //lower body           
             Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "The stance is going to be narrower than a squat, about hip width apart, with the toes pointed straight ahead. Some lifters like to flare the feet a bit but this should be minimal – no more than 15 degrees of foot flare. At the start, the bar should be resting against the thighs, and for the descent you want to sit the hips back allowing the torso to drop down. The knees will bend slightly but the shins remain vertical throughout – the bar should continue to drag along the thighs the entire time. During the negative, you want to maintain a slight arch and tension in your low back. This tilts the pelvis anteriorly and puts a greater stretch on the hamstrings. However, the lumbar extension and anterior pelvic tilt should be slight and not excessive. Moreover, do not allow the lumbar spine to round or the shoulders to be protracted during the RDL. Keep the chest up and the shoulders back.");
@@ -299,13 +307,15 @@ namespace AdaptLib
             Exercise a51 = new Exercise(ps, MisIdiomas.EN, "Leg Extension", "");
             Exercise a52 = new Exercise(ps, MisIdiomas.EN, "Hamstring Curls", "");
             Exercise a60 = new Exercise(ps, MisIdiomas.EN, "Conventional Deadlift", "");
+            Exercise a79 = new Exercise(ps, MisIdiomas.EN, "Barbell Step-Ups", "1 rep is 1 rep for each leg");
             Exercise a47 = new Exercise(ps, MisIdiomas.EN, "Squat w/ Elevated Heels", "");
             Exercise a49 = new Exercise(ps, MisIdiomas.EN, "One Leg Squat", "");
             Exercise a66 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Squat", "");
             Exercise a74 = new Exercise(ps, MisIdiomas.EN, "Jump Squat", "Perform normal unweighted squat, however on the way up jump as high as you can.");
-            Exercise a79 = new Exercise(ps, MisIdiomas.EN, "Barbell Step-Ups", "1 rep is 1 rep for each leg");
             Exercise a85 = new Exercise(ps, MisIdiomas.EN, "Split Squat To Knee Raise", "");
             Exercise a86 = new Exercise(ps, MisIdiomas.EN, "Squat", "");
+            Exercise a90 = new Exercise(ps, MisIdiomas.EN, "Front Squat Elevated Heels", "");
+            Exercise a95 = new Exercise(ps, MisIdiomas.EN, "1 and 1/4 Squats", "");
 
             //core + total body movements
             Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
@@ -320,38 +330,77 @@ namespace AdaptLib
             Exercise a80 = new Exercise(ps, MisIdiomas.EN, "Barbell Push Jerk", "");
             Exercise a81 = new Exercise(ps, MisIdiomas.EN, "Hanging Knee Twist", "");
             Exercise a82 = new Exercise(ps, MisIdiomas.EN, "Plank Knee to Elbows", "1 rep is 1 rep for each elbow");
+            Exercise a93 = new Exercise(ps, MisIdiomas.EN, "RDL + Row + Shrug, Push Jerk", ""); //easiest DB for all, then DB for first and BB for push jerk, hardest bb for all
+            Exercise a94 = new Exercise(ps, MisIdiomas.EN, "Dumbell Upright Row + Clean + Press", "");         
+            Exercise a97 = new Exercise(ps, MisIdiomas.EN, "Dumbell Curl + Lunge", "");
+            Exercise a98 = new Exercise(ps, MisIdiomas.EN, "Close Grip Push-ups + Knee Raise", "");
+
+            Exercise a99 = new Exercise(ps, MisIdiomas.EN, "Split Jumps", "");
+            a99.Aliases.Add(new AdaptText("Scissor Jumps", MisIdiomas.EN));
+            Exercise b0 = new Exercise(ps, MisIdiomas.EN, "Push-up + Alternating Arm & Leg Raise", "");
+            Exercise b1 = new Exercise(ps, MisIdiomas.EN, "Sumo Deadlift + Shoulder Press", "");
+            Exercise b2 = new Exercise(ps, MisIdiomas.EN, "TRX or Barbell Inverted Pull-ups", "");
+            Exercise b3 = new Exercise(ps, MisIdiomas.EN, "Forward/ Back Hops", "");
+            Exercise b4 = new Exercise(ps, MisIdiomas.EN, "Lateral Hops", "");
 
 
 
-
-            Exercise a89 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a90 = new Exercise(ps, MisIdiomas.EN, "", "");
-
-            Exercise a91 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a92 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a93 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a94 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a95 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a96 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a97 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a98 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise a99 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b0 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b1 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b2 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b3 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b4 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b5 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b6 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b7 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b8 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b9 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b10 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b11 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b12 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b13 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b14 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b15 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b16 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b17 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b18 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b19 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b20 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b21 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b22 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b23 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b24 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b25 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b26 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b27 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b28 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b29 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b30 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b31 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b32 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b33 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b34 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b35 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b36 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b37 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b38 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b39 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b40 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b41 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b42 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b43 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b44 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b45 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b46 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b47 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise b48 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b49 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b50 = new Exercise(ps, MisIdiomas.EN, "", "");
 
             //Exercise a = new Exercise(ps, MisIdiomas.EN, "", "");
             #endregion
 
             #region Road Workouts
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 0,1 }; //{ 8, 8, 10, 10, 12, 12, 15, 15 };
+            repL = new List<int> { 0, 1 }; //{ 8, 8, 10, 10, 12, 12, 15, 15 };
             timeL = new List<double> { 25, 5 };
-            x.addSetsAndTimes(repL, timeL, 20);
+            x.addSetsAndTimes(repL, timeL, 20, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_01 = new Workout(MisIdiomas.EN, "Interval Running Lvl 1", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_01.Exercises.Add(c1); //walk
@@ -359,9 +408,9 @@ namespace AdaptLib
             Cardio_IntervalRun_01.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 0, 1 }; 
+            repL = new List<int> { 0, 1 };
             timeL = new List<double> { 20, 10 };
-            x.addSetsAndTimes(repL, timeL, 30);
+            x.addSetsAndTimes(repL, timeL, 30, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_02 = new Workout(MisIdiomas.EN, "Interval Running Lvl 2", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_02.Exercises.Add(c1); //walk
@@ -369,9 +418,9 @@ namespace AdaptLib
             Cardio_IntervalRun_02.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 0, 1 }; 
+            repL = new List<int> { 0, 1 };
             timeL = new List<double> { 15, 15 };
-            x.addSetsAndTimes(repL, timeL, 40);
+            x.addSetsAndTimes(repL, timeL, 40, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_03 = new Workout(MisIdiomas.EN, "Interval Running Lvl 3", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_03.Exercises.Add(c1); //walk
@@ -379,9 +428,9 @@ namespace AdaptLib
             Cardio_IntervalRun_03.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 0, 1 }; 
+            repL = new List<int> { 0, 1 };
             timeL = new List<double> { 30, 30 };
-            x.addSetsAndTimes(repL, timeL, 25);
+            x.addSetsAndTimes(repL, timeL, 25, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_04 = new Workout(MisIdiomas.EN, "Interval Running Lvl 4", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_04.Exercises.Add(c1); //walk
@@ -389,9 +438,9 @@ namespace AdaptLib
             Cardio_IntervalRun_04.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 0, 1 }; 
+            repL = new List<int> { 0, 1 };
             timeL = new List<double> { 15, 45 };
-            x.addSetsAndTimes(repL, timeL, 30);
+            x.addSetsAndTimes(repL, timeL, 30, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_05 = new Workout(MisIdiomas.EN, "Interval Running Lvl 5", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_05.Exercises.Add(c1); //walk
@@ -401,7 +450,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             repL = new List<int> { 1, 0 };
             timeL = new List<double> { 25, 5 };
-            x.addSetsAndTimes(repL, timeL, 20);
+            x.addSetsAndTimes(repL, timeL, 20, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_06 = new Workout(MisIdiomas.EN, "Interval Running Lvl 6", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_06.Exercises.Add(c2); //sprint
@@ -409,9 +458,9 @@ namespace AdaptLib
             Cardio_IntervalRun_06.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 1, 0 }; 
+            repL = new List<int> { 1, 0 };
             timeL = new List<double> { 20, 10 };
-            x.addSetsAndTimes(repL, timeL, 20);
+            x.addSetsAndTimes(repL, timeL, 20, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_07 = new Workout(MisIdiomas.EN, "Interval Running Lvl 7", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_07.Exercises.Add(c2); //sprint
@@ -421,7 +470,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             repL = new List<int> { 1, 0 };
             timeL = new List<double> { 15, 15 };
-            x.addSetsAndTimes(repL, timeL, 20);
+            x.addSetsAndTimes(repL, timeL, 20, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_08 = new Workout(MisIdiomas.EN, "Interval Running Lvl 8", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_08.Exercises.Add(c2); //sprint
@@ -429,9 +478,9 @@ namespace AdaptLib
             Cardio_IntervalRun_08.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 1, 0 }; 
+            repL = new List<int> { 1, 0 };
             timeL = new List<double> { 30, 30 };
-            x.addSetsAndTimes(repL, timeL, 15);
+            x.addSetsAndTimes(repL, timeL, 15, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_09 = new Workout(MisIdiomas.EN, "Interval Running Lvl 9", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_09.Exercises.Add(c2); //sprint
@@ -439,9 +488,9 @@ namespace AdaptLib
             Cardio_IntervalRun_09.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            repL = new List<int> { 1, 0 }; 
-            timeL = new List<double> { 30,30 };
-            x.addSetsAndTimes(repL, timeL, 20);
+            repL = new List<int> { 1, 0 };
+            timeL = new List<double> { 30, 30 };
+            x.addSetsAndTimes(repL, timeL, 20, SetType.Tsec);
             x.TimesAreInMinutes = false;
             Cardio_IntervalRun_10 = new Workout(MisIdiomas.EN, "Interval Running Lvl 10", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
             Cardio_IntervalRun_10.Exercises.Add(c2); //sprint
@@ -647,16 +696,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             repL = new List<int> { 5, 8, 8, 8, 8 };
             setL = new List<int> { 0, 1, 2, 3, 4 };
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
+            x.addSetsAndReps(setL, repL, 5);
             Gym_Total_HASFit_03 = new Workout(MisIdiomas.EN, "Thor Workout – Chris Hemsworth Workout Routine – Muscle Building Exercises to Add Mass", "Build muscle with our Chris Hemsworth workout routine. This Thor workout includes compound strength movements to increase strength and exercises to add mass!", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
             Gym_Total_HASFit_03.Exercises.Add(a78); //
             Gym_Total_HASFit_03.Exercises.Add(a79); //
@@ -668,22 +708,58 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             repL = new List<int> { 6, 8, 8, 8 };
             setL = new List<int> { 0, 1, 2, 3 };
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
-            x.SetList.Add(setL);
-            x.RepList.Add(repL);
+            x.addSetsAndReps(setL, repL, 5);
             Gym_Total_HASFit_04 = new Workout(MisIdiomas.EN, "Bodyweight Strength Training Without Weights – Body Weight Exercise Training Workouts", "", "");
             Gym_Total_HASFit_04.Exercises.Add(a83); //
             Gym_Total_HASFit_04.Exercises.Add(a49); //
             Gym_Total_HASFit_04.Exercises.Add(a84); //
             Gym_Total_HASFit_04.Exercises.Add(a85); //
             Gym_Total_HASFit_04.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 });
+            x.RepList.Add(new List<int> { 5, 12, 5, 12, 5, 12, 5, 12 });
+            x.SetList.Add(new List<int> { 2, 3, 2, 3, 2, 3, 2, 3 });
+            x.RepList.Add(new List<int> { 5, 8, 5, 8, 5, 8, 5, 8 });
+            x.SetList.Add(new List<int> { 4, 5, 4, 5, 4, 5, 4, 5 });
+            x.RepList.Add(new List<int> { 12, 15, 12, 15, 12, 15, 12, 15 });
+            Gym_Total_HASFit_05 = new Workout(MisIdiomas.EN, "Taylor Lautner Workout Routine", "The taylor lautner workout will be a full, athletic physique. The taylor lautner exercises and taylor lautner training is a gym workout for strength and size.", "Complete this workout with the three supersets A, B, and C.  Perform each exercise in a superset without breaking before moving to the next.Break for 2 minutes between supersets.Example: A1, A2, A1, A2, A1, A2, A1, A2, and then break for 2 minutes before beginning superset B.");
+            Gym_Total_HASFit_05.Exercises.Add(a92); //
+            Gym_Total_HASFit_05.Exercises.Add(a70); //
+            Gym_Total_HASFit_05.Exercises.Add(a89); //
+            Gym_Total_HASFit_05.Exercises.Add(a91); //
+            Gym_Total_HASFit_05.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            x.SetList.Add(new List<int> { 0, 0, 0, 0 });
+            x.RepList.Add(new List<int> { 20, 15, 10, 5 });
+            Gym_Total_HASFit_06 = new Workout(MisIdiomas.EN, "Compound Exercises for Mass – Hypertrophy Workout for Mass", "Compound exercises for mass will help you build muscle. This hypertrophy workout for mass will help you break through plateaus. The mass training work out can be done by people of all fitness levels.", "Perform the appropriate exercises for your fitness level for four rounds total. 1 x 20, x15, x10, x5 of each exercise .");
+            Gym_Total_HASFit_06.Exercises.Add(a93); //
+            Gym_Total_HASFit_06.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 10, 10, 10, 12, 10 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            x.addSetsAndReps(setL, repL, 5);
+            Gym_Total_HASFit_07 = new Workout(MisIdiomas.EN, "Total Body Strength Training Workout – Weight Training Exercises", "Get strong fast with HASfit’s total body strength training workout. The weight training exercises are great for men and women. Try this weight workout at home or in the gym.", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
+            Gym_Total_HASFit_07.Exercises.Add(a94); //
+            Gym_Total_HASFit_07.Exercises.Add(a95); //
+            Gym_Total_HASFit_07.Exercises.Add(a96); //
+            Gym_Total_HASFit_07.Exercises.Add(a97); //
+            Gym_Total_HASFit_07.Exercises.Add(a98); //
+            Gym_Total_HASFit_07.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<int> { 10, 10, 10, 12, 10 };
+            setL = new List<int> { 0, 1, 2, 3, 4, 5 };
+            x.addSetsAndReps(setL, repL, 5);
+            Gym_Total_HASFit_07 = new Workout(MisIdiomas.EN, "Total Body Strength Training Workout – Weight Training Exercises", "Get strong fast with HASfit’s total body strength training workout. The weight training exercises are great for men and women. Try this weight workout at home or in the gym.", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
+            Gym_Total_HASFit_07.Exercises.Add(a94); //
+            Gym_Total_HASFit_07.Exercises.Add(a95); //
+            Gym_Total_HASFit_07.Exercises.Add(a96); //
+            Gym_Total_HASFit_07.Exercises.Add(a97); //
+            Gym_Total_HASFit_07.Exercises.Add(a98); //
+            Gym_Total_HASFit_07.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -693,14 +769,11 @@ namespace AdaptLib
             timeL = new List<double> { 1, 1, 1 };
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
-
             Abs_3_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 3 Minutes");
             Abs_3_HASFit.Exercises.Add(a13); //legs up double reach
             Abs_3_HASFit.Exercises.Add(a3);  //windshield wiper
             Abs_3_HASFit.Exercises.Add(a2);  //low plank, raised feet
             Abs_3_HASFit.Sets = x;
-
-
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 1, 3 };
@@ -709,7 +782,6 @@ namespace AdaptLib
             x.TimeList.Add(timeL);
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
-
             Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
             Abs_5_HASFit.Exercises.Add(a0);  //star crunch
             Abs_5_HASFit.Exercises.Add(a1);  //low plank
@@ -717,7 +789,6 @@ namespace AdaptLib
                                              //  Abs_5_HASFit.Exercises.Add(a1);  //low plank
             Abs_5_HASFit.Exercises.Add(a6);  //double crunch + leg spread
             Abs_5_HASFit.Sets = x;
-
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 3, 4, 4 };
@@ -739,7 +810,7 @@ namespace AdaptLib
             timeL = new List<double> { 1, 1, 1, 1, 1, 1 };
             x.SetList.Add(setL);
             x.TimeList.Add(timeL);
-           Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
+            Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
             Abs_6_HASFit.Exercises.Add(a12); //high plank knee to elbow
             Abs_6_HASFit.Exercises.Add(a13); //lying leg raise + crunch
             Abs_6_HASFit.Exercises.Add(a14); //high plank + shoulder touches
@@ -747,8 +818,6 @@ namespace AdaptLib
             Abs_6_HASFit.Exercises.Add(a6); //double crunch + leg spread
             Abs_6_HASFit.Exercises.Add(a17); //russian twists
             Abs_6_HASFit.Sets = x;
-
-
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2 };
@@ -840,7 +909,7 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_04 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> {  Gym_Upper_HASFit_04 })); //week 3 - hypertrophy
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_04 })); //week 3 - hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_02 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_IntervalRun_06, Abs_3_HASFit }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
@@ -848,12 +917,12 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_IntervalRun_07, Abs_6_HASFit }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 4 - strength
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_05 }));//week 4 - strength
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_06 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_IntervalRun_07, Abs_8B_HASFit }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_07 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_08 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 5 - hypertrophy
