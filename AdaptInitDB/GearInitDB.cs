@@ -661,16 +661,7 @@ namespace AdaptLib
 
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             repL = new List<int> { 5, 5, 5, 5 };
-            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
-            x.RepList.Add(repL);
-            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
-            x.RepList.Add(repL);
-            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
-            x.RepList.Add(repL);
-            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
-            x.RepList.Add(repL);
-            x.SetList.Add(new List<int> { 0, 1, 2, 3 });
-            x.RepList.Add(repL);
+            x.addSetsAndReps(repL, new List<int> { 0, 1, 2, 3 }, n: 5);
             Gym_Total_HASFit_01 = new Workout(MisIdiomas.EN, "21 Workout To Build Muscle – Partial Reps Exercises For Muscle Growth", "Mix up your routine with the 21 workout to build muscle. The partial reps exercises are for muscle growth and great for gaining strength.", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
             Gym_Total_HASFit_01.Exercises.Add(a65); //
             Gym_Total_HASFit_01.Exercises.Add(a66); //
@@ -681,10 +672,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 3, 4 };
             timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5 };
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndReps(setL, repL, 2);
             Gym_Total_HASFit_02 = new Workout(MisIdiomas.EN, "Blitzkrieg 5 Minute Home Workout", "The BLITZKRIEG cardio workout is a fast pace 5 minute workout at home. Get a good sweat, get your heart rate going, and work your muscles all in only five minute workout with our personal trainer.");
             Gym_Total_HASFit_02.Exercises.Add(a73); //
             Gym_Total_HASFit_02.Exercises.Add(a74);  //
@@ -731,8 +719,7 @@ namespace AdaptLib
             Gym_Total_HASFit_05.Sets = x;
 
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
-            x.SetList.Add(new List<int> { 0, 0, 0, 0 });
-            x.RepList.Add(new List<int> { 20, 15, 10, 5 });
+            x.addSetsAndReps(new List<int> { 0, 0, 0, 0 }, new List<int> { 20, 15, 10, 5 }, 1);
             Gym_Total_HASFit_06 = new Workout(MisIdiomas.EN, "Compound Exercises for Mass – Hypertrophy Workout for Mass", "Compound exercises for mass will help you build muscle. This hypertrophy workout for mass will help you break through plateaus. The mass training work out can be done by people of all fitness levels.", "Perform the appropriate exercises for your fitness level for four rounds total. 1 x 20, x15, x10, x5 of each exercise .");
             Gym_Total_HASFit_06.Exercises.Add(a93); //
             Gym_Total_HASFit_06.Sets = x;
@@ -767,8 +754,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2 };
             timeL = new List<double> { 1, 1, 1 };
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 1, SetType.Tmin);
             Abs_3_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 3 Minutes");
             Abs_3_HASFit.Exercises.Add(a13); //legs up double reach
             Abs_3_HASFit.Exercises.Add(a3);  //windshield wiper
@@ -778,10 +764,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 1, 3 };
             timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5 };
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 2, SetType.Tmin);
             Abs_5_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 5 Minutes");
             Abs_5_HASFit.Exercises.Add(a0);  //star crunch
             Abs_5_HASFit.Exercises.Add(a1);  //low plank
@@ -793,10 +776,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 3, 4, 4 };
             timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.25, 0.25 };
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 2, SetType.Tmin);
             Abs_5Standing_HASFit = new Workout(MisIdiomas.EN, "5 Minute Standing Abs Workout");
             Abs_5Standing_HASFit.Exercises.Add(a7); //alt leg standing crunch, arms extended
             Abs_5Standing_HASFit.Exercises.Add(a8); //alt elbow 2 knee hands on head
@@ -808,8 +788,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 3, 4, 5 };
             timeL = new List<double> { 1, 1, 1, 1, 1, 1 };
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 1, SetType.Tmin);
             Abs_6_HASFit = new Workout(MisIdiomas.EN, "6 Pack Abs In 6 Minutes");
             Abs_6_HASFit.Exercises.Add(a12); //high plank knee to elbow
             Abs_6_HASFit.Exercises.Add(a13); //lying leg raise + crunch
@@ -822,14 +801,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2 };
             timeL = new List<double> { 0.5, 0.5, 0.5 };
-            x.SetList.Add(setL); //4x
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 4, SetType.Tmin);
             Abs_6Oblique_HASFit = new Workout(MisIdiomas.EN, "Oblique Exercises And Love Handles In 6 Minutes");
             Abs_6Oblique_HASFit.Exercises.Add(a10); //standing twist
             Abs_6Oblique_HASFit.Exercises.Add(a18); //standing side crunches
@@ -839,10 +811,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 0, 1, 2, 3, 4, 5, 6 };
             timeL = new List<double> { 0.25, 0.25, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 };
-            x.SetList.Add(setL); //2x
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 2, SetType.Tmin);
             Abs_8A_HASFit = new Workout(MisIdiomas.EN, "8 Minutes To Ripped Abs");
             Abs_8A_HASFit.Exercises.Add(a20); //side plank + dips
             Abs_8A_HASFit.Exercises.Add(a21); //crunch w twist (1 shoulder to knee)
@@ -857,11 +826,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7 };
             timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 };
-            x.SetList.Add(setL); //2x
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
-
+            x.addSetsAndTimes(setL, timeL, 2, SetType.Tmin);
             Abs_8Lower_HASFit = new Workout(MisIdiomas.EN, "Lower Ab Workout");
             Abs_8Lower_HASFit.Exercises.Add(a28); //sprinter
             Abs_8Lower_HASFit.Exercises.Add(a29); //high plank knee 2 chest
@@ -876,10 +841,7 @@ namespace AdaptLib
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
             setL = new List<int> { 0, 1, 2, 3, 4, 5, 6, 6 };
             timeL = new List<double> { 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 };
-            x.SetList.Add(setL); //2x
-            x.TimeList.Add(timeL);
-            x.SetList.Add(setL);
-            x.TimeList.Add(timeL);
+            x.addSetsAndTimes(setL, timeL, 2, SetType.Tmin);
             Abs_8B_HASFit = new Workout(MisIdiomas.EN, "Shredding 8 Min Abs");
             Abs_8B_HASFit.Exercises.Add(a35); //clam
             Abs_8B_HASFit.Exercises.Add(a15); //leg raise

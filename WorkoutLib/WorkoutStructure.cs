@@ -50,7 +50,6 @@ namespace AdaptLib
         public void addSetsAndReps(List<int> sets, List<int> reps)
         {
             addSetsAndReps(sets, reps, n: 1);
-            DoIHaveReps = true;
         }
 
         public WorkoutStructure(bool anyTimes, bool anyDistances)
