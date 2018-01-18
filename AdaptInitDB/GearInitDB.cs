@@ -55,6 +55,10 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_07;
             Workout Gym_Total_HASFit_08;
             Workout Gym_Total_HASFit_09;
+            Workout Gym_Total_HASFit_10;
+            Workout Gym_Total_HASFit_11;
+            Workout Gym_Total_HASFit_12;
+            Workout Gym_Total_HASFit_13;
 
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
@@ -280,6 +284,7 @@ namespace AdaptLib
             Exercise b3 = new Exercise(ps, MisIdiomas.EN, "Forward/ Back Hops", "");
             Exercise b4 = new Exercise(ps, MisIdiomas.EN, "Lateral Hops", "");
             Exercise c3 = new Exercise(ps, MisIdiomas.EN, "Rest");
+            Exercise b27 = new Exercise(ps, MisIdiomas.EN, "Broad Jump + Knee Tuck", "");
 
             //upper body
             Exercise a41 = new Exercise(ps, MisIdiomas.EN, "Incline Chest Press", "");
@@ -307,6 +312,8 @@ namespace AdaptLib
             Exercise a84 = new Exercise(ps, MisIdiomas.EN, "Elevated Wide Push-up", "");
             Exercise b7 = new Exercise(ps, MisIdiomas.EN, "Push-up", "");
             Exercise b8 = new Exercise(ps, MisIdiomas.EN, "Elevated Push-up", "");
+            Exercise b25 = new Exercise(ps, MisIdiomas.EN, "Superman Push-ups", "");
+            Exercise b34 = new Exercise(ps, MisIdiomas.EN, "Total Body Ballistic Push-Up", "");
             Exercise a69 = new Exercise(ps, MisIdiomas.EN, "Wide Pronate Lat Pulldowns", "pronate - palms facing away");
             Exercise a70 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Curl", "");
             Exercise a71 = new Exercise(ps, MisIdiomas.EN, "Reverse Grip Straight Bar Pullbacks", "");
@@ -321,6 +328,7 @@ namespace AdaptLib
             Exercise a96 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Negative Fly To Chest Press Concentric", "");
             Exercise b5 = new Exercise(ps, MisIdiomas.EN, "California Skullcrusher", "");
             Exercise b6 = new Exercise(ps, MisIdiomas.EN, "Incline DB Fly", "");
+            Exercise b33 = new Exercise(ps, MisIdiomas.EN, "Negative Pull-ups", "");
 
             //lower body           
             Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "The stance is going to be narrower than a squat, about hip width apart, with the toes pointed straight ahead. Some lifters like to flare the feet a bit but this should be minimal – no more than 15 degrees of foot flare. At the start, the bar should be resting against the thighs, and for the descent you want to sit the hips back allowing the torso to drop down. The knees will bend slightly but the shins remain vertical throughout – the bar should continue to drag along the thighs the entire time. During the negative, you want to maintain a slight arch and tension in your low back. This tilts the pelvis anteriorly and puts a greater stretch on the hamstrings. However, the lumbar extension and anterior pelvic tilt should be slight and not excessive. Moreover, do not allow the lumbar spine to round or the shoulders to be protracted during the RDL. Keep the chest up and the shoulders back.");
@@ -333,6 +341,7 @@ namespace AdaptLib
             Exercise a79 = new Exercise(ps, MisIdiomas.EN, "Barbell Step-Ups", "1 rep is 1 rep for each leg");
             Exercise a47 = new Exercise(ps, MisIdiomas.EN, "Squat w/ Elevated Heels", "");
             Exercise a49 = new Exercise(ps, MisIdiomas.EN, "One Leg Squat", "");
+            a49.Aliases.Add(new AdaptText("Pistol Squat", MisIdiomas.EN));
             Exercise a66 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Squat", "");
             Exercise a74 = new Exercise(ps, MisIdiomas.EN, "Jump Squat", "Perform normal unweighted squat, however on the way up jump as high as you can.");
             Exercise a85 = new Exercise(ps, MisIdiomas.EN, "Split Squat To Knee Raise", "");
@@ -345,6 +354,8 @@ namespace AdaptLib
             Exercise b16 = new Exercise(ps, MisIdiomas.EN, "Block Calf Raises - Toes In", "");
             Exercise b17 = new Exercise(ps, MisIdiomas.EN, "Block Calf Raises - Toes Out", "");
             Exercise b18 = new Exercise(ps, MisIdiomas.EN, "Block Calf Raises - Toes Forward", "");
+            Exercise b28 = new Exercise(ps, MisIdiomas.EN, "Squat Box Jump", "");
+            Exercise b32 = new Exercise(ps, MisIdiomas.EN, "Negative Manual GHR's", "glute hamstring raise");
 
             //core + total body movements
             Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
@@ -369,20 +380,16 @@ namespace AdaptLib
             Exercise b20 = new Exercise(ps, MisIdiomas.EN, "Hang Clean", "");
             Exercise b22 = new Exercise(ps, MisIdiomas.EN, "Push Jerk", "");
             Exercise b24 = new Exercise(ps, MisIdiomas.EN, "Barbell Thrusters", "");
+            Exercise b26 = new Exercise(ps, MisIdiomas.EN, "High Snatch Pull From Hang", "");
+            Exercise b29 = new Exercise(ps, MisIdiomas.EN, "Hanging Leg Raise", "");
+            Exercise b30 = new Exercise(ps, MisIdiomas.EN, "Hang Clean + Front Squat", "");
+            Exercise b31 = new Exercise(ps, MisIdiomas.EN, "Downward Dog + Chaturanga Push-Up + High Plank", "");
+            Exercise b35 = new Exercise(ps, MisIdiomas.EN, "Sott Press", "");
+            Exercise b36 = new Exercise(ps, MisIdiomas.EN, "Barbell Fallout", "");
 
 
-            Exercise b25 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b26 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b27 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b28 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b29 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b30 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b31 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b32 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b33 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b34 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b35 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b36 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+
             Exercise b37 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b38 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b39 = new Exercise(ps, MisIdiomas.EN, "", "");
@@ -687,6 +694,40 @@ namespace AdaptLib
             Gym_Total_HASFit_09 = new Workout(MisIdiomas.EN, "Barbell Workout Routine – Barbell Complex – Barbell Exercises for Strength Training", "You only need a bar to get strong with this barbell workout routine at home or gym. Use these barbell exercises for strength improvement.", "");
             Gym_Total_HASFit_09.Exercises = new List<Exercise> { a99, b0, b1, b2, b3, b4 }; //
             Gym_Total_HASFit_09.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: true);
+            repL = new List<double> { 8, 200, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3 };
+            typeL = new List<SetType> { SetType.rep, SetType.distM, SetType.rep, SetType.rep };
+            x.DoIHaveReps = true;
+            x.addSets(setL, repL, typeL, 5);
+            Gym_Total_HASFit_10 = new Workout(MisIdiomas.EN, "Man of Steel Workout – Superman Workout – Henry Cavill Workout – HIIT – Intense Workout", "The superman workout is a hiit intense workout that will bring you superhuman speed, strength, and power! The man of steel workout and henry cavill workout routine  will help you gain muscle while getting lean at the same time.", "");
+            Gym_Total_HASFit_10.Exercises = new List<Exercise> { b25, c2, b26, b27 }; //
+            Gym_Total_HASFit_10.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<double> { 8, 15, 12, 12 };
+            setL = new List<int> { 0, 1, 2, 3 };
+            x.addSetsAndReps(setL, repL, 6);
+            Gym_Total_HASFit_11 = new Workout(MisIdiomas.EN, "Total Body Strength Training Workout – Weight Training Exercises", "Get strong fast with HASfit’s total body strength training workout. The weight training exercises are great for men and women. Try this weight workout at home or in the gym.", "Perform each exercise at high intensity for the prescribed sets and repetitions.");
+            Gym_Total_HASFit_11.Exercises = new List<Exercise> { b30, b8, b28, b29 }; //
+            Gym_Total_HASFit_11.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<double> { 8, 12, 8, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            x.addSetsAndReps(setL, repL, 6);
+            Gym_Total_HASFit_12 = new Workout(MisIdiomas.EN, "Warrior Workout – Tom Hardy Workout – MMA Workout – Tom Hardy Training", "The warrior workout uses an explosive combination of olympic lifts, mma workouts, and high intensity interval Training, hiit to create the perfect tom hardy workout and tom hardy training.", "");
+            Gym_Total_HASFit_12.Exercises = new List<Exercise> { b34, a99, b12, b35, b36 }; //
+            Gym_Total_HASFit_12.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<double> { 8, 8, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3 };
+            x.addSetsAndReps(setL, repL, 6);
+            Gym_Total_HASFit_13 = new Workout(MisIdiomas.EN, "Incredible Body Weight Exercises for Strength – Total Bodyweight Training Workout", "", "");
+            Gym_Total_HASFit_13.Exercises = new List<Exercise> { a49, b31, b32, b33 }; //
+            Gym_Total_HASFit_13.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -844,11 +885,11 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_07 }));
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_09 })); //week 6 - high intensity interval training
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_10 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_11 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_12 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_13 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 7 - high intensity interval training

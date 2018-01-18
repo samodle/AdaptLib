@@ -4,7 +4,7 @@ namespace AdaptLib
     //workout specific
    // public enum TorsoPositionT1 { standing_upright, sitting, kneeling, laying}
    // public enum LegPositionT1 { }
-   public enum SetType { rep, Tsec, Tmin, distMi, distKm}
+   public enum SetType { rep, Tsec, Tmin, distMi, distKm, distM}
 
     public enum MuscleT1{arms, legs, chest, neck, back, core }
 
