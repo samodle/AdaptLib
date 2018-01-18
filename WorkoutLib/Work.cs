@@ -16,7 +16,7 @@ namespace AdaptLib
          * 1. the order of this list is CRITICAL for the operation of the SetList set/superset functionality
          * 2. Exercizes and Equip/Gear lists need to be populated at the same time
          */
-        public List<Exercise> Exercises { get; set; } = new List<Exercise>();
+        public List<Exercise> Exercises { get; set; }// = new List<Exercise>();
 
         public WorkoutStructure Sets { get; set; }
 
