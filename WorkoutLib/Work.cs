@@ -54,7 +54,14 @@ namespace AdaptLib
 
         public Workout(MisIdiomas lang, string name, string description, string instruct): this(lang, name, description)
         {
-            Instructions.Add(instruct, lang);
+            if(instruct == "")
+            {
+                Instructions.Add("Perform each exercise at high intensity for the prescribed sets and repetitions to complete one round.", MisIdiomas.EN);
+            }
+            else
+            {
+                Instructions.Add(instruct, lang);
+            }           
         }
         #endregion
     }

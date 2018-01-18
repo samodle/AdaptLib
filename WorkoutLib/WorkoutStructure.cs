@@ -13,8 +13,21 @@ namespace AdaptLib
 
         public bool DoIHaveTimes { get; private set; } = false;
         public bool DoIHaveDistances { get; private set; } = false;
-        public bool DoIHaveReps { get; private set; } = false;
+        public bool DoIHaveReps { get; set; } = false;
         #endregion
+
+        public void addSets(List<int> sets, List<double> data, List<SetType> types, int n)
+        {
+            List<Tuple<int, double, SetType>> x = new List<Tuple<int, double, SetType>>();
+            for (int i = 0; i < sets.Count; i++)
+            {
+                x.Add(new Tuple<int, double, SetType>(sets[i], data[i], types[i]));
+            }
+            for (int i = 0; i < n; i++)
+            {
+                SetList.Add(x);
+            }
+        }
 
         public void addSetsAndReps(List<int> sets, List<double> reps, int n)
         {
