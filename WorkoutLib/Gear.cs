@@ -26,6 +26,11 @@ namespace AdaptLib
         public bool DoIHaveWeight { get { return (WeightKGs != Utils.NA); } }
         #endregion
 
+        public override string ToString()
+        {
+            return "ID: " + ID.ToString();
+        }
+
         #region Constructor
         //assumes name/descript/etc will be added l8er
         public Gear(WorkoutEquipment e, double kgs)

@@ -39,6 +39,11 @@ namespace AdaptLib
         public AdaptText Name { get; set; } 
         public List<DailyPlan> Days { get; set; } = new List<DailyPlan>();
 
+        public override string ToString()
+        {
+            return "# Days: " + Days.Count;//"ID: " + ID.ToString();
+        }
+
         public WorkoutPlan(MisIdiomas lang, string nombre)
         {
             Name = new AdaptText(nombre, lang);

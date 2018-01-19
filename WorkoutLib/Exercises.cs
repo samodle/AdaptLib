@@ -41,6 +41,11 @@ namespace AdaptLib
         /* To Do: Add image, adapttext dictionary */
         #endregion
 
+        public override string ToString()
+        {
+            return "ID: " + ID.ToString();
+        }
+
         #region Constructor
         public Exercise(ExerciseParams p, MisIdiomas l, string name)
         {

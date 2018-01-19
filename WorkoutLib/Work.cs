@@ -26,6 +26,11 @@ namespace AdaptLib
         public List<int> Equip { get; private set; }
         #endregion
 
+        public override string ToString()
+        {
+            return "ID: " + ID.ToString() + ", EquipList.Count = " + Equip.Count;
+        }
+
         private void populateEquipmentList()
         {
             foreach (Exercise e in Exercises)

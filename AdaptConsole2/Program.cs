@@ -13,10 +13,12 @@ namespace AdaptConsole2
         {
 
             Console.WriteLine("Wassup World! err ref#80085");
-            Console.WriteLine("MasterGearList.Count = " + GearInitDB.MasterGearList.Count);
+            Console.WriteLine("MasterExerciseList.Count = " + GearInitDB.MasterExerciseList.Count);
+            Console.Write("MasterGearList.Count = " + GearInitDB.MasterGearList.Count);
             GearInitDB.setMasterLists();
-            Console.WriteLine("MasterGearList.Count = " + GearInitDB.MasterGearList.Count);
-            Console.Write("Press any key to continue...");
+            Console.WriteLine(" ---> " + GearInitDB.MasterGearList.Count);
+            Console.WriteLine("MasterExerciseList.Count = " + GearInitDB.MasterExerciseList.Count);
+            Console.WriteLine("Press any key to continue. Do it. You won't...");
             Console.ReadKey(true);
 
         }
