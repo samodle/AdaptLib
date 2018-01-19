@@ -31,7 +31,10 @@ namespace AdaptLib
 
         public void addSetsAndReps(List<int> sets, List<double> reps, int n)
         {
-            if (sets.Count != reps.Count) { throw new Exception("TITANIC DISASTER: Set list and rep list have different counts!"); } //err
+            if (sets.Count != reps.Count)
+            {
+                throw new Exception(TheSourceCode.RandoErrorMessageOpener() + " Set list and rep list have different counts!");
+            } //err
 
             List<Tuple<int, double, SetType>> x = new List<Tuple<int, double, SetType>>();
             for (int i = 0; i < sets.Count; i++)

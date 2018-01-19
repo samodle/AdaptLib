@@ -36,12 +36,12 @@ namespace AdaptLib
 
     public class WorkoutPlan
     {
-        public AdaptText Name { get; set; }
+        public AdaptText Name { get; set; } 
         public List<DailyPlan> Days { get; set; } = new List<DailyPlan>();
 
         public WorkoutPlan(MisIdiomas lang, string nombre)
         {
-            Name.Add(nombre, lang);
+            Name = new AdaptText(nombre, lang);
         }
     }
 }
