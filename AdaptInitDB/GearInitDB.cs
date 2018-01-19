@@ -59,6 +59,7 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_11;
             Workout Gym_Total_HASFit_12;
             Workout Gym_Total_HASFit_13;
+            Workout Gym_Total_HASFit_14;
 
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
@@ -226,46 +227,7 @@ namespace AdaptLib
 
             //nordic track, plank reach twists, situp twist down
 
-            eList.Add(a0);
-            eList.Add(a1);
-            eList.Add(a2);
-            eList.Add(a3);
-            eList.Add(a4);
-            eList.Add(a5);
-            eList.Add(a6);
-            eList.Add(a7);
-            eList.Add(a8);
-            eList.Add(a9);
-            eList.Add(a10);
-            eList.Add(a11);
-            eList.Add(a12);
-            eList.Add(a13);
-            eList.Add(a14);
-            eList.Add(a15);
-            eList.Add(a16);
-            eList.Add(a17);
-            eList.Add(a18);
-            eList.Add(a19);
-            eList.Add(a20);
-            eList.Add(a21);
-            eList.Add(a22);
-            eList.Add(a23);
-            eList.Add(a24);
-            eList.Add(a25);
-            eList.Add(a26);
-            eList.Add(a27);
-            eList.Add(a28);
-            eList.Add(a29);
-            eList.Add(a30);
-            eList.Add(a31);
-            eList.Add(a32);
-            eList.Add(a33);
-            eList.Add(a34);
-            eList.Add(a35);
-            eList.Add(a36);
-            eList.Add(a37);
-            eList.Add(a38);
-            eList.Add(a39);
+
             #endregion
 
             #region Gym Exercises
@@ -357,19 +319,23 @@ namespace AdaptLib
             Exercise b28 = new Exercise(ps, MisIdiomas.EN, "Squat Box Jump", "");
             Exercise b32 = new Exercise(ps, MisIdiomas.EN, "Negative Manual GHR's", "glute hamstring raise");
 
-            //core + total body movements
-            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
-            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "Lunge Knee Ups with Overhead Plate", "4 x 8 (each leg)");
+            //core
             Exercise a62 = new Exercise(ps, MisIdiomas.EN, "Figure 8’s from bench", "4 x 10 revolutions (5 each way)");
             Exercise a68 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Med Ball Sit-ups", "");
+            Exercise a75 = new Exercise(ps, MisIdiomas.EN, "Mountain Climber", "From high plank position, jump so that one knee is up in your chest while one is still behind you. Jump again and switch leg positions.");   
+            Exercise a81 = new Exercise(ps, MisIdiomas.EN, "Hanging Knee Twist", "");
+            Exercise a82 = new Exercise(ps, MisIdiomas.EN, "Plank Knee to Elbows", "1 rep is 1 rep for each elbow");
+            Exercise b29 = new Exercise(ps, MisIdiomas.EN, "Hanging Leg Raise", "");       
+            Exercise b36 = new Exercise(ps, MisIdiomas.EN, "Barbell Fallout", "");
+
+            //total body (not core specific)
+            Exercise a59 = new Exercise(ps, MisIdiomas.EN, "Ballistic Push-up + Plank Knee Tuck", "");
+            Exercise a61 = new Exercise(ps, MisIdiomas.EN, "Lunge Knee Ups with Overhead Plate", "4 x 8 (each leg)");
             Exercise a73 = new Exercise(ps, MisIdiomas.EN, "Alternating Arm Squat Press", "Weights resting on shoulder, perform squat. After coming up all the way, lift one arm all the way overhead. (This is a press, not a jerk)");
-            Exercise a75 = new Exercise(ps, MisIdiomas.EN, "Mountain Climber", "From high plank position, jump so that one knee is up in your chest while one is still behind you. Jump again and switch leg positions.");
             Exercise a76 = new Exercise(ps, MisIdiomas.EN, "Jump Hang", "With");
             Exercise a77 = new Exercise(ps, MisIdiomas.EN, "Standing Weight Swing", "");
             Exercise a78 = new Exercise(ps, MisIdiomas.EN, "RDL + Bent-over Row + Snatch Power Pull", "");
             Exercise a80 = new Exercise(ps, MisIdiomas.EN, "Barbell Push Jerk", "");
-            Exercise a81 = new Exercise(ps, MisIdiomas.EN, "Hanging Knee Twist", "");
-            Exercise a82 = new Exercise(ps, MisIdiomas.EN, "Plank Knee to Elbows", "1 rep is 1 rep for each elbow");
             Exercise a93 = new Exercise(ps, MisIdiomas.EN, "RDL + Row + Shrug, Push Jerk", ""); //easiest DB for all, then DB for first and BB for push jerk, hardest bb for all
             Exercise a94 = new Exercise(ps, MisIdiomas.EN, "Dumbell Upright Row + Clean + Press", "");
             Exercise a97 = new Exercise(ps, MisIdiomas.EN, "Dumbell Curl + Lunge", "");
@@ -381,20 +347,17 @@ namespace AdaptLib
             Exercise b22 = new Exercise(ps, MisIdiomas.EN, "Push Jerk", "");
             Exercise b24 = new Exercise(ps, MisIdiomas.EN, "Barbell Thrusters", "");
             Exercise b26 = new Exercise(ps, MisIdiomas.EN, "High Snatch Pull From Hang", "");
-            Exercise b29 = new Exercise(ps, MisIdiomas.EN, "Hanging Leg Raise", "");
             Exercise b30 = new Exercise(ps, MisIdiomas.EN, "Hang Clean + Front Squat", "");
             Exercise b31 = new Exercise(ps, MisIdiomas.EN, "Downward Dog + Chaturanga Push-Up + High Plank", "");
             Exercise b35 = new Exercise(ps, MisIdiomas.EN, "Sott Press", "");
-            Exercise b36 = new Exercise(ps, MisIdiomas.EN, "Barbell Fallout", "");
 
 
 
-
-            Exercise b37 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b38 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b39 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b40 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b41 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b37 = new Exercise(ps, MisIdiomas.EN, "Burpee + Box Jump", "");
+            Exercise b38 = new Exercise(ps, MisIdiomas.EN, "Sliding Mountain Climber + Push-up", "");
+            Exercise b39 = new Exercise(ps, MisIdiomas.EN, "Jumping Pull-ups", "");
+            Exercise b40 = new Exercise(ps, MisIdiomas.EN, "Sliding Knee Tuck + Push-up", "");
+            Exercise b41 = new Exercise(ps, MisIdiomas.EN, "Med Ball Sit-ups w/ Bench", "");
             Exercise b42 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b43 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b44 = new Exercise(ps, MisIdiomas.EN, "", "");
@@ -728,6 +691,14 @@ namespace AdaptLib
             Gym_Total_HASFit_13 = new Workout(MisIdiomas.EN, "Incredible Body Weight Exercises for Strength – Total Bodyweight Training Workout", "", "");
             Gym_Total_HASFit_13.Exercises = new List<Exercise> { a49, b31, b32, b33 }; //
             Gym_Total_HASFit_13.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            repL = new List<double> { 8, 8, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3 };
+            x.addSetsAndReps(setL, repL, 6);
+            Gym_Total_HASFit_14 = new Workout(MisIdiomas.EN, "Exclusive Ryan Reynolds Workout Routine – High Intensity Interval Training Exercises", "Our EXCLUSIVE Ryan Reynolds workout routine will get you ripped and lean at the same time! These high intensity interval training exercises will challenge you in only 15 minutes.", "Complete all movements in order for as many rounds as possible in 15 minutes.");
+            Gym_Total_HASFit_14.Exercises = new List<Exercise> {  }; //
+            Gym_Total_HASFit_14.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -916,20 +887,20 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_02 }));
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 10 - hypertrophy
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_04 })); //week 10 - hypertrophy
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_02 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_IntervalRun_06, Abs_8B_HASFit }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_05 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_IntervalRun_07, Abs_6_HASFit }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 }));//week 11 - strength
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_01 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_03 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_04 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 12 - high intensity interval training
@@ -987,7 +958,168 @@ namespace AdaptLib
             #endregion
             #endregion
 
+            #region Wrap It 'Fo You Build It. wait... I'm sure its 'posed to rhyme...
+            eList.Add(a0);
+            eList.Add(a1);
+            eList.Add(a2);
+            eList.Add(a3);
+            eList.Add(a4);
+            eList.Add(a5);
+            eList.Add(a6);
+            eList.Add(a7);
+            eList.Add(a8);
+            eList.Add(a9);
+            eList.Add(a10);
+            eList.Add(a11);
+            eList.Add(a12);
+            eList.Add(a13);
+            eList.Add(a14);
+            eList.Add(a15);
+            eList.Add(a16);
+            eList.Add(a17);
+            eList.Add(a18);
+            eList.Add(a19);
+            eList.Add(a20);
+            eList.Add(a21);
+            eList.Add(a22);
+            eList.Add(a23);
+            eList.Add(a24);
+            eList.Add(a25);
+            eList.Add(a26);
+            eList.Add(a27);
+            eList.Add(a28);
+            eList.Add(a29);
+            eList.Add(a30);
+            eList.Add(a31);
+            eList.Add(a32);
+            eList.Add(a33);
+            eList.Add(a34);
+            eList.Add(a35);
+            eList.Add(a36);
+            eList.Add(a37);
+            eList.Add(a38);
+            eList.Add(a39);
+            eList.Add(a40);
+            eList.Add(a41);
+            eList.Add(a42);
+            eList.Add(a43);
+            eList.Add(a44);
+            eList.Add(a45);
+            eList.Add(a46);
+            eList.Add(a47);
+            eList.Add(a48);
+            eList.Add(a49);
+            eList.Add(a50);
+            eList.Add(a51);
+            eList.Add(a52);
+            eList.Add(a53);
+            eList.Add(a54);
+            eList.Add(a55);
+            eList.Add(a56);
+            eList.Add(a57);
+            eList.Add(a58);
+            eList.Add(a59);
+            eList.Add(a60);
+            eList.Add(a61);
+            eList.Add(a62);
+            eList.Add(a63);
+            eList.Add(a64);
+            eList.Add(a65);
+            eList.Add(a66);
+            eList.Add(a61);
+            eList.Add(a62);
+            eList.Add(a63);
+            eList.Add(a64);
+            eList.Add(a65);
+            eList.Add(a66);
+            eList.Add(a67);
+            eList.Add(a68);
+            eList.Add(a69);
+            eList.Add(a70);
+            eList.Add(a71);
+            eList.Add(a72);
+            eList.Add(a73);
+            eList.Add(a74);
+            eList.Add(a75);
+            eList.Add(a76);
+            eList.Add(a77);
+            eList.Add(a78);
+            eList.Add(a79);
+            eList.Add(a80);
+            eList.Add(a81);
+            eList.Add(a82);
+            eList.Add(a83);
+            eList.Add(a84);
+            eList.Add(a85);
+            eList.Add(a86);
+            eList.Add(a87);
+            eList.Add(a88);
+            eList.Add(a89);
+            eList.Add(a90);
+            eList.Add(a91);
+            eList.Add(a92);
+            eList.Add(a93);
+            eList.Add(a94);
+            eList.Add(a95);
+            eList.Add(a96);
+            eList.Add(a97);
+            eList.Add(a98);
+            eList.Add(a99);
+
+            eList.Add(b0);
+            eList.Add(b1);
+            eList.Add(b2);
+            eList.Add(b3);
+            eList.Add(b4);
+            eList.Add(b5);
+            eList.Add(b6);
+            eList.Add(b7);
+            eList.Add(b8);
+            eList.Add(b9);
+            eList.Add(b10);
+            eList.Add(b11);
+            eList.Add(b12);
+            eList.Add(b13);
+            eList.Add(b14);
+            eList.Add(b15);
+            eList.Add(b16);
+            eList.Add(b17);
+            eList.Add(b18);
+            eList.Add(b19);
+            eList.Add(b20);
+            eList.Add(b21);
+            eList.Add(b22);
+            eList.Add(b23);
+            eList.Add(b24);
+            eList.Add(b25);
+            eList.Add(b26);
+            eList.Add(b27);
+            eList.Add(b28);
+            eList.Add(b29);
+            eList.Add(b30);
+            eList.Add(b31);
+            eList.Add(b32);
+            eList.Add(b33);
+            eList.Add(b34);
+            eList.Add(b35);
+            eList.Add(b36);
+            eList.Add(b37);
+            eList.Add(b38);
+            eList.Add(b39);
+            eList.Add(b40);
+            eList.Add(b41);
+            eList.Add(b42);
+            eList.Add(b43);
+            eList.Add(b44);
+            eList.Add(b45);
+            eList.Add(b46);
+            eList.Add(b47);
+            eList.Add(b48);
+            eList.Add(b49);
+            eList.Add(b50);
+
             MasterExerciseList = eList;
+            #endregion
         }
     }
 }
