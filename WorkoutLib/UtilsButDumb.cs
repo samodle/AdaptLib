@@ -10,10 +10,11 @@ namespace AdaptLib
         public static string RandoErrorMessageOpener()
         {
             int rInt = R1.Next(0, 100);
-            if(rInt < 20)
+            if (rInt < 20)
             {
                 return ("TITANIC DISASTER! Your code just ice berged you:");
-            } else if(rInt < 40)
+            }
+            else if (rInt < 40)
             {
                 return ("DEEP STATE COUP. Program hijacked by government forces loyal to the illuminati: ");
             }

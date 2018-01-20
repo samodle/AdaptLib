@@ -6,11 +6,15 @@ namespace AdaptLib
     public class Workout
     {
         #region Variables/Properties
-        public static int NumberOfWorkouts = 1;
+        public static int NumberOfWorkouts = 1; //static int to track total number of these objects in order to generate IDs
         public int ID { get; set; } = -1;
         public AdaptText Name { get; set; } = new AdaptText();
         public AdaptText Description { get; set; } = new AdaptText();
         public AdaptText Instructions { get; set; } = new AdaptText();
+
+        public double Target { get; private set; } = -1;
+        public SetType TargetType { get; private set; } = SetType.NA;
+
 
         /*
          * 1. the order of this list is CRITICAL for the operation of the SetList set/superset functionality
@@ -29,6 +33,12 @@ namespace AdaptLib
         public override string ToString()
         {
             return "ID: " + ID.ToString() + ", EquipList.Count = " + Equip.Count;
+        }
+
+        public void setTargetAndType(double trgt, SetType stype)
+        {
+            Target = trgt;
+            TargetType = stype;
         }
 
         private void populateEquipmentList()

@@ -11,6 +11,8 @@ namespace AdaptLib
         //Tuple<workout index, amount, type>
         public List<List<Tuple<int, double, SetType>>> SetList { get; private set; } = new List<List<Tuple<int, double, SetType>>>();
 
+        public WorkoutType WType { get; set; } = WorkoutType.superset;
+
         public bool DoIHaveTimes { get; private set; } = false;
         public bool DoIHaveDistances { get; private set; } = false;
         public bool DoIHaveReps { get; set; } = false;

@@ -5,7 +5,6 @@ namespace AdaptLib
 {
     public class Gear
     {
-
         //TD: for some things like box jumps height is the important metric
 
         #region Variables/Properties
