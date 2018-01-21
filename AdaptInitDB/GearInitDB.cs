@@ -987,17 +987,17 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_12 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 13
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_06 })); //week 13 - hypertrophy
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_03 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_07 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_06 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_04 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_07 }));
 
             #region Abs
             WorkoutPlan Abs_30_HASFit_00 = new WorkoutPlan(MisIdiomas.EN, "Six Pack Abs In 30 Days");
