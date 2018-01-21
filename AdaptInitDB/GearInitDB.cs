@@ -25,6 +25,8 @@ namespace AdaptLib
             Workout Cardio_IntervalRun_09;
             Workout Cardio_IntervalRun_10;
 
+            Workout Cardio_StairRun_01;
+
             //Core
             Workout Abs_3_HASFit;
             Workout Abs_5_HASFit;
@@ -245,6 +247,13 @@ namespace AdaptLib
             Exercise c0 = new Exercise(ps, MisIdiomas.EN, "Jog");
             Exercise c1 = new Exercise(ps, MisIdiomas.EN, "Walk");
             Exercise c2 = new Exercise(ps, MisIdiomas.EN, "Sprint", "Run as fast as you can!");
+
+            Exercise c4 = new Exercise(ps, MisIdiomas.EN, "Jog Stairs - Every Step");
+            Exercise c5 = new Exercise(ps, MisIdiomas.EN, "Sprint Stairs - Every Step");
+            Exercise c6 = new Exercise(ps, MisIdiomas.EN, "Jog Stairs - Every Other Step");
+            Exercise c7 = new Exercise(ps, MisIdiomas.EN, "Sprint Stairs - Every Other Step");
+            Exercise c8 = new Exercise(ps, MisIdiomas.EN, "Stretch Stairs - Every Third Step");
+
             Exercise a99 = new Exercise(ps, MisIdiomas.EN, "Split Jumps", "");
             a99.Aliases.Add(new AdaptText("Scissor Jumps", MisIdiomas.EN));
             Exercise b3 = new Exercise(ps, MisIdiomas.EN, "Forward/ Back Hops", "");
@@ -297,8 +306,8 @@ namespace AdaptLib
             Exercise a96 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Negative Fly To Chest Press Concentric", "");
             Exercise b5 = new Exercise(ps, MisIdiomas.EN, "California Skullcrusher", "");
             Exercise b6 = new Exercise(ps, MisIdiomas.EN, "Incline DB Fly", "");
-     
-          
+
+
 
             //lower body           
             Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "The stance is going to be narrower than a squat, about hip width apart, with the toes pointed straight ahead. Some lifters like to flare the feet a bit but this should be minimal – no more than 15 degrees of foot flare. At the start, the bar should be resting against the thighs, and for the descent you want to sit the hips back allowing the torso to drop down. The knees will bend slightly but the shins remain vertical throughout – the bar should continue to drag along the thighs the entire time. During the negative, you want to maintain a slight arch and tension in your low back. This tilts the pelvis anteriorly and puts a greater stretch on the hamstrings. However, the lumbar extension and anterior pelvic tilt should be slight and not excessive. Moreover, do not allow the lumbar spine to round or the shoulders to be protracted during the RDL. Keep the chest up and the shoulders back.");
@@ -365,12 +374,12 @@ namespace AdaptLib
             Exercise b43 = new Exercise(ps, MisIdiomas.EN, "Burpees", "");
 
 
-          
-            Exercise b45 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b46 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b47 = new Exercise(ps, MisIdiomas.EN, "", "");
 
-            Exercise b48 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b45 = new Exercise(ps, MisIdiomas.EN, "Partner Fireman Pick-ups", ""); //in immortals workout challenge 5 pickups can replace 8/each leg pistol squats
+            Exercise b46 = new Exercise(ps, MisIdiomas.EN, "Hurdle Broad Jumps", "");
+            Exercise b47 = new Exercise(ps, MisIdiomas.EN, "Toes To Bar", "");
+
+            Exercise b48 = new Exercise(ps, MisIdiomas.EN, "DB Push-up + Row Crawl", "");
             Exercise b49 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b50 = new Exercise(ps, MisIdiomas.EN, "", "");
 
@@ -378,13 +387,20 @@ namespace AdaptLib
             #endregion
 
             #region Road Workouts
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false);
+            setL = new List<int> { 0, 1, 2, 1 };
+            repL = new List<double> { 1, 1, 1, 1 };
+            x.addSetsAndReps(setL, repL, 3); //3 'pyramids'
+            Cardio_StairRun_01 = new Workout(MisIdiomas.EN, "Interval Running Lvl 1", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
+            Cardio_StairRun_01.Exercises = new List<Exercise> { c4, c7, c8 };
+            Cardio_StairRun_01.Sets = x;
+
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
-            setL = new List<int> { 0, 1 }; //{ 8, 8, 10, 10, 12, 12, 15, 15 };
+            setL = new List<int> { 0, 1 }; //
             timeL = new List<double> { 25, 5 };
             x.addSetsAndTimes(setL, timeL, 20, SetType.Tsec);
             Cardio_IntervalRun_01 = new Workout(MisIdiomas.EN, "Interval Running Lvl 1", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
-            Cardio_IntervalRun_01.Exercises.Add(c1); //walk
-            Cardio_IntervalRun_01.Exercises.Add(c0); //jog
+            Cardio_IntervalRun_01.Exercises = new List<Exercise> { c1, c0 };
             Cardio_IntervalRun_01.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
@@ -392,8 +408,7 @@ namespace AdaptLib
             timeL = new List<double> { 20, 10 };
             x.addSetsAndTimes(setL, timeL, 30, SetType.Tsec);
             Cardio_IntervalRun_02 = new Workout(MisIdiomas.EN, "Interval Running Lvl 2", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
-            Cardio_IntervalRun_02.Exercises.Add(c1); //walk
-            Cardio_IntervalRun_02.Exercises.Add(c0); //jog
+            Cardio_IntervalRun_02.Exercises = new List<Exercise> { c1, c0 };
             Cardio_IntervalRun_02.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
@@ -401,8 +416,7 @@ namespace AdaptLib
             timeL = new List<double> { 15, 15 };
             x.addSetsAndTimes(setL, timeL, 40, SetType.Tsec);
             Cardio_IntervalRun_03 = new Workout(MisIdiomas.EN, "Interval Running Lvl 3", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
-            Cardio_IntervalRun_03.Exercises.Add(c1); //walk
-            Cardio_IntervalRun_03.Exercises.Add(c0); //jog
+            Cardio_IntervalRun_03.Exercises = new List<Exercise> { c1, c0 };
             Cardio_IntervalRun_03.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
@@ -410,8 +424,7 @@ namespace AdaptLib
             timeL = new List<double> { 30, 30 };
             x.addSetsAndTimes(setL, timeL, 25, SetType.Tsec);
             Cardio_IntervalRun_04 = new Workout(MisIdiomas.EN, "Interval Running Lvl 4", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
-            Cardio_IntervalRun_04.Exercises.Add(c1); //walk
-            Cardio_IntervalRun_04.Exercises.Add(c0); //jog
+            Cardio_IntervalRun_04.Exercises = new List<Exercise> { c1, c0 };
             Cardio_IntervalRun_04.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
@@ -419,8 +432,7 @@ namespace AdaptLib
             timeL = new List<double> { 15, 45 };
             x.addSetsAndTimes(setL, timeL, 30, SetType.Tsec);
             Cardio_IntervalRun_05 = new Workout(MisIdiomas.EN, "Interval Running Lvl 5", "Interval Running – Walking – Sprinting are excellent ways to lose weight running. You will alternate between low intensity and high intensity periods of walking, jogging, and sprinting. Repeat this technique 1x – 3x per week. Try to increase by one level every 2 – 4 weeks. A “Walk” is defined as a brisk walk using arms and controlling breathing and upright posture. A “Jog” is defined as a steady run with intermediate speed. A “Sprint” is defined as running as hard as you can, whether you are moving fast or not. ", "");
-            Cardio_IntervalRun_05.Exercises.Add(c1); //walk
-            Cardio_IntervalRun_05.Exercises.Add(c0); //jog
+            Cardio_IntervalRun_05.Exercises = new List<Exercise> { c1, c0 };
             Cardio_IntervalRun_05.Sets = x;
 
             x = new WorkoutStructure(anyTimes: true, anyDistances: false);
@@ -724,18 +736,18 @@ namespace AdaptLib
             setL = new List<int> { 0, 1, 2, 3, 4, 5 };
             x.addSetsAndReps(setL, repL, 4);
             Gym_Total_HASFit_16 = new Workout(MisIdiomas.EN, "Wrath of Titans Workout – HIIT Workout – Interval Training Exercises", "Feel the wrath of this hiit workout that builds power and stamina. These interval training exercises are sure to challenge even the most seasoned trainee.", "Complete 4 rounds for time. Perform each exercise at high intensity for the prescribed time to complete one round. ");
-            Gym_Total_HASFit_16.Exercises = new List<Exercise> {  }; //
+            Gym_Total_HASFit_16.Exercises = new List<Exercise> { a60, a74, a92, b43, a86, b44 }; //
             Gym_Total_HASFit_16.Sets = x;
 
             //as many in 20 minutes
             x = new WorkoutStructure(anyTimes: false, anyDistances: true);
-            repL = new List<double> { 8, 12, 8, 12, 200 };
-            setL = new List<int> { 0, 1, 2, 3, 4, 5 };
+            repL = new List<double> { 8, 8, 8, 8, 8 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
             typeL = new List<SetType> { SetType.rep, SetType.rep, SetType.rep, SetType.rep, SetType.distM };
             x.DoIHaveReps = true;
             x.addSets(setL, repL, typeL, 1);
             Gym_Total_HASFit_17 = new Workout(MisIdiomas.EN, "The Incredible Avengers Workout – Thor, Iron Man, and Captain America Training", "This total body, high intensity interval training workout will kick your butt like a super villain! This avengers workout training routine is inspired by Thor, Chris Hemsworth: Captain America, Chris Evans; and Iron Man, Robert Downey Jr.", "Complete as many rounds as possible in 20 minutes");
-            Gym_Total_HASFit_17.Exercises = new List<Exercise> { b42, a74, b12, a13, c2 }; //
+            Gym_Total_HASFit_17.Exercises = new List<Exercise> { b48, a49, b26, b46, b47 }; //original workout included partner fireman pickups instead of pistol squats
             Gym_Total_HASFit_17.setTargetAndType(20, SetType.Tmin);
             Gym_Total_HASFit_17.Sets = x;
             #endregion
@@ -906,8 +918,8 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_15 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_16 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_17 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_StairRun_01 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 8 - hypertrohpy
@@ -998,6 +1010,18 @@ namespace AdaptLib
             #endregion
 
             #region Wrap It 'Fo You Build It
+            eList.Add(c0);
+            eList.Add(c1);
+            eList.Add(c2);
+            eList.Add(c3);
+            eList.Add(c4);
+            eList.Add(c5);
+            eList.Add(c6);
+            //   eList.Add(c7);
+            //  eList.Add(c8);
+            // eList.Add(c9);
+            //eList.Add(c10);
+
             eList.Add(a0);
             eList.Add(a1);
             eList.Add(a2);
