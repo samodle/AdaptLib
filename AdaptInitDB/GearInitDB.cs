@@ -61,6 +61,8 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_13;
             Workout Gym_Total_HASFit_14;
             Workout Gym_Total_HASFit_15;
+            Workout Gym_Total_HASFit_16;
+            Workout Gym_Total_HASFit_17;
 
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
@@ -167,7 +169,7 @@ namespace AdaptLib
 
             //can be done w med ball
             Exercise a13 = new Exercise(ps2, MisIdiomas.EN, "Lying Leg Raise + Crunch", "Start laying flat with arms and legs fully extended. Bring your straight arms and legs up to try and form a 90 degree angle from your original torso position from each.");
-
+            Exercise b44 = new Exercise(ps, MisIdiomas.EN, "Lying Knee Raise + Crunch", "Start laying flat with arms and legs fully extended. Bring your straight arms and knees up (bent 90 degrees, or as comfortable) to try and form a 90 degree angle from your original torso position to your knees.");
             Exercise a14 = new Exercise(ps, MisIdiomas.EN, "High Plank: Shoulder Touches", "From high plank position, alternate touching your left palm to your right shoulder then right palm to left shoulder.");
 
             Exercise a15 = new Exercise(ps, MisIdiomas.EN, "Lying Leg Twist", "Starting on your back with legs straight up, rotate your waste to form an arc with your feet");
@@ -269,15 +271,18 @@ namespace AdaptLib
             Exercise a89 = new Exercise(ps, MisIdiomas.EN, "Dips", "");
             Exercise a56 = new Exercise(ps, MisIdiomas.EN, "Bench Dips", "");
             Exercise a65 = new Exercise(ps, MisIdiomas.EN, "7-7-7 Pull-ups", "");
-            Exercise a83 = new Exercise(ps, MisIdiomas.EN, "Pike Push-up", "");
-            Exercise b23 = new Exercise(ps, MisIdiomas.EN, "Push-up On Bar", "");
+            Exercise b33 = new Exercise(ps, MisIdiomas.EN, "Negative Pull-ups", "");
+            Exercise b39 = new Exercise(ps, MisIdiomas.EN, "Jumping Pull-ups", "");
             Exercise a92 = new Exercise(ps, MisIdiomas.EN, "Supinated Grip Pull-Ups", "");
             Exercise b2 = new Exercise(ps, MisIdiomas.EN, "TRX or Barbell Inverted Pull-ups", "");
+            Exercise a83 = new Exercise(ps, MisIdiomas.EN, "Pike Push-up", "");
+            Exercise b23 = new Exercise(ps, MisIdiomas.EN, "Push-up On Bar", "");
             Exercise a84 = new Exercise(ps, MisIdiomas.EN, "Elevated Wide Push-up", "");
             Exercise b7 = new Exercise(ps, MisIdiomas.EN, "Push-up", "");
             Exercise b8 = new Exercise(ps, MisIdiomas.EN, "Elevated Push-up", "");
             Exercise b25 = new Exercise(ps, MisIdiomas.EN, "Superman Push-ups", "");
             Exercise b34 = new Exercise(ps, MisIdiomas.EN, "Total Body Ballistic Push-Up", "");
+            Exercise b42 = new Exercise(ps, MisIdiomas.EN, "Fallout Push-ups", "");
             Exercise a69 = new Exercise(ps, MisIdiomas.EN, "Wide Pronate Lat Pulldowns", "pronate - palms facing away");
             Exercise a70 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Curl", "");
             Exercise a71 = new Exercise(ps, MisIdiomas.EN, "Reverse Grip Straight Bar Pullbacks", "");
@@ -292,7 +297,8 @@ namespace AdaptLib
             Exercise a96 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Negative Fly To Chest Press Concentric", "");
             Exercise b5 = new Exercise(ps, MisIdiomas.EN, "California Skullcrusher", "");
             Exercise b6 = new Exercise(ps, MisIdiomas.EN, "Incline DB Fly", "");
-            Exercise b33 = new Exercise(ps, MisIdiomas.EN, "Negative Pull-ups", "");
+     
+          
 
             //lower body           
             Exercise a48 = new Exercise(ps, MisIdiomas.EN, "RDL", "The stance is going to be narrower than a squat, about hip width apart, with the toes pointed straight ahead. Some lifters like to flare the feet a bit but this should be minimal – no more than 15 degrees of foot flare. At the start, the bar should be resting against the thighs, and for the descent you want to sit the hips back allowing the torso to drop down. The knees will bend slightly but the shins remain vertical throughout – the bar should continue to drag along the thighs the entire time. During the negative, you want to maintain a slight arch and tension in your low back. This tilts the pelvis anteriorly and puts a greater stretch on the hamstrings. However, the lumbar extension and anterior pelvic tilt should be slight and not excessive. Moreover, do not allow the lumbar spine to round or the shoulders to be protracted during the RDL. Keep the chest up and the shoulders back.");
@@ -352,19 +358,14 @@ namespace AdaptLib
             Exercise b30 = new Exercise(ps, MisIdiomas.EN, "Hang Clean + Front Squat", "");
             Exercise b31 = new Exercise(ps, MisIdiomas.EN, "Downward Dog + Chaturanga Push-Up + High Plank", "");
             Exercise b35 = new Exercise(ps, MisIdiomas.EN, "Sott Press", "");
-
-
-
             Exercise b37 = new Exercise(ps, MisIdiomas.EN, "Burpee + Box Jump", "");
             Exercise b38 = new Exercise(ps, MisIdiomas.EN, "Sliding Mountain Climber + Push-up", "");
-            Exercise b39 = new Exercise(ps, MisIdiomas.EN, "Jumping Pull-ups", "");
             Exercise b40 = new Exercise(ps, MisIdiomas.EN, "Sliding Knee Tuck + Push-up", "");
             Exercise b41 = new Exercise(ps, MisIdiomas.EN, "Med Ball Sit-ups w/ Bench", "");
+            Exercise b43 = new Exercise(ps, MisIdiomas.EN, "Burpees", "");
 
 
-            Exercise b42 = new Exercise(ps, MisIdiomas.EN, "Fallout Push-ups", "");
-            Exercise b43 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b44 = new Exercise(ps, MisIdiomas.EN, "", "");
+          
             Exercise b45 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b46 = new Exercise(ps, MisIdiomas.EN, "", "");
             Exercise b47 = new Exercise(ps, MisIdiomas.EN, "", "");
@@ -696,7 +697,7 @@ namespace AdaptLib
             Gym_Total_HASFit_13.Exercises = new List<Exercise> { a49, b31, b32, b33 }; //
             Gym_Total_HASFit_13.Sets = x;
 
-            //To Do: as many in 15 minutes
+            //as many in 15 minutes
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             repL = new List<double> { 6, 6, 8, 6, 8 };
             setL = new List<int> { 0, 1, 2, 3, 4 };
@@ -706,7 +707,7 @@ namespace AdaptLib
             Gym_Total_HASFit_14.setTargetAndType(15, SetType.Tmin);
             Gym_Total_HASFit_14.Sets = x;
 
-            //To Do: as many in 20 minutes
+            //as many in 20 minutes
             x = new WorkoutStructure(anyTimes: false, anyDistances: true);
             repL = new List<double> { 8, 12, 8, 12, 200 };
             setL = new List<int> { 0, 1, 2, 3, 4 };
@@ -714,9 +715,29 @@ namespace AdaptLib
             x.DoIHaveReps = true;
             x.addSets(setL, repL, typeL, 1);
             Gym_Total_HASFit_15 = new Workout(MisIdiomas.EN, "The Incredible Avengers Workout – Thor, Iron Man, and Captain America Training", "This total body, high intensity interval training workout will kick your butt like a super villain! This avengers workout training routine is inspired by Thor, Chris Hemsworth: Captain America, Chris Evans; and Iron Man, Robert Downey Jr.", "Complete as many rounds as possible in 20 minutes");
-            Gym_Total_HASFit_15.Exercises = new List<Exercise> { }; //
+            Gym_Total_HASFit_15.Exercises = new List<Exercise> { b42, a74, b12, a13, c2 }; //
             Gym_Total_HASFit_15.setTargetAndType(20, SetType.Tmin);
             Gym_Total_HASFit_15.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: true);
+            repL = new List<double> { 4, 5, 8, 10, 25, 50 };
+            setL = new List<int> { 0, 1, 2, 3, 4, 5 };
+            x.addSetsAndReps(setL, repL, 4);
+            Gym_Total_HASFit_16 = new Workout(MisIdiomas.EN, "Wrath of Titans Workout – HIIT Workout – Interval Training Exercises", "Feel the wrath of this hiit workout that builds power and stamina. These interval training exercises are sure to challenge even the most seasoned trainee.", "Complete 4 rounds for time. Perform each exercise at high intensity for the prescribed time to complete one round. ");
+            Gym_Total_HASFit_16.Exercises = new List<Exercise> {  }; //
+            Gym_Total_HASFit_16.Sets = x;
+
+            //as many in 20 minutes
+            x = new WorkoutStructure(anyTimes: false, anyDistances: true);
+            repL = new List<double> { 8, 12, 8, 12, 200 };
+            setL = new List<int> { 0, 1, 2, 3, 4, 5 };
+            typeL = new List<SetType> { SetType.rep, SetType.rep, SetType.rep, SetType.rep, SetType.distM };
+            x.DoIHaveReps = true;
+            x.addSets(setL, repL, typeL, 1);
+            Gym_Total_HASFit_17 = new Workout(MisIdiomas.EN, "The Incredible Avengers Workout – Thor, Iron Man, and Captain America Training", "This total body, high intensity interval training workout will kick your butt like a super villain! This avengers workout training routine is inspired by Thor, Chris Hemsworth: Captain America, Chris Evans; and Iron Man, Robert Downey Jr.", "Complete as many rounds as possible in 20 minutes");
+            Gym_Total_HASFit_17.Exercises = new List<Exercise> { b42, a74, b12, a13, c2 }; //
+            Gym_Total_HASFit_17.setTargetAndType(20, SetType.Tmin);
+            Gym_Total_HASFit_17.Sets = x;
             #endregion
 
             #region Core Workouts
@@ -882,8 +903,8 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_14 }));//week 7 - high intensity interval training
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_15 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_16 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
@@ -976,7 +997,7 @@ namespace AdaptLib
             #endregion
             #endregion
 
-            #region Wrap It 'Fo You Build It. wait... I'm sure its 'posed to rhyme...
+            #region Wrap It 'Fo You Build It
             eList.Add(a0);
             eList.Add(a1);
             eList.Add(a2);
