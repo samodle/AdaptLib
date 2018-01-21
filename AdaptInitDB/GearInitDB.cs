@@ -14,6 +14,7 @@ namespace AdaptLib
             #region Variables
             WorkoutStructure x;
 
+            //Cardio
             Workout Cardio_IntervalRun_01;
             Workout Cardio_IntervalRun_02;
             Workout Cardio_IntervalRun_03;
@@ -37,7 +38,7 @@ namespace AdaptLib
             Workout Abs_8Lower_HASFit;
             Workout Abs_8B_HASFit;
 
-            //Gym
+            //Upper
             Workout Gym_Upper_HASFit_00;
             Workout Gym_Upper_HASFit_01;
             Workout Gym_Upper_HASFit_02;
@@ -46,7 +47,9 @@ namespace AdaptLib
             Workout Gym_Upper_HASFit_05;
             Workout Gym_Upper_HASFit_06;
             Workout Gym_Upper_HASFit_07;
+            Workout Gym_Upper_HASFit_08;
 
+            //Total Body
             Workout Gym_Total_HASFit_00;
             Workout Gym_Total_HASFit_01;
             Workout Gym_Total_HASFit_02;
@@ -66,6 +69,7 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_16;
             Workout Gym_Total_HASFit_17;
 
+            //Lower
             Workout Gym_Lower_HASFit_00;
             Workout Gym_Lower_HASFit_01;
             Workout Gym_Lower_HASFit_02;
@@ -241,7 +245,7 @@ namespace AdaptLib
             ps2 = new ExerciseParams(MuscleT1.arms, WeightStatus.optional);
             ExerciseParams ps3 = new ExerciseParams(MuscleT1.back, WeightStatus.required);
 
-            //To Do - add property for does it 50-50 or 7-7-7 etc
+            //To Do - add property for does it 50-50 or 7-7-7 (partial partial whole) etc - or 3-3-3 (up hold down)
 
             //cardio
             Exercise c0 = new Exercise(ps, MisIdiomas.EN, "Jog");
@@ -260,6 +264,7 @@ namespace AdaptLib
             Exercise b4 = new Exercise(ps, MisIdiomas.EN, "Lateral Hops", "");
             Exercise c3 = new Exercise(ps, MisIdiomas.EN, "Rest");
             Exercise b27 = new Exercise(ps, MisIdiomas.EN, "Broad Jump + Knee Tuck", "");
+            Exercise b46 = new Exercise(ps, MisIdiomas.EN, "Hurdle Broad Jumps", ""); //requires a hurdle...
 
             //upper body
             Exercise a41 = new Exercise(ps, MisIdiomas.EN, "Incline Chest Press", "");
@@ -299,6 +304,9 @@ namespace AdaptLib
             Exercise a72 = new Exercise(ps, MisIdiomas.EN, "Hammer Curl", "");
             Exercise b10 = new Exercise(ps, MisIdiomas.EN, "Bench Curls", "");
             Exercise b11 = new Exercise(ps, MisIdiomas.EN, "Reverse Cable Curl", "");
+            Exercise b52 = new Exercise(ps, MisIdiomas.EN, "Incline DB Reverse Hammer Curls", ""); //3-3-3 tempo, 3 up 3 hold 3 down
+            Exercise b53 = new Exercise(ps, MisIdiomas.EN, "Incline Low Cable Curls", "");
+            Exercise b54 = new Exercise(ps, MisIdiomas.EN, "Standing High Cable Double Bicep Curls", "");
             Exercise a87 = new Exercise(ps, MisIdiomas.EN, "Low Cable Flys", "");
             Exercise a88 = new Exercise(ps, MisIdiomas.EN, "Reverse Cable Pulldowns", "");
             a88.Aliases.Add(new AdaptText("Reverse Tricep Pulldowns", MisIdiomas.EN));
@@ -306,6 +314,10 @@ namespace AdaptLib
             Exercise a96 = new Exercise(ps, MisIdiomas.EN, "Incline Dumbell Negative Fly To Chest Press Concentric", "");
             Exercise b5 = new Exercise(ps, MisIdiomas.EN, "California Skullcrusher", "");
             Exercise b6 = new Exercise(ps, MisIdiomas.EN, "Incline DB Fly", "");
+            Exercise b49 = new Exercise(ps, MisIdiomas.EN, "Incline Lat Pulldowns", "");
+            Exercise b50 = new Exercise(ps, MisIdiomas.EN, "Reverse DB Fly", "");
+            Exercise b51 = new Exercise(ps, MisIdiomas.EN, "Upright Row + Bent Over Row", "");
+          
 
 
 
@@ -372,16 +384,18 @@ namespace AdaptLib
             Exercise b40 = new Exercise(ps, MisIdiomas.EN, "Sliding Knee Tuck + Push-up", "");
             Exercise b41 = new Exercise(ps, MisIdiomas.EN, "Med Ball Sit-ups w/ Bench", "");
             Exercise b43 = new Exercise(ps, MisIdiomas.EN, "Burpees", "");
-
-
-
             Exercise b45 = new Exercise(ps, MisIdiomas.EN, "Partner Fireman Pick-ups", ""); //in immortals workout challenge 5 pickups can replace 8/each leg pistol squats
-            Exercise b46 = new Exercise(ps, MisIdiomas.EN, "Hurdle Broad Jumps", "");
             Exercise b47 = new Exercise(ps, MisIdiomas.EN, "Toes To Bar", "");
-
             Exercise b48 = new Exercise(ps, MisIdiomas.EN, "DB Push-up + Row Crawl", "");
-            Exercise b49 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b50 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+
+    
+
+
+            Exercise b55 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b56 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b57 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b58 = new Exercise(ps, MisIdiomas.EN, "", "");
 
             //Exercise a = new Exercise(ps, MisIdiomas.EN, "", "");
             #endregion
@@ -476,7 +490,7 @@ namespace AdaptLib
             Cardio_IntervalRun_10.Sets = x;
             #endregion
 
-            #region Gym Workouts
+            #region Upper Body Workouts
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             repL = new List<double> { 4, 4, 6, 6, 8, 8, 10, 10 }; //{ 8, 8, 10, 10, 12, 12, 15, 15 };
             x.addSetsAndReps(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 }, repL);
@@ -549,6 +563,19 @@ namespace AdaptLib
             Gym_Upper_HASFit_07.Exercises = new List<Exercise> { b13, b10, b12, b11, b14 }; //
             Gym_Upper_HASFit_07.Sets = x;
 
+            x = new WorkoutStructure(anyTimes: false, anyDistances: false); //originally this existed as one workout made of doing two separate back to back, however the single workouts were never used in the plan as singles 
+            setL = new List<int> { 0, 1, 2 };
+            repL = new List<double> { 12, 12, 12 };
+            x.addSetsAndReps(setL, repL, 5);
+            setL = new List<int> { 3, 4, 5 };
+            repL = new List<double> { 12, 12, 15 };
+            x.addSetsAndReps(setL, repL, 5);
+            Gym_Upper_HASFit_08 = new Workout(MisIdiomas.EN, "MASSIVE Back Workout – Bodybuilding Back Exercises To Add Size and Build Muscle   ///  How To Get Big Biceps Workout – Biceps Exercises For Mass – Bicep Work out", "Looking for a bodybuilding back workout ? Check out this bodybuilding back exercise routine to gain mass and get a bigger massive back.  Follow this quick biceps workout to get big biceps in no time! Adding new bicep exercises to your routine is the best way to shock them into growth.", "");
+            Gym_Upper_HASFit_08.Exercises = new List<Exercise> { b49, b50, b51, b52, b53, b54 }; //
+            Gym_Upper_HASFit_08.Sets = x;
+            #endregion
+
+            #region Lower Body Workouts
             //LOWER
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             x.addSetsAndReps(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 }, new List<double> { 4, 4, 6, 6, 8, 8, 10, 10 });
@@ -592,7 +619,9 @@ namespace AdaptLib
             Gym_Lower_HASFit_04 = new Workout(MisIdiomas.EN, "Muscle Building Legs Workout – Bodybuilding Leg Exercises to Add Mass – Legs Work Out", "Need a new muscle building legs workout ? Try our bodybuilding leg exercises to add mass and learn how to get big legs. This legs work out is great for intermediate through advanced trainees.", "");
             Gym_Lower_HASFit_04.Exercises = new List<Exercise> { a49, b15, b16, b17, b18, b19 }; //
             Gym_Lower_HASFit_04.Sets = x;
+            #endregion
 
+            #region Total Body Workouts
             //Total Body Workouts
             x = new WorkoutStructure(anyTimes: false, anyDistances: false);
             x.addSetsAndReps(new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 }, new List<double> { 5, 5, 5, 5, 5, 5, 5, 5 });
@@ -922,13 +951,13 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Cardio_StairRun_01 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 8 - hypertrohpy
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_08 }));//week 8 - hypertrohpy
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_03 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_06 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_08 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_04 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_06 }));
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 })); //week 9 - strength/hypertrophy
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Lower_HASFit_00 }));
@@ -1017,7 +1046,7 @@ namespace AdaptLib
             eList.Add(c4);
             eList.Add(c5);
             eList.Add(c6);
-            //   eList.Add(c7);
+            eList.Add(c7);
             //  eList.Add(c8);
             // eList.Add(c9);
             //eList.Add(c10);
