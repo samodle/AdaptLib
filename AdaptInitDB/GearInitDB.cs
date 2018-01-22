@@ -48,6 +48,7 @@ namespace AdaptLib
             Workout Gym_Upper_HASFit_06;
             Workout Gym_Upper_HASFit_07;
             Workout Gym_Upper_HASFit_08;
+            Workout Gym_Upper_RunTheRack_00;
 
             //Total Body
             Workout Gym_Total_HASFit_00;
@@ -68,6 +69,9 @@ namespace AdaptLib
             Workout Gym_Total_HASFit_15;
             Workout Gym_Total_HASFit_16;
             Workout Gym_Total_HASFit_17;
+            Workout Gym_Total_HASFit_18;
+            Workout Gym_Total_HASFit_19;
+            Workout Gym_Total_HASFit_20;
 
             //Lower
             Workout Gym_Lower_HASFit_00;
@@ -317,7 +321,7 @@ namespace AdaptLib
             Exercise b49 = new Exercise(ps, MisIdiomas.EN, "Incline Lat Pulldowns", "");
             Exercise b50 = new Exercise(ps, MisIdiomas.EN, "Reverse DB Fly", "");
             Exercise b51 = new Exercise(ps, MisIdiomas.EN, "Upright Row + Bent Over Row", "");
-          
+
 
 
 
@@ -389,15 +393,58 @@ namespace AdaptLib
             Exercise b48 = new Exercise(ps, MisIdiomas.EN, "DB Push-up + Row Crawl", "");
 
 
-    
 
 
-            Exercise b55 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b56 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b57 = new Exercise(ps, MisIdiomas.EN, "", "");
-            Exercise b58 = new Exercise(ps, MisIdiomas.EN, "", "");
 
-            //Exercise a = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b55 = new Exercise(ps, MisIdiomas.EN, "Medicine Ball Overhead Squat", "");
+            Exercise b56 = new Exercise(ps, MisIdiomas.EN, "Stability Ball Push-up", "");
+            Exercise b57 = new Exercise(ps, MisIdiomas.EN, "Stability Ball Lat Pullback", "");
+            Exercise b58 = new Exercise(ps, MisIdiomas.EN, "Hanging Oblique Toes To Bar", "");
+            Exercise b59 = new Exercise(ps, MisIdiomas.EN, "Fast Feet (Timed) To Reach Jump", ""); //TO DO!!!
+
+            Exercise b60 = new Exercise(ps, MisIdiomas.EN, "Clean from Hang to Drop Front Squat", "");
+            Exercise b61 = new Exercise(ps, MisIdiomas.EN, "Pull-up to Toes to Bar", "");
+            Exercise b62 = new Exercise(ps, MisIdiomas.EN, "Jumping Pull-up to Knee Raise", "");
+            Exercise b63 = new Exercise(ps, MisIdiomas.EN, "Jump Squat w/ Timed Iso Hold", "");
+            Exercise b64 = new Exercise(ps, MisIdiomas.EN, "Lunge Start Jump", "");
+            Exercise b65 = new Exercise(ps, MisIdiomas.EN, "Ballistic Pike Push-up", "");
+            Exercise b66 = new Exercise(ps, MisIdiomas.EN, "Overhead Lunge", "");
+            Exercise b67 = new Exercise(ps, MisIdiomas.EN, "Plank Knee Tuck", "");
+            Exercise b68 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b69 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise b70 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b71 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b72 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b73 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b74 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b75 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b76 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b77 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b78 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b79 = new Exercise(ps, MisIdiomas.EN, "", "");
+
+            Exercise b80 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b81 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b82 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b83 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b84 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b85 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b86 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b87 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b88 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b89 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b90 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b91 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b92 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b93 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b94 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b95 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b96 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b97 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b98 = new Exercise(ps, MisIdiomas.EN, "", "");
+            Exercise b99 = new Exercise(ps, MisIdiomas.EN, "", "");
+            //Exercise c = new Exercise(ps, MisIdiomas.EN, "", "");
             #endregion
 
             #region Road Workouts
@@ -779,6 +826,32 @@ namespace AdaptLib
             Gym_Total_HASFit_17.Exercises = new List<Exercise> { b48, a49, b26, b46, b47 }; //original workout included partner fireman pickups instead of pistol squats
             Gym_Total_HASFit_17.setTargetAndType(20, SetType.Tmin);
             Gym_Total_HASFit_17.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: true);
+            repL = new List<double> { 12, 12, 12, 4, 6 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            x.addSetsAndReps(setL, repL, 5);
+            Gym_Total_HASFit_18 = new Workout(MisIdiomas.EN, "Iron Man Workout – Functional Training Exercises – Robert Downey Jr. Workout – HIIT", "Our Iron Man workout will help you build muscle and lose fat at the same time. This Robert Downey workout consists of functional training exercises using a hiit technique.", "");
+            Gym_Total_HASFit_18.Exercises = new List<Exercise> { b55, b56, b57, b58, b59 }; //
+            Gym_Total_HASFit_18.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: true);
+            repL = new List<double> { 5, 8, 8, 15, 400 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            x.addSetsAndReps(setL, repL, 6);
+            Gym_Total_HASFit_19 = new Workout(MisIdiomas.EN, "Conan The Barbarian Workout – High Intensity Workout – HIIT", "Get the athletic look with this Conan the Barbarian workout. This hiit – high intensity workout will challenge even the most fit athlete", "");
+            Gym_Total_HASFit_19.Exercises = new List<Exercise> { b60, b61, b62, b7, c2 }; //
+            Gym_Total_HASFit_19.Sets = x;
+
+            x = new WorkoutStructure(anyTimes: false, anyDistances: true);
+            repL = new List<double> { 8, 8, 8, 12, 8 };
+            setL = new List<int> { 0, 1, 2, 3, 4 };
+            x.addSetsAndReps(setL, repL, 6);
+            Gym_Total_HASFit_20 = new Workout(MisIdiomas.EN, "Usain Bolt Training – Usain Bolt Workout – Speed Training – Speed Workout", "This speed training usain bolt workout showcases the type of explosive speed workout exercises Usain Bolt’s training in the gym program consists of explosive olympic lifts, plyometric jump training, weight training, and sprinter specific strength.", "");
+            Gym_Total_HASFit_20.Exercises = new List<Exercise> { b20, b64, b65, b66, b67 }; //
+            Gym_Total_HASFit_20.Sets = x;
+
+            Gym_Upper_RunTheRack_00 = new Workout(MisIdiomas.EN, "Run The Rack DB Curls Palms Up", "Perform one giant superset with no breaks!. DB Curls with palms up x Run the rack","Start with highest weight that 4 - 5 reps can be performed, then move to next lower weight and do as many as possible.Continue this until you have successfuly ran the rack.");
             #endregion
 
             #region Core Workouts
@@ -984,11 +1057,11 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 12 - high intensity interval training
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_18 }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_19 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_12 }));
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_20, Gym_Upper_RunTheRack_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_06 })); //week 13 - hypertrophy
@@ -1209,6 +1282,55 @@ namespace AdaptLib
             eList.Add(b48);
             eList.Add(b49);
             eList.Add(b50);
+            eList.Add(b51);
+            eList.Add(b52);
+            eList.Add(b53);
+            eList.Add(b54);
+            eList.Add(b55);
+            eList.Add(b56);
+            eList.Add(b57);
+            eList.Add(b58);
+            eList.Add(b59);
+            eList.Add(b60);
+            eList.Add(b61);
+            eList.Add(b62);
+            eList.Add(b63);
+            eList.Add(b64);
+            eList.Add(b65);
+            eList.Add(b66);
+            eList.Add(b67);
+            eList.Add(b68);
+            eList.Add(b69);
+            eList.Add(b70);
+            eList.Add(b71);
+            eList.Add(b72);
+            eList.Add(b73);
+            eList.Add(b74);
+            eList.Add(b75);
+            eList.Add(b76);
+            eList.Add(b77);
+            eList.Add(b78);
+            eList.Add(b79);
+            eList.Add(b80);
+            eList.Add(b81);
+            eList.Add(b82);
+            eList.Add(b83);
+            eList.Add(b84);
+            eList.Add(b85);
+            eList.Add(b86);
+            eList.Add(b87);
+            eList.Add(b88);
+            eList.Add(b89);
+            eList.Add(b90);
+            eList.Add(b91);
+            eList.Add(b92);
+            eList.Add(b93);
+            eList.Add(b94);
+            eList.Add(b95);
+            eList.Add(b96);
+            eList.Add(b97);
+            eList.Add(b98);
+            eList.Add(b99);
 
             MasterExerciseList = eList;
             #endregion
