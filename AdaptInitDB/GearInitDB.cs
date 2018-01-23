@@ -14,6 +14,10 @@ namespace AdaptLib
             #region Variables
             WorkoutStructure x;
 
+            //MMA
+            Workout MMA_Kozak_00; //"Cardio Kickboxing" w11d2
+            Workout MMA_Kozak_01; //"Mixed Martial Arts Workout" wk12d1
+
             //Cardio
             Workout Cardio_IntervalRun_01;
             Workout Cardio_IntervalRun_02;
@@ -84,6 +88,11 @@ namespace AdaptLib
             List<double> timeL;
             List<double> repL;
             List<SetType> typeL;
+
+            ExerciseParams ps;
+            ExerciseParams ps2;
+
+            List<Exercise> eList = new List<Exercise>();
             #endregion
 
             #region Gear
@@ -142,12 +151,28 @@ namespace AdaptLib
             MasterGearList = gList;
             #endregion
 
-            #region Core Exercises
-            ExerciseParams ps = new ExerciseParams(MuscleT1.core, WeightStatus.none);
-            ExerciseParams ps2 = new ExerciseParams(MuscleT1.core, WeightStatus.optional);
+            #region MMA Exercises
+            ps = new ExerciseParams(MuscleT1.arms, WeightStatus.required);
 
-            //EXERCISE
-            List<Exercise> eList = new List<Exercise>();
+            Exercise m1 = new Exercise(ps, MisIdiomas.EN, "1: Lead Jab","point with thumb and aim with front two knuckles. move body w/ arm");
+            Exercise m2 = new Exercise(ps, MisIdiomas.EN, "2: Back Straight Punch", "point with thumb and aim with front two knuckles, twist and use your body while making a straight, quick motion with your back arm");
+            Exercise m3 = new Exercise(ps, MisIdiomas.EN, "3: Lead Hook", "Imagine a string running from your wrist through your elbow and knee so the whole body punches together, not just the arm");
+            Exercise m4 = new Exercise(ps, MisIdiomas.EN, "4: Back Hook", "big power, think haymaker");
+            Exercise mu = new Exercise(ps, MisIdiomas.EN, "Uppercut", "bend at the knees putting weight in butt and punch up with the following hand (opposite hand of whatever punched last)");
+            Exercise mkn = new Exercise(ps, MisIdiomas.EN, "Knee Strike", "Knee straight up, toes pointed down. Bring arms up then down as if grabbing an opponent. ");
+            Exercise mfk = new Exercise(ps, MisIdiomas.EN, "Front Kick", "push kick, ball of foot up");
+            Exercise mj = new Exercise(ps, MisIdiomas.EN, "Jump Rope", "");
+            Exercise mdu = new Exercise(ps, MisIdiomas.EN, "Duck", "quickly squat down, putting weight in butt, before returning to starting position");
+            Exercise m10 = new Exercise(ps, MisIdiomas.EN, "Punch It Out", "Constant 12 punches for time");
+            Exercise mdl = new Exercise(ps, MisIdiomas.EN, "Double Lunge", "alternate starting leg, lunch forward then quickly follow through into second sprinting lunge step");
+            Exercise mds = new Exercise(ps, MisIdiomas.EN, "Dodge Squat", "hands up, move torso repeatedly side to side while slowly lowering body into and out of a squat");
+            Exercise msp = new Exercise(ps, MisIdiomas.EN, "Sprawl", "similar to modified squat thrust or up-downs");
+            Exercise mupa = new Exercise(ps, MisIdiomas.EN, "Double Upa Sit Up", "situp then one upa to each side");
+            #endregion
+
+            #region Core Exercises
+            ps = new ExerciseParams(MuscleT1.core, WeightStatus.none);
+            ps2 = new ExerciseParams(MuscleT1.core, WeightStatus.optional);
 
             Exercise a0 = new Exercise(ps, MisIdiomas.EN, "Star Crunch", "Start on your back with arms and legs splayed straight out and 6in off the ground like a starfish. While lifting your knees to your chest, pull your arms as far down past your butt as you can, then return to the starting position.");
 
@@ -321,8 +346,6 @@ namespace AdaptLib
             Exercise b49 = new Exercise(ps, MisIdiomas.EN, "Incline Lat Pulldowns", "");
             Exercise b50 = new Exercise(ps, MisIdiomas.EN, "Reverse DB Fly", "");
             Exercise b51 = new Exercise(ps, MisIdiomas.EN, "Upright Row + Bent Over Row", "");
-
-
 
 
             //lower body           
@@ -966,6 +989,12 @@ namespace AdaptLib
             Abs_8B_HASFit.Sets = x;
             #endregion
 
+            #region MMA Workouts
+            MMA_Kozak_00 = new Workout(MisIdiomas.EN, "Aerobic Cardio Kick Boxing Workout Exercise to Burn Fat Fast!", "Burn fat with this aerobic cardio kickboxing workout. The cardio kick boxing routine is for people of all fitness levels");
+
+            MMA_Kozak_01 = new Workout(MisIdiomas.EN, "UFC Training at Home – 15 Min MMA Workout Exercises at Home – MMA Training at Home", "This ufc workout at home requires no equipment and can be done at home using grappling, jui-jitsu, and cardio kickboxing techniques in one mma workout routine.");
+            #endregion
+
             #region Finite Plans
             WorkoutPlan Muscle_90_HASFit_00 = new WorkoutPlan(MisIdiomas.EN, "90 Days To Build Muscle");
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Upper_HASFit_00 })); //week 1 - hypertrophy
@@ -1049,14 +1078,14 @@ namespace AdaptLib
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_00 }));//week 11 - strength
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { MMA_Kozak_00 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_01 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_03 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_04 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
 
-            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { }));//week 12 - high intensity interval training
+            Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { MMA_Kozak_01 }));//week 12 - high intensity interval training
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_18 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan(new List<Workout> { Gym_Total_HASFit_19 }));
             Muscle_90_HASFit_00.Days.Add(new DailyPlan()); //Off Day
