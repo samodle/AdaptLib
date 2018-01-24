@@ -4,8 +4,6 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WorkoutLib", "WorkoutLib\WorkoutLib.shproj", "{FF01684F-C8F4-448D-922A-5AA09FEADC81}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AdaptInitDB", "AdaptInitDB\AdaptInitDB.shproj", "{3A296963-7580-4F65-AB55-866400096EC5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptConsole2", "AdaptConsole2\AdaptConsole2.csproj", "{83A26350-7D1B-4AB3-937D-624B372B8892}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.Android", "App1\App1.Android\App1.Android.csproj", "{71FF24F0-D11B-4B1A-8C97-4FFC18821413}"
@@ -14,9 +12,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App1", "App1\App1\App1.shpr
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		AdaptInitDB\AdaptInitDB.projitems*{3a296963-7580-4f65-ab55-866400096ec5}*SharedItemsImports = 13
 		App1\App1\App1.projitems*{71ff24f0-d11b-4b1a-8c97-4ffc18821413}*SharedItemsImports = 4
-		AdaptInitDB\AdaptInitDB.projitems*{83a26350-7d1b-4ab3-937d-624b372b8892}*SharedItemsImports = 4
 		WorkoutLib\WorkoutLib.projitems*{83a26350-7d1b-4ab3-937d-624b372b8892}*SharedItemsImports = 4
 		App1\App1\App1.projitems*{c5ad296c-7324-4e98-b1c2-280353ccec04}*SharedItemsImports = 13
 		WorkoutLib\WorkoutLib.projitems*{ff01684f-c8f4-448d-922a-5aa09feadc81}*SharedItemsImports = 13

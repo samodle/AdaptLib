@@ -9,14 +9,19 @@
     <Import_RootNamespace>WorkoutLib</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Burst.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Enums.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Exercises.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Gear.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Plan.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UtilsButDumb.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Work.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)WorkoutStructure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptData\GearInitDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptData\PublicFun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Support\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptCore\Exercises.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptCore\Gear.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptCore\Plan.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Support\Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Support\UtilsButDumb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptCore\Work.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdaptCore\WorkoutStructure.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)AdaptCore\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Support\" />
   </ItemGroup>
 </Project>

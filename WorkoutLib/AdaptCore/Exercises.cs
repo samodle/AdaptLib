@@ -53,6 +53,8 @@ namespace AdaptLib
 
             this.Name.Add(name, l);
             this.PrimaryMuscleGroup.Add(p.PrimaryMuscle);
+
+            PublicFun.EXERCISES_ALL.Add(this);
         }
         public Exercise(ExerciseParams p, MisIdiomas l, string name, string description) : this(p, l, name)
         {

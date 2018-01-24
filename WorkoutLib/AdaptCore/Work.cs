@@ -17,7 +17,7 @@ namespace AdaptLib
     public class Workout
     {
         #region Variables/Properties
-        public static int NumberOfWorkouts = 1; //static int to track total number of these objects in order to generate IDs
+        public static int NetCount = 1; //static int to track total number of these objects in order to generate IDs
         public int ID { get; set; } = -1;
         public AdaptText Name { get; set; } = new AdaptText();
         public AdaptText Description { get; set; } = new AdaptText();
@@ -66,11 +66,11 @@ namespace AdaptLib
         #region Constructor
         public Workout(MisIdiomas lang, string name)
         {
-            ID = NumberOfWorkouts;
+            ID = NetCount;
 
             Name.Add(name, lang);
 
-            NumberOfWorkouts++;
+            NetCount++;
         }
 
         public Workout(MisIdiomas lang, string name, string description): this(lang, name)

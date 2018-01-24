@@ -18,6 +18,11 @@ namespace AdaptConsole2
             GearInitDB.setMasterLists();
             Console.WriteLine(" ---> " + GearInitDB.MasterGearList.Count);
             Console.WriteLine("MasterExerciseList.Count = " + GearInitDB.MasterExerciseList.Count);
+
+
+            Console.WriteLine("EXERCISE_ALL.Count = " + PublicFun.EXERCISES_ALL.Count);
+
+
             Console.WriteLine("Press any key to continue. Do it. You won't...");
             Console.ReadKey(true);
 
