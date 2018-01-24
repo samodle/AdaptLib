@@ -9,6 +9,7 @@
     <Import_RootNamespace>WorkoutLib</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Burst.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exercises.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Gear.cs" />

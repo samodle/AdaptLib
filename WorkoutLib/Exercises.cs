@@ -38,7 +38,6 @@ namespace AdaptLib
         public List<MuscleT1> PrimaryMuscleGroup { get; set; } = new List<MuscleT1>();
         public List<MuscleT2> SecondaryMuscleGroup { get; set; } = new List<MuscleT2>();
 
-        /* To Do: Add image, adapttext dictionary */
         #endregion
 
         public override string ToString()
