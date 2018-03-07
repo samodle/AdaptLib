@@ -1,37 +1,50 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WorkoutLib", "WorkoutLib\WorkoutLib.shproj", "{FF01684F-C8F4-448D-922A-5AA09FEADC81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptConsole2", "AdaptConsole2\AdaptConsole2.csproj", "{83A26350-7D1B-4AB3-937D-624B372B8892}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptUWP", "AdaptUWP\AdaptUWP.csproj", "{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.Android", "App1\App1.Android\App1.Android.csproj", "{71FF24F0-D11B-4B1A-8C97-4FFC18821413}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App1", "App1\App1\App1.shproj", "{C5AD296C-7324-4E98-B1C2-280353CCEC04}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MotivateLib", "MotivateLib\MotivateLib.shproj", "{C95B7465-A1E1-498C-9F59-B1C1D78C5C97}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		App1\App1\App1.projitems*{71ff24f0-d11b-4b1a-8c97-4ffc18821413}*SharedItemsImports = 4
-		WorkoutLib\WorkoutLib.projitems*{83a26350-7d1b-4ab3-937d-624b372b8892}*SharedItemsImports = 4
-		App1\App1\App1.projitems*{c5ad296c-7324-4e98-b1c2-280353ccec04}*SharedItemsImports = 13
+		MotivateLib\MotivateLib.projitems*{c95b7465-a1e1-498c-9f59-b1c1d78c5c97}*SharedItemsImports = 13
+		WorkoutLib\WorkoutLib.projitems*{cce29e61-c2ac-4995-a4d3-87ad10e69cba}*SharedItemsImports = 4
 		WorkoutLib\WorkoutLib.projitems*{ff01684f-c8f4-448d-922a-5aa09feadc81}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{83A26350-7D1B-4AB3-937D-624B372B8892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83A26350-7D1B-4AB3-937D-624B372B8892}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83A26350-7D1B-4AB3-937D-624B372B8892}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83A26350-7D1B-4AB3-937D-624B372B8892}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71FF24F0-D11B-4B1A-8C97-4FFC18821413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71FF24F0-D11B-4B1A-8C97-4FFC18821413}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71FF24F0-D11B-4B1A-8C97-4FFC18821413}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{71FF24F0-D11B-4B1A-8C97-4FFC18821413}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71FF24F0-D11B-4B1A-8C97-4FFC18821413}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71FF24F0-D11B-4B1A-8C97-4FFC18821413}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|ARM.Build.0 = Debug|ARM
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|ARM.Deploy.0 = Debug|ARM
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|x64.ActiveCfg = Debug|x64
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|x64.Build.0 = Debug|x64
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|x64.Deploy.0 = Debug|x64
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|x86.ActiveCfg = Debug|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|x86.Build.0 = Debug|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Debug|x86.Deploy.0 = Debug|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|Any CPU.ActiveCfg = Release|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|ARM.ActiveCfg = Release|ARM
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|ARM.Build.0 = Release|ARM
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|ARM.Deploy.0 = Release|ARM
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|x64.ActiveCfg = Release|x64
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|x64.Build.0 = Release|x64
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|x64.Deploy.0 = Release|x64
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|x86.ActiveCfg = Release|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|x86.Build.0 = Release|x86
+		{CCE29E61-C2AC-4995-A4D3-87AD10E69CBA}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

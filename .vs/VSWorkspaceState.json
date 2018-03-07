@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AdaptConsole",
+    "\\AdaptConsole2",
+    "\\AdaptInitDB",
+    "\\AdaptLib"
   ],
   "SelectedNode": "\\AdaptLib.sln",
   "PreviewInSolutionExplorer": false

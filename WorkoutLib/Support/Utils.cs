@@ -31,9 +31,6 @@ namespace AdaptLib
         {
             AString.Add(i, s);
         }
-
-        public string EN{ get {return Get(MisIdiomas.EN); }}
-
         public string Get(MisIdiomas lang)
         {
             string r = "";

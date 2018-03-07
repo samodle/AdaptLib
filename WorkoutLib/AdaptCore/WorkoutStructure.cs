@@ -52,7 +52,7 @@ namespace AdaptLib
 
         public void addSetsAndTimes(List<int> sets, List<double> times, int n, SetType st)
         {
-            if (sets.Count != times.Count) { throw new Exception("HOLY S***! Time list and set list have different counts - this ain't gonna work!"); } //err
+            if (sets.Count != times.Count) { throw new Exception("HOLY SMOKES! Time list and set list have different counts - this ain't gonna work!"); } //err
             List<Tuple<int, double, SetType>> x = new List<Tuple<int, double, SetType>>();
             for (int i = 0; i < sets.Count; i++)
             {
