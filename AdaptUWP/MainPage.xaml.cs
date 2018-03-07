@@ -27,12 +27,21 @@ namespace AdaptUWP
         #region Variables
         MisIdiomas CurrentLanguage = MisIdiomas.EN;
         AdaptText TextBlock_Title;
+
+        //core
+        private DispatcherTimer coreTimer = new DispatcherTimer();
+        public DateTime Time { get; set; }
+        private int TimerSeconds = 0;
+        private int TimerMinutes = 0;
+        private bool isFirstTime = true;
         #endregion
 
         #region Construction/Initialization
         public MainPage()
         {
             this.InitializeComponent();
+            closeAllGrids();
+            Grid_MainMenu.Visibility = Visibility.Visible;
         }
 
         public void init(MisIdiomas lang)
@@ -55,15 +64,68 @@ namespace AdaptUWP
         {
             closeAllGrids();
             Grid_Core.Visibility = Visibility.Visible;
+            Grid_Core.Background = Grid_MainMenu.Background;
         }
 
         private void Button_Gym_Click(object sender, RoutedEventArgs e)
         {
             closeAllGrids();
             Grid_Gym.Visibility = Visibility.Visible;
+            Grid_Gym.Background = Grid_MainMenu.Background;
         }
+
         #endregion
 
+        #region Core
+        private void nvSample_Loaded(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+        private void nvSample_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+
+        }
+
+        private void Button_CoreGo_Click(object sender, RoutedEventArgs e)
+        {
+            Button_CoreGo.Visibility = Visibility.Collapsed;
+            Button_CorePause.Visibility = Visibility.Visible;
+            coreTimer.Interval = TimeSpan.FromSeconds(1);
+            if (isFirstTime)
+            {
+                coreTimer.Tick += (object senderX, object eX) =>
+                {
+                //  Time = DateTime.Now; //formerly checking for "isRealTime" variable
+                //  secondHand(Time.Second);
+                TimerSeconds++;
+                    if (TimerSeconds == 60)
+                    {
+                        TimerSeconds = 0;
+                        TimerMinutes++;
+                    }
+                    TextBlock_CoreClock.Text = ((TimerMinutes < 10) ? ("0" + TimerMinutes) : TimerMinutes.ToString()) + ":" + ((TimerSeconds < 10) ? ("0" + TimerSeconds) : TimerSeconds.ToString());
+                };
+                isFirstTime = false;
+
+                //INITIALIZE THE GIFS!!! 
+                CoreGifB.UriSource = new Uri(this.BaseUri, "Img/GIF/giphyCats.gif");
+                CoreGifA.UriSource = new Uri(this.BaseUri, "Img/GIF/giphyCats2.gif");
+                CoreGifBB.Visibility = Visibility.Visible;
+                CoreGifAA.Visibility = Visibility.Visible;
+
+            }
+            coreTimer.Start();
+        }
+
+
+        private void Button_CorePause_Click(object sender, RoutedEventArgs e)
+        {
+            TB_CoreGo.Text = "Start";
+            Button_CoreGo.Visibility = Visibility.Visible;
+            Button_CorePause.Visibility = Visibility.Collapsed;
+            coreTimer.Stop();
+        }
+        #endregion
     }
 }

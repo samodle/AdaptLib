@@ -10,7 +10,7 @@
     <Grid>
 
         <!-- Main Menu -->
-        <Grid Name="Grid_MainMenu" Background= "Black" Visibility="Visible" >
+        <Grid Name="Grid_MainMenu" Background= "Black" Visibility="Collapsed" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -37,7 +37,7 @@
         <Grid Name="Grid_FirstUse" Visibility="Collapsed"></Grid>
 
         <!-- Core -->
-        <Grid Name="Grid_Core" Visibility="Collapsed">
+        <Grid Name="Grid_Core" Visibility="Visible">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -49,7 +49,65 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <TextBlock Name="TextBlock_GymTitle" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Text="now let's get it." FontFamily="Arial" FontSize="24" FontStyle="Normal" TextWrapping="WrapWholeWords" CharacterSpacing="200" Foreground="WhiteSmoke" />
+            <NavigationView  Loaded="nvSample_Loaded" Margin="0,12,0,0" Grid.Row="0" Grid.RowSpan="3"  Grid.Column="0" SelectionChanged="nvSample_SelectionChanged"
+            x:Name="nvCore" 
+            IsSettingsVisible="True" IsTabStop="False"
+            Header="This is header text.">
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Icon="Play" Content="Menu Item1" Tag="SamplePage1" />
+                    <NavigationViewItemSeparator/>
+                    <NavigationViewItem Icon="Save" Content="Menu Item2" Tag="SamplePage2" />
+                    <NavigationViewItem Icon="Refresh" Content="Menu Item3" Tag="SamplePage3" />
+                </NavigationView.MenuItems>
+            </NavigationView>
+
+            <TextBlock Name="TextBlock_CoreClock" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Text="00:00.00" FontFamily="Arial" FontSize="54" FontStyle="Normal" TextWrapping="WrapWholeWords" CharacterSpacing="200" Foreground="WhiteSmoke" />
+
+            <Button Name="Button_CoreGo" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF42A214" Foreground="WhiteSmoke" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="Button_CoreGo_Click">
+
+                <Button.Resources>
+                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver">#FF42A214</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonBackgroundPressed">#FF359308</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundPointerOver">white</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundPressed">white</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver">#FF267600</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPressed">#FF267600</SolidColorBrush>
+                </Button.Resources>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Name="TB_CoreGo" Text="Get It" />
+                </StackPanel>
+
+            </Button>
+
+            <Button Name="Button_CorePause" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Background="CornflowerBlue" Foreground="WhiteSmoke" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="Button_CorePause_Click">
+
+                <Button.Resources>
+                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver">#FF42A214</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonBackgroundPressed">#FF359308</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundPointerOver">white</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundPressed">white</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver">#FF267600</SolidColorBrush>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPressed">#FF267600</SolidColorBrush>
+                </Button.Resources>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Pause" />
+                </StackPanel>
+
+            </Button>
+
+            <Image Name="CoreGifAA" Grid.Column="0" Grid.Row="1" Visibility="Visible">
+                <Image.Source>
+                    <BitmapImage x:Name="CoreGifA" UriSource="/Img/absIcon.png"/>
+                </Image.Source>
+            </Image>
+
+            <Image Name="CoreGifBB" Grid.Column="2" Grid.Row="1" Visibility="Visible">
+                <Image.Source>
+                    <BitmapImage x:Name="CoreGifB" UriSource="/Img/GIF/giphyCat2.gif"/>
+                </Image.Source>
+            </Image>
 
         </Grid>
 
@@ -65,6 +123,8 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+
+
         </Grid>
     </Grid>
 </Page>
