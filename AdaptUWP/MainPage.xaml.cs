@@ -56,6 +56,14 @@ namespace AdaptUWP
             closeAllGrids();
             Grid_Core.Visibility = Visibility.Visible;
         }
+
+        private void Button_Gym_Click(object sender, RoutedEventArgs e)
+        {
+            closeAllGrids();
+            Grid_Gym.Visibility = Visibility.Visible;
+        }
         #endregion
+
+
     }
 }

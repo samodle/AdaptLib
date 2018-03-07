@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AdaptUWP")]
-[assembly: AssemblyDescription("The Illuminati Don't Want You To See This")]
+[assembly: AssemblyDescription("The Illuminati Doesn't Want You To See This")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EvilCorp")]
 [assembly: AssemblyProduct("AdaptUWP")]
