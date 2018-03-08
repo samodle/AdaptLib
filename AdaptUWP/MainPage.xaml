@@ -39,9 +39,9 @@
         <!-- Core -->
         <Grid Name="Grid_Core" Visibility="Visible">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -61,48 +61,53 @@
                 </NavigationView.MenuItems>
             </NavigationView>
 
-            <TextBlock Name="TextBlock_CoreClock" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Text="00:00.00" FontFamily="Arial" FontSize="54" FontStyle="Normal" TextWrapping="WrapWholeWords" CharacterSpacing="200" Foreground="WhiteSmoke" />
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Center" >
+                <TextBlock Name="TextBlock_CoreClock" HorizontalAlignment="Center"  Text="00:00.00" FontFamily="Arial" FontSize="44" FontStyle="Normal" TextWrapping="WrapWholeWords" CharacterSpacing="200" Foreground="WhiteSmoke" />
 
-            <Button Name="Button_CoreGo" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF42A214" Foreground="WhiteSmoke" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="Button_CoreGo_Click">
+                <TextBlock Name="TextBlock_CoreReps" HorizontalAlignment="Center"  Text="3 of 8" FontFamily="Arial" FontSize="44" FontStyle="Normal" TextWrapping="WrapWholeWords" CharacterSpacing="200" Foreground="WhiteSmoke" />
 
-                <Button.Resources>
-                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver">#FF42A214</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonBackgroundPressed">#FF359308</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonForegroundPointerOver">white</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonForegroundPressed">white</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver">#FF267600</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonBorderBrushPressed">#FF267600</SolidColorBrush>
-                </Button.Resources>
+                <TextBlock Name="TextBlock_CoreName" HorizontalAlignment="Center"  Text="Current Exercise" FontFamily="Arial" FontSize="44" FontStyle="Normal" TextWrapping="WrapWholeWords" CharacterSpacing="200" Foreground="WhiteSmoke" />
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Name="TB_CoreGo" Text="Get It" />
-                </StackPanel>
 
-            </Button>
+                <Button Name="Button_CoreGo" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF42A214" Foreground="WhiteSmoke" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="Button_CoreGo_Click">
 
-            <Button Name="Button_CorePause" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Background="CornflowerBlue" Foreground="WhiteSmoke" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="Button_CorePause_Click">
+                    <Button.Resources>
+                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver">#FF42A214</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonBackgroundPressed">#FF359308</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonForegroundPointerOver">white</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonForegroundPressed">white</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver">#FF267600</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPressed">#FF267600</SolidColorBrush>
+                    </Button.Resources>
 
-                <Button.Resources>
-                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver">#FF42A214</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonBackgroundPressed">#FF359308</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonForegroundPointerOver">white</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonForegroundPressed">white</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver">#FF267600</SolidColorBrush>
-                    <SolidColorBrush x:Key="ButtonBorderBrushPressed">#FF267600</SolidColorBrush>
-                </Button.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="TB_CoreGo" Text="Get It" />
+                    </StackPanel>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Pause" />
-                </StackPanel>
+                </Button>
+                <Button Name="Button_CorePause" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Background="CornflowerBlue" Foreground="WhiteSmoke" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="Button_CorePause_Click">
 
-            </Button>
+                    <Button.Resources>
+                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver">#FF42A214</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonBackgroundPressed">#FF359308</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonForegroundPointerOver">white</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonForegroundPressed">white</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver">#FF267600</SolidColorBrush>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPressed">#FF267600</SolidColorBrush>
+                    </Button.Resources>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Pause" />
+                    </StackPanel>
+
+                </Button>
+            </StackPanel>
 
             <Image Name="CoreGifAA" Grid.Column="0" Grid.Row="1" Visibility="Visible">
                 <Image.Source>
                     <BitmapImage x:Name="CoreGifA" UriSource="/Img/absIcon.png"/>
                 </Image.Source>
             </Image>
-
             <Image Name="CoreGifBB" Grid.Column="2" Grid.Row="1" Visibility="Visible">
                 <Image.Source>
                     <BitmapImage x:Name="CoreGifB" UriSource="/Img/GIF/giphyCat2.gif"/>

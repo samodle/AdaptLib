@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -116,6 +117,15 @@ namespace AdaptUWP
 
             }
             coreTimer.Start();
+            changeExercises(30);
+        }
+
+        private async void changeExercises(int duration)
+        {
+            await Task.Delay(TimeSpan.FromSeconds(duration));
+            CoreGifB.UriSource = new Uri(this.BaseUri, "Img/GIF/giphyCats2.gif");
+            CoreGifA.UriSource = new Uri(this.BaseUri, "Img/GIF/giphyCats.gif");
+            TextBlock_CoreName.Text = "Next Exercise";
         }
 
 
